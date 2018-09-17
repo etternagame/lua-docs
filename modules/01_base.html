@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/00_Utility.html">00_Utility</a></li>
+  <li><a href="../modules/00_init.html">00_init</a></li>
+  <li><a href="../modules/01_IniFile.html">01_IniFile</a></li>
+  <li><a href="../modules/01_alias.html">01_alias</a></li>
+  <li><strong>01_base</strong></li>
+  <li><a href="../modules/02_Serialize.html">02_Serialize</a></li>
+  <li><a href="../modules/03.html">03</a></li>
+  <li><a href="../modules/09_SimNSkinPreview.html">09_SimNSkinPreview</a></li>
+  <li><a href="../modules/10.html">10</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>01_base</code></h1>
+<p>Mostly default lua function overrides</p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#loadfile">loadfile (file)</a></td>
+	<td class="summary">Override Lua's loadfile to use lua.ReadFile.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#dofile">dofile (file)</a></td>
+	<td class="summary">Override Lua's dofile to use our loadfile.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ivalues">ivalues (t)</a></td>
+	<td class="summary">Like ipairs(), but returns only values.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Var">Var (varname)</a></td>
+	<td class="summary">lua.GetThreadVariable alias
+ Mostly used for noteskins</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "loadfile"></a>
+    <strong>loadfile (file)</strong>
+    </dt>
+    <dd>
+    Override Lua's loadfile to use lua.ReadFile.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">file</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">nil</span></span>
+        chunk The file contents (Or nil if there was an error)</li>
+        <li>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">nil</span></span>
+        error The error (Or nil if succesful)</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "dofile"></a>
+    <strong>dofile (file)</strong>
+    </dt>
+    <dd>
+    Override Lua's dofile to use our loadfile.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">file</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         filename
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#pdf-error">error</a></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ivalues"></a>
+    <strong>ivalues (t)</strong>
+    </dt>
+    <dd>
+    Like ipairs(), but returns only values.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">t</span>
+            <span class="types"><span class="type">tab</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">function</span></span>
+        iterator
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">for</span> v <span class="keyword">in</span> ivalues({<span class="number">1</span>,<span class="number">2</span>}) <span class="keyword">do</span> <span class="global">print</span>(<span class="global">tostring</span>(v)) <span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Var"></a>
+    <strong>Var (varname)</strong>
+    </dt>
+    <dd>
+    lua.GetThreadVariable alias
+ Mostly used for noteskins
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">varname</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">any</span></span>
+        value
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="backtick">`local x = Var Var "Button"`</span></pre>
+    </ul>
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2018-09-17 10:37:33 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

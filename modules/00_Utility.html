@@ -1,0 +1,745 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><strong>00_Utility</strong></li>
+  <li><a href="../modules/00_init.html">00_init</a></li>
+  <li><a href="../modules/01_IniFile.html">01_IniFile</a></li>
+  <li><a href="../modules/01_alias.html">01_alias</a></li>
+  <li><a href="../modules/01_base.html">01_base</a></li>
+  <li><a href="../modules/02_Serialize.html">02_Serialize</a></li>
+  <li><a href="../modules/03.html">03</a></li>
+  <li><a href="../modules/09_SimNSkinPreview.html">09_SimNSkinPreview</a></li>
+  <li><a href="../modules/10.html">10</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>00_Utility</code></h1>
+<p>Random helper functions that don't really belong anywhere else.</p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#get43size">get43size (size4_3)</a></td>
+	<td class="summary">Scale a number to 4:3 resolution</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getAutoplay">getAutoplay ()</a></td>
+	<td class="summary">Returns current autoplay type.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isWindowed">isWindowed ()</a></td>
+	<td class="summary">Returns true if windowed mode is on</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getTrueX">getTrueX (element)</a></td>
+	<td class="summary">Get the actor's real X (Not relative to the parent like self:GetX()) by recursively grabbing the parents' position
+ Does not take zoom into account.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getTrueY">getTrueY (element)</a></td>
+	<td class="summary">Get the actor's real Y (Not relative to the parent like self:GetY()) by recursively grabbing the parents' position
+ Does not take zoom into account.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isOver">isOver (element)</a></td>
+	<td class="summary">Checks whether the mouse is over an actor</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isOverScaled">isOverScaled (element, scale)</a></td>
+	<td class="summary">For when its just wrong and you need to control the scale yourself</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tableContains">tableContains (table, key)</a></td>
+	<td class="summary">returns true if the table contains the key.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getTableSize">getTableSize (table)</a></td>
+	<td class="summary">for non-array tables.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#MD5FileHex">MD5FileHex (sPath)</a></td>
+	<td class="summary">returns the hexadecimal representaion of the MD5 hash.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SHA1FileHex">SHA1FileHex (sPath)</a></td>
+	<td class="summary">Returns the hexadecimal representation of the SHA-1 hash for the file.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#MD5StringHex">MD5StringHex (str)</a></td>
+	<td class="summary">Returns the hexadecimal representaion of the MD5 hash for the string.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SHA1StringHex">SHA1StringHex (str)</a></td>
+	<td class="summary">Returns the hexadecimal representation of the SHA-1 hash for the string</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#filterFileList">filterFileList (fileList, fileTypes)</a></td>
+	<td class="summary">Given a table of file paths/names in a fileList
+ filters out files from fileList that aren't in the type in fileTypes
+ both function parameters are passed on as tables</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isScoreValid">isScoreValid (pn, steps, score)</a></td>
+	<td class="summary">Just something to get rid of scores where the player quit out early.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#disqualifyScore">disqualifyScore ()</a></td>
+	<td class="summary">Should make the currently played sscore not save
+ Doesn't work for some reason rip-</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getNoteFieldScale">getNoteFieldScale (pn_old_deprecated)</a></td>
+	<td class="summary">Values based on ArrowEffects.cpp
+ Gets the note scale from the mini mod being used.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getNoteFieldWidth">getNoteFieldWidth (pn_old_deprecated)</a></td>
+	<td class="summary">Gets the width of the note assuming the base width is 64.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getNoteFieldPos">getNoteFieldPos (pn_old_deprecated)</a></td>
+	<td class="summary">Gets the center X position of the notefield.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getCommonBPM">getCommonBPM (bpmChanges, lastBeat)</a></td>
+	<td class="summary">Get the most common BPM in a list of BPMChanges
+ Should check for correctness later.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getBPMChangeCount">getBPMChangeCount (bpmChanges)</a></td>
+	<td class="summary">Get number of bpm changes in a bpm changes array
+ DDreamStudio adds small, indetectable bpm changes which make
+ #bpmChanges not accurate</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getCurrentKeyMode">getCurrentKeyMode ()</a></td>
+	<td class="summary">Returns a string of the form "(KeyCount)K" like "4K"
+ Uses GAMESTATE:GetCurrentSteps(PLAYER_1):GetStepsType()</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "get43size"></a>
+    <strong>get43size (size4_3)</strong>
+    </dt>
+    <dd>
+    Scale a number to 4:3 resolution
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">size4_3</span>
+            <span class="types"><span class="type">number</span></span>
+         the size to scale
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        4:3 scaled value
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getAutoplay"></a>
+    <strong>getAutoplay ()</strong>
+    </dt>
+    <dd>
+    Returns current autoplay type.  returns a integer between 0~2 corresponding to
+ human, autoplay and autoplay cpu respectively.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isWindowed"></a>
+    <strong>isWindowed ()</strong>
+    </dt>
+    <dd>
+    Returns true if windowed mode is on
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getTrueX"></a>
+    <strong>getTrueX (element)</strong>
+    </dt>
+    <dd>
+    Get the actor's real X (Not relative to the parent like self:GetX()) by recursively grabbing the parents' position
+ Does not take zoom into account.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">element</span>
+            <span class="types"><span class="type">actor</span></span>
+         the actor
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getTrueY"></a>
+    <strong>getTrueY (element)</strong>
+    </dt>
+    <dd>
+    Get the actor's real Y (Not relative to the parent like self:GetY()) by recursively grabbing the parents' position
+ Does not take zoom into account.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">element</span>
+            <span class="types"><span class="type">actor</span></span>
+         the actor
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isOver"></a>
+    <strong>isOver (element)</strong>
+    </dt>
+    <dd>
+    Checks whether the mouse is over an actor
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">element</span>
+            <span class="types"><span class="type">actor</span></span>
+         the actor
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if the mouse is over the actor
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isOverScaled"></a>
+    <strong>isOverScaled (element, scale)</strong>
+    </dt>
+    <dd>
+    For when its just wrong and you need to control the scale yourself
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">element</span>
+            <span class="types"><span class="type">actor</span></span>
+         the actor
+        </li>
+        <li><span class="parameter">scale</span>
+            <span class="types"><span class="type">number</span></span>
+         Multiplier
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if the mouse is over the actor
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "tableContains"></a>
+    <strong>tableContains (table, key)</strong>
+    </dt>
+    <dd>
+    returns true if the table contains the key.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">table</span>
+            <span class="types"><span class="type">tab</span></span>
+
+        </li>
+        <li><span class="parameter">key</span>
+            <span class="types"><span class="type">any</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getTableSize"></a>
+    <strong>getTableSize (table)</strong>
+    </dt>
+    <dd>
+    for non-array tables.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">table</span>
+            <span class="types"><span class="type">tab</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">int</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "MD5FileHex"></a>
+    <strong>MD5FileHex (sPath)</strong>
+    </dt>
+    <dd>
+    returns the hexadecimal representaion of the MD5 hash.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">sPath</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">0</span></span>
+        0 if invalid
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SHA1FileHex"></a>
+    <strong>SHA1FileHex (sPath)</strong>
+    </dt>
+    <dd>
+    Returns the hexadecimal representation of the SHA-1 hash for the file.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">sPath</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">0</span></span>
+        0 if invalid
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "MD5StringHex"></a>
+    <strong>MD5StringHex (str)</strong>
+    </dt>
+    <dd>
+    Returns the hexadecimal representaion of the MD5 hash for the string.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">str</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">0</span></span>
+        0 if invalid
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SHA1StringHex"></a>
+    <strong>SHA1StringHex (str)</strong>
+    </dt>
+    <dd>
+    Returns the hexadecimal representation of the SHA-1 hash for the string
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">str</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">0</span></span>
+        0 if invalid
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "filterFileList"></a>
+    <strong>filterFileList (fileList, fileTypes)</strong>
+    </dt>
+    <dd>
+    Given a table of file paths/names in a fileList
+ filters out files from fileList that aren't in the type in fileTypes
+ both function parameters are passed on as tables
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">fileList</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">{string}</a></span>
+
+        </li>
+        <li><span class="parameter">fileTypes</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">{string}</a></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isScoreValid"></a>
+    <strong>isScoreValid (pn, steps, score)</strong>
+    </dt>
+    <dd>
+    Just something to get rid of scores where the player quit out early.
+ dead because chord cohesion removal -mina
+ always returns true now
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">pn</span>
+
+        </li>
+        <li><span class="parameter">steps</span>
+
+        </li>
+        <li><span class="parameter">score</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "disqualifyScore"></a>
+    <strong>disqualifyScore ()</strong>
+    </dt>
+    <dd>
+    Should make the currently played sscore not save
+ Doesn't work for some reason rip-
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getNoteFieldScale"></a>
+    <strong>getNoteFieldScale (pn_old_deprecated)</strong>
+    </dt>
+    <dd>
+    Values based on ArrowEffects.cpp
+ Gets the note scale from the mini mod being used.
+ Do not use pn_old_deprecated
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">pn_old_deprecated</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getNoteFieldWidth"></a>
+    <strong>getNoteFieldWidth (pn_old_deprecated)</strong>
+    </dt>
+    <dd>
+    Gets the width of the note assuming the base width is 64.
+ Do not use pn_old_deprecated
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">pn_old_deprecated</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getNoteFieldPos"></a>
+    <strong>getNoteFieldPos (pn_old_deprecated)</strong>
+    </dt>
+    <dd>
+    Gets the center X position of the notefield.
+ Do not use pn_old_deprecated
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">pn_old_deprecated</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getCommonBPM"></a>
+    <strong>getCommonBPM (bpmChanges, lastBeat)</strong>
+    </dt>
+    <dd>
+    Get the most common BPM in a list of BPMChanges
+ Should check for correctness later.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bpmChanges</span>
+            <span class="types"><span class="type">{{number}}</span></span>
+         table of {row, bpm}
+        </li>
+        <li><span class="parameter">lastBeat</span>
+            <span class="types"><span class="type">int</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">int</span></span>
+        maxBPM
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getBPMChangeCount"></a>
+    <strong>getBPMChangeCount (bpmChanges)</strong>
+    </dt>
+    <dd>
+    Get number of bpm changes in a bpm changes array
+ DDreamStudio adds small, indetectable bpm changes which make
+ #bpmChanges not accurate
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bpmChanges</span>
+            <span class="types"><span class="type">{{number}}</span></span>
+         table of {row, bpm}
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">int</span></span>
+        BPMChangeCount
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getCurrentKeyMode"></a>
+    <strong>getCurrentKeyMode ()</strong>
+    </dt>
+    <dd>
+    Returns a string of the form "(KeyCount)K" like "4K"
+ Uses GAMESTATE:GetCurrentSteps(PLAYER_1):GetStepsType()
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        keymode
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2018-09-17 10:37:33 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

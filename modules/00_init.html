@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/00_Utility.html">00_Utility</a></li>
+  <li><strong>00_init</strong></li>
+  <li><a href="../modules/01_IniFile.html">01_IniFile</a></li>
+  <li><a href="../modules/01_alias.html">01_alias</a></li>
+  <li><a href="../modules/01_base.html">01_base</a></li>
+  <li><a href="../modules/02_Serialize.html">02_Serialize</a></li>
+  <li><a href="../modules/03.html">03</a></li>
+  <li><a href="../modules/09_SimNSkinPreview.html">09_SimNSkinPreview</a></li>
+  <li><a href="../modules/10.html">10</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>00_init</code></h1>
+<p>Initialization of basic functions
+ This file is always executed first.</p>
+<p>
+ Override Lua's upper and lower functions with our own, which is always UTF-8.</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Trace">Trace (message)</a></td>
+	<td class="summary">alias for lua.Trace</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Warn">Warn (message)</a></td>
+	<td class="summary">lua.Warn alias</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#print">print (message)</a></td>
+	<td class="summary">lua.Trace alias</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#string:find_last">string:find_last (text)</a></td>
+	<td class="summary">Find the last occurence of text in the `string`</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#math.round">math.round (n)</a></td>
+	<td class="summary">Round to nearest integer.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#split">split (delimiter, text)</a></td>
+	<td class="summary">split text into a table by the delimiter</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#join">join (delimiter, list)</a></td>
+	<td class="summary">`table.concat` alias</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "Trace"></a>
+    <strong>Trace (message)</strong>
+    </dt>
+    <dd>
+    alias for lua.Trace
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">message</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Warn"></a>
+    <strong>Warn (message)</strong>
+    </dt>
+    <dd>
+    lua.Warn alias
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">message</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "print"></a>
+    <strong>print (message)</strong>
+    </dt>
+    <dd>
+    lua.Trace alias
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">message</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "string:find_last"></a>
+    <strong>string:find_last (text)</strong>
+    </dt>
+    <dd>
+    Find the last occurence of text in the `string`
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int 0 if not found
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "math.round"></a>
+    <strong>math.round (n)</strong>
+    </dt>
+    <dd>
+    Round to nearest integer.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">n</span>
+            <span class="types"><span class="type">number</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        number
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "split"></a>
+    <strong>split (delimiter, text)</strong>
+    </dt>
+    <dd>
+    split text into a table by the delimiter
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">delimiter</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        table
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "join"></a>
+    <strong>join (delimiter, list)</strong>
+    </dt>
+    <dd>
+    `table.concat` alias
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">delimiter</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+        <li><span class="parameter">list</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        string
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2018-09-17 10:37:33 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
