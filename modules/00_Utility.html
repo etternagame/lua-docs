@@ -3,8 +3,8 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <head>
-    <title>Reference</title>
-    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    <title>Etterna lua docs</title>
+    <link rel="stylesheet" href="../ldoc_fixed.css" type="text/css" />
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 <div id="navigation">
 <br/>
-<h1>ldoc</h1>
+<h1>Etterna</h1>
 
 <ul>
   <li><a href="../index.html">Index</a></li>
@@ -43,10 +43,16 @@
   <li><a href="../modules/01_IniFile.html">01_IniFile</a></li>
   <li><a href="../modules/01_alias.html">01_alias</a></li>
   <li><a href="../modules/01_base.html">01_base</a></li>
+  <li><a href="../modules/02_ActorDef.html">02_ActorDef</a></li>
   <li><a href="../modules/02_Serialize.html">02_Serialize</a></li>
   <li><a href="../modules/03.html">03</a></li>
   <li><a href="../modules/09_SimNSkinPreview.html">09_SimNSkinPreview</a></li>
   <li><a href="../modules/10.html">10</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="../topics/actor-commands.md.html">Actor Commands</a></li>
+  <li><a href="../topics/quickstart.md.html">QuickStart</a></li>
 </ul>
 
 </div>
@@ -55,7 +61,9 @@
 
 <h1>Module <code>00_Utility</code></h1>
 <p>Random helper functions that don't really belong anywhere else.</p>
-<p></p>
+<p>
+
+</p>
 
 
 <h2><a href="#Functions">Functions</a></h2>
@@ -209,6 +217,8 @@
 
            <span class="types"><span class="type">number</span></span>
 
+
+
     </ol>
 
 
@@ -228,6 +238,8 @@
     <ol>
 
            <span class="types"><span class="type">boolean</span></span>
+
+
 
     </ol>
 
@@ -257,6 +269,8 @@
 
            <span class="types"><span class="type">number</span></span>
 
+
+
     </ol>
 
 
@@ -284,6 +298,8 @@
     <ol>
 
            <span class="types"><span class="type">number</span></span>
+
+
 
     </ol>
 
@@ -362,9 +378,13 @@
         <li><span class="parameter">table</span>
             <span class="types"><span class="type">tab</span></span>
 
+
+
         </li>
         <li><span class="parameter">key</span>
             <span class="types"><span class="type">any</span></span>
+
+
 
         </li>
     </ul>
@@ -373,6 +393,8 @@
     <ol>
 
            <span class="types"><span class="type">bool</span></span>
+
+
 
     </ol>
 
@@ -393,6 +415,8 @@
         <li><span class="parameter">table</span>
             <span class="types"><span class="type">tab</span></span>
 
+
+
         </li>
     </ul>
 
@@ -400,6 +424,8 @@
     <ol>
 
            <span class="types"><span class="type">int</span></span>
+
+
 
     </ol>
 
@@ -419,6 +445,8 @@
     <ul>
         <li><span class="parameter">sPath</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
         </li>
     </ul>
@@ -447,6 +475,8 @@
         <li><span class="parameter">sPath</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
     </ul>
 
@@ -474,6 +504,8 @@
         <li><span class="parameter">str</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
     </ul>
 
@@ -500,6 +532,8 @@
     <ul>
         <li><span class="parameter">str</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
         </li>
     </ul>
@@ -530,9 +564,13 @@
         <li><span class="parameter">fileList</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">{string}</a></span>
 
+
+
         </li>
         <li><span class="parameter">fileTypes</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">{string}</a></span>
+
+
 
         </li>
     </ul>
@@ -556,11 +594,17 @@
     <ul>
         <li><span class="parameter">pn</span>
 
+
+
         </li>
         <li><span class="parameter">steps</span>
 
+
+
         </li>
         <li><span class="parameter">score</span>
+
+
 
         </li>
     </ul>
@@ -592,12 +636,14 @@
     <dd>
     Values based on ArrowEffects.cpp
  Gets the note scale from the mini mod being used.
- Do not use pn_old_deprecated
+ Do not use pn<em>old</em>deprecated
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">pn_old_deprecated</span>
+
+
 
         </li>
     </ul>
@@ -613,12 +659,14 @@
     </dt>
     <dd>
     Gets the width of the note assuming the base width is 64.
- Do not use pn_old_deprecated
+ Do not use pn<em>old</em>deprecated
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">pn_old_deprecated</span>
+
+
 
         </li>
     </ul>
@@ -634,12 +682,14 @@
     </dt>
     <dd>
     Gets the center X position of the notefield.
- Do not use pn_old_deprecated
+ Do not use pn<em>old</em>deprecated
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">pn_old_deprecated</span>
+
+
 
         </li>
     </ul>
@@ -666,6 +716,8 @@
         </li>
         <li><span class="parameter">lastBeat</span>
             <span class="types"><span class="type">int</span></span>
+
+
 
         </li>
     </ul>
@@ -738,7 +790,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2018-09-17 10:37:33 </i>
+<i style="float:right;">Last updated 2018-11-24 19:07:31 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

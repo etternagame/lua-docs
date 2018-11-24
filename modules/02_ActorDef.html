@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Etterna lua docs</title>
+    <link rel="stylesheet" href="../ldoc_fixed.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Etterna</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Tables">Tables</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/00_Utility.html">00_Utility</a></li>
+  <li><a href="../modules/00_init.html">00_init</a></li>
+  <li><a href="../modules/01_IniFile.html">01_IniFile</a></li>
+  <li><a href="../modules/01_alias.html">01_alias</a></li>
+  <li><a href="../modules/01_base.html">01_base</a></li>
+  <li><strong>02_ActorDef</strong></li>
+  <li><a href="../modules/02_Serialize.html">02_Serialize</a></li>
+  <li><a href="../modules/03.html">03</a></li>
+  <li><a href="../modules/09_SimNSkinPreview.html">09_SimNSkinPreview</a></li>
+  <li><a href="../modules/10.html">10</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="../topics/actor-commands.md.html">Actor Commands</a></li>
+  <li><a href="../topics/quickstart.md.html">QuickStart</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>02_ActorDef</code></h1>
+<p>Actor creation utilities</p>
+<p>
+
+</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#ResolveRelativePath">ResolveRelativePath (path, level, optional)</a></td>
+	<td class="summary">Resolve a path (Returns resolved path string)</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoadActorFunc">LoadActorFunc (path, level)</a></td>
+	<td class="summary">Load an actor template.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoadActor">LoadActor (path, ...)</a></td>
+	<td class="summary">Load and create an actor template.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoadActorWithParams">LoadActorWithParams (path, params, ...)</a></td>
+	<td class="summary">Same as LoadActor but sets everything in params as
+ "Thread Variables" accessed via Var("name")</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoadFont">LoadFont (a, b)</a></td>
+	<td class="summary">Function to easily create a BitmapText Actor
+ Can be used like LoadFont("Common normal")
+ or LoadFont("Common", "normal")</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoadColorFont">LoadColorFont (a, b)</a></td>
+	<td class="summary">Same as LoadFont but for ColorBitmapText Actor</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#WrapInActorFrame">WrapInActorFrame (t)</a></td>
+	<td class="summary">Returns an ActorFrame with the numeric table t as children</td>
+	</tr>
+</table>
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Def">Def</a></td>
+	<td class="summary">This is used as follows:</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "ResolveRelativePath"></a>
+    <strong>ResolveRelativePath (path, level, optional)</strong>
+    </dt>
+    <dd>
+    Resolve a path (Returns resolved path string)
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">path</span>
+
+
+
+        </li>
+        <li><span class="parameter">level</span>
+
+
+
+        </li>
+        <li><span class="parameter">optional</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoadActorFunc"></a>
+    <strong>LoadActorFunc (path, level)</strong>
+    </dt>
+    <dd>
+    Load an actor template.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">path</span>
+
+
+
+        </li>
+        <li><span class="parameter">level</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoadActor"></a>
+    <strong>LoadActor (path, ...)</strong>
+    </dt>
+    <dd>
+    Load and create an actor template.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">path</span>
+
+
+
+        </li>
+        <li><span class="parameter">...</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoadActorWithParams"></a>
+    <strong>LoadActorWithParams (path, params, ...)</strong>
+    </dt>
+    <dd>
+    Same as LoadActor but sets everything in params as
+ "Thread Variables" accessed via Var("name")
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">path</span>
+
+
+
+        </li>
+        <li><span class="parameter">params</span>
+
+
+
+        </li>
+        <li><span class="parameter">...</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoadFont"></a>
+    <strong>LoadFont (a, b)</strong>
+    </dt>
+    <dd>
+    Function to easily create a BitmapText Actor
+ Can be used like LoadFont("Common normal")
+ or LoadFont("Common", "normal")
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">a</span>
+
+
+
+        </li>
+        <li><span class="parameter">b</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoadColorFont"></a>
+    <strong>LoadColorFont (a, b)</strong>
+    </dt>
+    <dd>
+    Same as LoadFont but for ColorBitmapText Actor
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">a</span>
+
+
+
+        </li>
+        <li><span class="parameter">b</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "WrapInActorFrame"></a>
+    <strong>WrapInActorFrame (t)</strong>
+    </dt>
+    <dd>
+    Returns an ActorFrame with the numeric table t as children
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">t</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "Def"></a>
+    <strong>Def</strong>
+    </dt>
+    <dd>
+    This is used as follows:
+
+
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Def[<span class="string">"ActorType"</span>]({}) <span class="keyword">or</span> Def.ActorType({})
+ex. Def.ActorFrame {}
+Note: The {} here are just syntax sugar <span class="keyword">for</span> a <span class="keyword">function</span> call ({})</pre>
+    </ul>
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2018-11-24 19:07:31 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

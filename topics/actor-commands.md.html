@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Etterna lua docs</title>
+    <link rel="stylesheet" href="../ldoc_fixed.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Etterna</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Command">Command </a></li>
+<li><a href="#MessageCommand">MessageCommand </a></li>
+<li><a href="#Universal_Commands">Universal Commands </a></li>
+<li><a href="#ScreenSelectMusic">ScreenSelectMusic </a></li>
+<li><a href="#ScreenGameplay">ScreenGameplay </a></li>
+<li><a href="#ActorScroller_specific">ActorScroller specific </a></li>
+<li><a href="#Downloads">Downloads </a></li>
+</ul>
+
+
+<h2>Topics</h2>
+<ul class="">
+  <li><strong>Actor Commands</strong></li>
+  <li><a href="../topics/quickstart.md.html">QuickStart</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/00_Utility.html">00_Utility</a></li>
+  <li><a href="../modules/00_init.html">00_init</a></li>
+  <li><a href="../modules/01_IniFile.html">01_IniFile</a></li>
+  <li><a href="../modules/01_alias.html">01_alias</a></li>
+  <li><a href="../modules/01_base.html">01_base</a></li>
+  <li><a href="../modules/02_ActorDef.html">02_ActorDef</a></li>
+  <li><a href="../modules/02_Serialize.html">02_Serialize</a></li>
+  <li><a href="../modules/03.html">03</a></li>
+  <li><a href="../modules/09_SimNSkinPreview.html">09_SimNSkinPreview</a></li>
+  <li><a href="../modules/10.html">10</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+
+<h1>Actor Commands</h1>
+
+<p><a name="Command"></a></p>
+<h2>Command</h2>
+
+<p>A command is basically an <code>Actor</code> function defined by lua. These can be called instantly using playcommand(commandStringName) or queued for the next frame using queuecommand(commandStringName) on an actor. Usually, they identify certain events that happen, and are called accordingly. Parameters to Commands are '(self, params)' with params being an optional table of named parameters. Note that the command's name must be stripped of the suffix 'Command' when playing/queueing it.</p>
+
+
+<pre>
+Def.ActorFrame {
+    InitCommand = <span class="keyword">function</span>(self)
+        self:x(<span class="number">5</span>)
+    <span class="keyword">end</span>
+}
+</pre>
+
+<p><a name="MessageCommand"></a></p>
+<h2>MessageCommand</h2>
+
+<p>A 'message' command is registered as XMessageCommand (Instead of XCommand), and the registered command will still be called X, but it will be flagged as a message command. This means that if someone broadcasts a message (Using <code>MSGMAN</code> a.k.a message manager) it will trigger/execute that command (Meaning, that function). Parameters to MessageCommands are '(self, params)' with params being an optional table of named parameters.</p>
+
+<p><a name="Universal_Commands"></a></p>
+<h2>Universal Commands</h2>
+
+<p>These are Commands which are usable for all actors, regardless of screen.</p>
+
+<h3>InitCommand</h3>
+
+<p>Executed before the screen displays it's 'on' state. Useful to initialize actor state (Like position, sizes, storing the reference to the actor in a file-local variable)</p>
+
+<h3>OnCommand</h3>
+
+<p>Executed as the screen is displayed (After all InitCommands). Useful, for example, to begin animations as the player enters a screen.</p>
+
+<h3>OffCommand</h3>
+
+<p>Executed as the screen is being exited.</p>
+
+<h3>AnimationFinishedCommand</h3>
+
+<p>Executed when an animation is finished (If one was executed on this actor)</p>
+
+<h3>CodeMessageCommand</h3>
+
+<p>Executed when any button specified in metrics is pressed. You must have CodeNames set in the respective screen in metrics.ini for this to function correctly.</p>
+
+
+<pre>
+params = {
+    PlayerNumber = PLAYER_1 <span class="keyword">or</span> PLAYER_2 ,
+    Name = the name of the code you specified. So <span class="keyword">if</span> you have <span class="backtick"><code>Codeleft=&quot;Left&quot;</code></span> <span class="keyword">in</span> metrics.ini <span class="keyword">and</span> you press left, params.Name would be <span class="string">"left"</span>
+}
+</pre>
+
+<p>Example metrics:</p>
+
+
+<pre>
+CodeNames=<span class="string">"ResetJudge,PrevJudge,NextJudge,ToggleHands"</span>
+CodeResetJudge=<span class="string">"MenuUp"</span>
+CodeNextJudge=<span class="string">"EffectUp"</span>
+CodePrevJudge=<span class="string">"EffectDown"</span>
+CodeToggleHands=<span class="string">"MenuDown"</span>
+</pre>
+
+<h1>Screen Specific</h1>
+
+<p>Note: In case something is missing in any particular screen, you can check the ScreenX.cpp files under /src/ in the github repository, checking what is broadcasted by MESSAGEMAN.</p>
+
+<p><a name="ScreenSelectMusic"></a></p>
+<h2>ScreenSelectMusic</h2>
+
+<h3>SetMessageCommand</h3>
+
+<p>Broadcast when a <code>MusicWheelItem</code>' is being set with new information, such as when scrolling up and down. Gets the <code>Song</code> currently selected in the <code>MusicWheel</code></p>
+
+
+<pre>
+params = {
+    Song = An instance of the <span class="backtick"><code>Song</code></span> that was just set to the <span class="backtick"><code>MusicWheelItem</code></span>,
+    Index = The index of the <span class="backtick"><code>MusicWheelItem</code></span> that was just set,
+    HasFocus = If the <span class="backtick"><code>MusicWheelItem</code></span> is focused <span class="keyword">or</span> <span class="keyword">not</span>,
+    Text = The name of the song group this <span class="backtick"><code>MusicWheelItem</code></span> is from,
+}
+</pre>
+
+<h3>CurrentStepsP1ChangedMessageCommand</h3>
+
+<p>Triggered when the currently selected <code>Steps</code> (a.k.a chart within a <code>Song</code>) change, whether it be by changing the difficulty or selecting another song.</p>
+
+<h3>CurrentSongChangedMessageCommand</h3>
+
+<p>Triggered when the <code>MusicWheel</code> current <code>Song</code> changes.</p>
+
+<h3>PreviousSongMessageCommand or NextSongMessageCommand</h3>
+
+<p>Triggered when the player selects a different <code>Song</code> in the <code>MusicWheel</code> by tapping left or right.</p>
+
+<h3>ChangeStepsMessageCommand</h3>
+
+<p>Triggered when <code>Steps</code> are changed. Need to check player &amp; direction using ChangeStepsMessageCommand=function(self, params) then params.Player and params.Direction.</p>
+
+
+<pre>
+params = {
+    Player =PLAYER_1 <span class="keyword">or</span> PLAYER_2,
+    Direction = <span class="number">1</span> <span class="keyword">or</span> -<span class="number">1</span>,
+}
+</pre>
+
+<p><a name="ScreenGameplay"></a></p>
+<h2>ScreenGameplay</h2>
+
+<h3>LifeChangedMessageCommand</h3>
+
+<p>Activated whenever a player's life changes.</p>
+
+<p>| Parameters | Description                             |
+| ---------- | --------------------------------------- |
+| Player     | Either PLAYER<em>1 or PLAYER</em>2             |
+| LifeMeter  | Amount of life in a decimal from 0 to 1 |</p>
+
+<p>If the lifebar is type is battery it will also have LivesLeft and LostLife.</p>
+
+<h3>HealthStateChangedMessageCommand</h3>
+
+<p>Activated whenever a player's health state changes...</p>
+
+<p>| Parameters     | Description                                                                                                              |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| PlayerNumber   | Either PLAYER<em>1 or PLAYER</em>2                                                                                              |
+| HealthState    | A HealthState Enum, which is either <code>HealthState_Hot</code>, <code>HealthState_Alive</code>, <code>HealthState_Danger</code>, or <code>HealthState_Dead</code>. |
+| OldHealthState | self explanatory.                                                                                                        |</p>
+
+<h3>PlayerFailedMessageCommand</h3>
+
+<p>This one's obvious.</p>
+
+<p>| Parameters   | Description                 |
+| ------------ | --------------------------- |
+| PlayerNumber | Either PLAYER<em>1 or PLAYER</em>2 |</p>
+
+<h3>ScoreChangedMessageCommand</h3>
+
+<p>Activated whenever a player's score changes. Params include PlayerNumber and MultiPlayer, but can also include ToastyCombo in certain cases.</p>
+
+<p>| Parameters   | Description                 |
+| ------------ | --------------------------- |
+| PlayerNumber | Either PLAYER<em>1 or PLAYER</em>2 |
+| MultiPlayer  | ???                         |</p>
+
+<h3>JudgmentMessageCommand</h3>
+
+<p>Triggered when a judgment happens, either because a player stepped on a note or they completely missed it.</p>
+
+<p>| Parameters    | Description                      |
+| ------------- | -------------------------------- |
+| Player        | Either PLAYER<em>1 or PLAYER</em>2      |
+| MultiPlayer   | If they're multiplayer, probably |
+| TapNoteSccre  | The TapNoteScore                 |
+| Early         | True if early, false if late     |
+| TapNoteOffset | Offset of the judgement          |
+| HoldNoteScore | The HoldNoteScore                |</p>
+
+<h3>ComboChangedMessageCommand</h3>
+
+<p>Activated whenever a combo changes.</p>
+
+<p>| Parameters       | Description                                                      |
+| ---------------- | ---------------------------------------------------------------- |
+| Player           | Either PLAYER<em>1 or PLAYER</em>2                                      |
+| OldCombo         | ???                                                              |
+| OldMissCombo     | ???                                                              |
+| PlayerState      | An instance of PlayerState. This may not always be present.      |
+| PlayerStageStats | An instance of PlayerStageStats. This may not always be present. |</p>
+
+<h3>ToastyAchievedMessageCommand</h3>
+
+<p>| Parameters   | Description                 |
+| ------------ | --------------------------- |
+| PlayerNumber | Either PLAYER<em>1 or PLAYER</em>2 |
+| ToastyCombo  | ???                         |
+| Level        | ???                         |</p>
+
+<h3>ToastyDroppedMessageCommand</h3>
+
+<p>| Parameters   | Description                 |
+| ------------ | --------------------------- |
+| PlayerNumber | Either PLAYER<em>1 or PLAYER</em>2 |</p>
+
+<h3>DoneLoadingNextSongMessageCommand</h3>
+
+<p>Unknown, might be triggered during course mode</p>
+
+<p><a name="ActorScroller_specific"></a></p>
+<h2>ActorScroller specific</h2>
+
+<h3>GainFocusCommand</h3>
+
+<p>Triggered when the ActorScroller is selected</p>
+
+<h3>LoseFocusCommand</h3>
+
+<p>Triggered when the ActorScroller is deselected</p>
+
+<p><a name="Downloads"></a></p>
+<h2>Downloads</h2>
+
+<h3></h3>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2018-11-24 19:07:31 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
