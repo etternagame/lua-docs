@@ -50,6 +50,13 @@
   <li><a href="../modules/09_SimNSkinPreview.html">09_SimNSkinPreview</a></li>
   <li><a href="../modules/10.html">10</a></li>
 </ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/Actor.html">Actor</a></li>
+  <li><a href="../classes/ActorFrame.html">ActorFrame</a></li>
+  <li><a href="../classes/BitmapText.html">BitmapText</a></li>
+  <li><a href="../classes/Sprite.html">Sprite</a></li>
+</ul>
 <h2>Topics</h2>
 <ul class="">
   <li><a href="../topics/actor-commands.md.html">Actor Commands</a></li>
@@ -70,7 +77,7 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#ResolveRelativePath">ResolveRelativePath (path, level, optional)</a></td>
+	<td class="name" nowrap><a href="#ResolveRelativePath">ResolveRelativePath (path, level)</a></td>
 	<td class="summary">Resolve a path (Returns resolved path string)</td>
 	</tr>
 	<tr>
@@ -78,13 +85,8 @@
 	<td class="summary">Load an actor template.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#LoadActor">LoadActor (path, ...)</a></td>
+	<td class="name" nowrap><a href="#LoadActor">LoadActor (path)</a></td>
 	<td class="summary">Load and create an actor template.</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#LoadActorWithParams">LoadActorWithParams (path, params, ...)</a></td>
-	<td class="summary">Same as LoadActor but sets everything in params as
- "Thread Variables" accessed via Var("name")</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#LoadFont">LoadFont (a, b)</a></td>
@@ -98,7 +100,7 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#WrapInActorFrame">WrapInActorFrame (t)</a></td>
-	<td class="summary">Returns an ActorFrame with the numeric table t as children</td>
+	<td class="summary">Returns an ActorFrame with the numeric table/array t as children</td>
 	</tr>
 </table>
 <h2><a href="#Tables">Tables</a></h2>
@@ -106,6 +108,11 @@
 	<tr>
 	<td class="name" nowrap><a href="#Def">Def</a></td>
 	<td class="summary">This is used as follows:</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#params">params</a></td>
+	<td class="summary">Same as LoadActor but sets everything in params as
+ "Thread Variables" accessed via Var("name")</td>
 	</tr>
 </table>
 
@@ -118,7 +125,7 @@
     <dl class="function">
     <dt>
     <a name = "ResolveRelativePath"></a>
-    <strong>ResolveRelativePath (path, level, optional)</strong>
+    <strong>ResolveRelativePath (path, level)</strong>
     </dt>
     <dd>
     Resolve a path (Returns resolved path string)
@@ -127,19 +134,14 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">path</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
 
         </li>
         <li><span class="parameter">level</span>
-
-
-
-        </li>
-        <li><span class="parameter">optional</span>
-
-
-
+            <span class="types"><span class="type">number</span></span>
+         integer, call stack level for error()
         </li>
     </ul>
 
@@ -159,14 +161,14 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">path</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
 
         </li>
         <li><span class="parameter">level</span>
-
-
-
+            <span class="types"><span class="type">number</span></span>
+         integer, call stack level for error()
         </li>
     </ul>
 
@@ -177,7 +179,7 @@
 </dd>
     <dt>
     <a name = "LoadActor"></a>
-    <strong>LoadActor (path, ...)</strong>
+    <strong>LoadActor (path)</strong>
     </dt>
     <dd>
     Load and create an actor template.
@@ -186,44 +188,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">path</span>
-
-
-
-        </li>
-        <li><span class="parameter">...</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "LoadActorWithParams"></a>
-    <strong>LoadActorWithParams (path, params, ...)</strong>
-    </dt>
-    <dd>
-    Same as LoadActor but sets everything in params as
- "Thread Variables" accessed via Var("name")
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">path</span>
-
-
-
-        </li>
-        <li><span class="parameter">params</span>
-
-
-
-        </li>
-        <li><span class="parameter">...</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
 
@@ -296,7 +261,7 @@
     <strong>WrapInActorFrame (t)</strong>
     </dt>
     <dd>
-    Returns an ActorFrame with the numeric table t as children
+    Returns an ActorFrame with the numeric table/array t as children
 
 
     <h3>Parameters:</h3>
@@ -337,6 +302,28 @@ Note: The {} here are just syntax sugar <span class="keyword">for</span> a <span
     </ul>
 
 </dd>
+    <dt>
+    <a name = "params"></a>
+    <strong>params</strong>
+    </dt>
+    <dd>
+    Same as LoadActor but sets everything in params as
+ "Thread Variables" accessed via Var("name")  doing Var(key) in the file in path will index this table
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">path</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         path to file without extension
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
 </dl>
 
 
@@ -344,7 +331,7 @@ Note: The {} here are just syntax sugar <span class="keyword">for</span> a <span
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2018-11-24 19:07:31 </i>
+<i style="float:right;">Last updated 2018-11-24 22:20:27 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

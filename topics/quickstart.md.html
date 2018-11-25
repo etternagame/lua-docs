@@ -55,6 +55,13 @@
   <li><a href="../modules/09_SimNSkinPreview.html">09_SimNSkinPreview</a></li>
   <li><a href="../modules/10.html">10</a></li>
 </ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/Actor.html">Actor</a></li>
+  <li><a href="../classes/ActorFrame.html">ActorFrame</a></li>
+  <li><a href="../classes/BitmapText.html">BitmapText</a></li>
+  <li><a href="../classes/Sprite.html">Sprite</a></li>
+</ul>
 
 </div>
 
@@ -65,26 +72,26 @@
 
 <p>A lua file is plain text. To create and edit these you need a plain text editor such as notepad.</p>
 
-<p>You can use any text editor, but to make your life easier, we recommend that you use vscode. Extensions you may want to use with vscode would definitely be the vscode-lua generic lua extension and the ettlua extension.</p>
+<p>You can use any text editor, but to make your life easier, we recommend that you use <a href="https://code.visualstudio.com/Download">vscode</a>. Extensions you may want to use with <a href="https://code.visualstudio.com/Download">vscode</a> would definitely be the <a href="https://marketplace.visualstudio.com/items?itemName=trixnz.vscode-lua">vscode-lua</a> generic lua extension and the <a href="https://marketplace.visualstudio.com/items?itemName=Nick12.ettlua-for-vscode">ettlua</a> extension.</p>
 
-<p>If you have no programming language experience whatsoever or you are not familiar with lua and don't think you would be comfortable infering the syntax, it is recommended that you read some lua book or material (Like https://www.lua.org/pil/contents.html , chapter 1 being optional, chapters 2 to 5 recommended and 13,19 and 20 also optional. You're free to read the whole book, but you will probably not get a lot of useful things for lua in this game from the rest).</p>
+<p>If you have no programming language experience whatsoever or you are not familiar with lua and don't think you would be comfortable infering the syntax, it is recommended that you read some lua book or material (Like <a href="https://www.lua.org/pil/contents.html">Programming In Lua</a>, chapter 1 being optional, chapters 2 to 5 recommended and 13,19 and 20 also optional. You're free to read the whole book, but you will probably not get a lot of useful things for lua in this game from the rest).</p>
 
 <p><a name="Basic_Structure"></a></p>
 <h2>Basic Structure</h2>
 
-<p>The game defines a number of <code>Screen</code>s. It's possible to define custom <code>Screens</code>, but that's not inmediately relevant. Each <code>Screen</code> is a container for <code>Actor</code>s. Pretty much every Drawable thing is an <code>Actor</code>. A container for <code>Actor</code>s is actually called an <code>ActorFrame</code> (So, <code>Screen</code>s are <code>ActorFrame</code>s). Lua comes into play in the game when loading <code>Screen</code>s. Some lua code is executed when initializing <code>Screen</code>s, and it tells the game which <code>Actor</code>s it needs to create and add to it. It can also registers a number of <code>Command</code>s, which are just lua functions executed on certain events (Usually called by the game engine). Lua code is also executed when the game is executed, on startup, usually to initialize whatever global state it needs to use later, and to define functions globally so they can be available everywhere (Note: Usually it's recommended to "namespace" your global functions, putting them under a table, so as to not pollute the global namespace). A lua file executed at startup is called a <code>Script</code> within the context of this game. Sometimes, Screen lua files are called <code>BGAnimations</code>, or "BackGround Animations" (Sometimes abbreviated BGAnims).</p>
+<p>The game defines a number of <code>Screens</code>. It's possible to define custom <code>Screens</code>, but that's not inmediately relevant. Each <code>Screen</code> is a container for <code>Actors</code>. Pretty much every Drawable thing is an <a href="../classes/Actor.html#">Actor</a>. A container for <code>Actors</code> is actually called an <a href="../classes/ActorFrame.html#">ActorFrame</a> (So, <code>Screens</code> are <code>ActorFrames</code>). Lua comes into play in the game when loading <code>Screens</code>. Some lua code is executed when initializing <code>Screens</code>, and it tells the game which <code>Actors</code> it needs to create and add to it. It can also registers a number of <code>Commands</code>, which are just lua functions executed on certain events (Usually called by the game engine). Lua code is also executed when the game is executed, on startup, usually to initialize whatever global state it needs to use later, and to define functions globally so they can be available everywhere (Note: Usually it's recommended to "namespace" your global functions, putting them under a table, so as to not pollute the global namespace). A lua file executed at startup is called a <code>Script</code> within the context of this game. Sometimes, Screen lua files are called <code>BGAnimations</code>, or "BackGround Animations" (Sometimes abbreviated BGAnims).</p>
 
 <p><a name="Screens"></a></p>
 <h2>Screens</h2>
 
-<p>I mentioned lua code can be executed on <code>Screen</code> initialization. However, <code>Screen</code>s have a second component to them that is of relatively big importance to someone dealing with BGAnims: metrics.ini</p>
+<p>I mentioned lua code can be executed on <code>Screen</code> initialization. However, <code>Screens</code> have a second component to them that is of relatively big importance to someone dealing with BGAnims: metrics.ini</p>
 
 
 </div> <!-- id="content" -->
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2018-11-24 19:07:31 </i>
+<i style="float:right;">Last updated 2018-11-24 22:20:27 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
