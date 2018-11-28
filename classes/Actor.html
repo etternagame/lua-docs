@@ -30,6 +30,10 @@
   <li><a href="../index.html">Index</a></li>
 </ul>
 
+<h2>Contents</h2>
+<ul>
+<li><a href="#Methods">Methods</a></li>
+</ul>
 
 
 <h2>Classes</h2>
@@ -74,18 +78,6269 @@
 </p>
 
 
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Actor:AddWrapperState">Actor:AddWrapperState ()</a></td>
+	<td class="summary">This adds a wrapper state around the Actor, which is like wrapping the Actor in an ActorFrame, except that you can use it on any actor, and add or remove wrapper states in response to things that happen while the screen is being used.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetNumWrapperStates">Actor:GetNumWrapperStates ()</a></td>
+	<td class="summary">Returns the number of wrapper states the actor has.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetWrapperState">Actor:GetWrapperState (i)</a></td>
+	<td class="summary">Returns the wrapper state at index i.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:RemoveWrapperState">Actor:RemoveWrapperState (int, i)</a></td>
+	<td class="summary">Removes the wrapper state at index i.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetParent">Actor:GetParent ()</a></td>
+	<td class="summary">Returns the Actor's parent, or <code>nil</code> if it doesn't have one.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetFakeParent">Actor:GetFakeParent ()</a></td>
+	<td class="summary">Returns the Actor's fake parent, or <code>nil</code> if it doesn't have one.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:SetFakeParent">Actor:SetFakeParent (Actor, p)</a></td>
+	<td class="summary">Sets the Actor's fake parent to p, or clears it if p is nil.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetVisible">Actor:GetVisible ()</a></td>
+	<td class="summary">Returns the Actor's visibility.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetX">Actor:GetX ()</a></td>
+	<td class="summary">Returns the Actor's x position.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetY">Actor:GetY ()</a></td>
+	<td class="summary">Returns the Actor's y position.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetZ">Actor:GetZ ()</a></td>
+	<td class="summary">Returns the Actor's z position.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetDestX">Actor:GetDestX ()</a></td>
+	<td class="summary">Returns what the Actor's x position will be when it reaches its destination tween state.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetDestY">Actor:GetDestY ()</a></td>
+	<td class="summary">Returns what the Actor's y position will be when it reaches its destination tween state.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetDestZ">Actor:GetDestZ ()</a></td>
+	<td class="summary">Returns what the Actor's z position will be when it reaches its destination tween state.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetZoom">Actor:GetZoom ()</a></td>
+	<td class="summary">Returns the Actor's zoom.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetZoomX">Actor:GetZoomX ()</a></td>
+	<td class="summary">Returns the Actor's X zoom.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetZoomY">Actor:GetZoomY ()</a></td>
+	<td class="summary">Returns the Actor's Y zoom.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetZoomZ">Actor:GetZoomZ ()</a></td>
+	<td class="summary">Returns the Actor's Z zoom.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:SetTextureFiltering">Actor:SetTextureFiltering (bool, b)</a></td>
+	<td class="summary">Sets Texture Filtering for an Actor to <code>b</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:accelerate">Actor:accelerate (float, fRate)</a></td>
+	<td class="summary">Plays the commands that follow at an accelerated rate (<code>fRate</code> * <code>fRate</code>), where <code>fRate</code> is in seconds.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:addcommand">Actor:addcommand (string, sName, ActorCommand, cmd)</a></td>
+	<td class="summary">Adds a command to the Actor.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:addrotationx">Actor:addrotationx (float, rot)</a></td>
+	<td class="summary">Adds <code>rot</code> to the Actor's current x rotation.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:addrotationy">Actor:addrotationy (float, rot)</a></td>
+	<td class="summary">Adds <code>rot</code> to the Actor's current y rotation.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:addrotationz">Actor:addrotationz (float, rot)</a></td>
+	<td class="summary">Adds <code>rot</code> to the Actor's current z rotation.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:addx">Actor:addx (float, xPos)</a></td>
+	<td class="summary">Adds <code>xPos</code> to the Actor's current x position.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:addy">Actor:addy (float, yPos)</a></td>
+	<td class="summary">Adds <code>yPos</code> to the Actor's current y position.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:addz">Actor:addz (float, zPos)</a></td>
+	<td class="summary">Adds <code>zPos</code> to the Actor's current z position.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:align">Actor:align (h, v)</a></td>
+	<td class="summary">Sets the alignment of an Actor, where <code>h</code> and <code>v</code> are in the range 0..1.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:animate">Actor:animate (bool, b)</a></td>
+	<td class="summary">Sets whether or not the Actor should animate.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:aux">Actor:aux (float, fAux)</a></td>
+	<td class="summary">Sets the Actor's aux value.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:backfacecull">Actor:backfacecull (bool, b)</a></td>
+	<td class="summary">If <code>true</code>, cull the Actor's back faces.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:basealpha">Actor:basealpha (float, fAlpha)</a></td>
+	<td class="summary">Sets the Actor's base alpha to <code>fAlpha</code>, where <code>fAlpha</code> is in the range 0..1.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:baserotationx">Actor:baserotationx (float, rot)</a></td>
+	<td class="summary">Sets the Actor's base X rotation to <code>rot</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:baserotationy">Actor:baserotationy (float, rot)</a></td>
+	<td class="summary">Sets the Actor's base Y rotation to <code>rot</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:baserotationz">Actor:baserotationz (float, rot)</a></td>
+	<td class="summary">Sets the Actor's base Z rotation to <code>rot</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:basezoom">Actor:basezoom (float, zoom)</a></td>
+	<td class="summary">Sets the Actor's base zoom to <code>zoom</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:basezoomx">Actor:basezoomx (float, zoom)</a></td>
+	<td class="summary">Sets the Actor's base X zoom to <code>zoom</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:basezoomy">Actor:basezoomy (float, zoom)</a></td>
+	<td class="summary">Sets the Actor's base Y zoom to <code>zoom</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:basezoomz">Actor:basezoomz (float, zoom)</a></td>
+	<td class="summary">Sets the Actor's base Z zoom to <code>zoom</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:blend">Actor:blend (BlendMode, mode)</a></td>
+	<td class="summary">Sets the Actor to use the specified blend mode.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:bob">Actor:bob ()</a></td>
+	<td class="summary">Makes the Actor bob up and down.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:bounce">Actor:bounce ()</a></td>
+	<td class="summary">Makes the Actor bounce, similar to bob but with one point acting as the ground.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:Center">Actor:Center (time)</a></td>
+	<td class="summary">Centers an Actor on the screen.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:CenterX">Actor:CenterX (time)</a></td>
+	<td class="summary">Centers an Actor on the X axis.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:CenterY">Actor:CenterY (time)</a></td>
+	<td class="summary">Centers an Actor on the y axis.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:clearzbuffer">Actor:clearzbuffer (bool, bClear)</a></td>
+	<td class="summary">Determines if the z-buffer should be cleared or not.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:compound">Actor:compound (length, tweens)</a></td>
+	<td class="summary">Combines multiple interpolators for complex tweens.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:cropbottom">Actor:cropbottom (float, percent)</a></td>
+	<td class="summary">Crops <code>percent</code> of the Actor from the bottom, where <code>percent</code> is in the range 0..1.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:cropleft">Actor:cropleft (float, percent)</a></td>
+	<td class="summary">Crops <code>percent</code> of the Actor from the left, where <code>percent</code> is in the range 0..1.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:cropright">Actor:cropright (float, percent)</a></td>
+	<td class="summary">Crops <code>percent</code> of the Actor from the right, where <code>percent</code> is in the range 0..1.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:croptop">Actor:croptop (float, percent)</a></td>
+	<td class="summary">Crops <code>percent</code> of the Actor from the top, where <code>percent</code> is in the range 0..1.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:cullmode">Actor:cullmode (CullMode, mode)</a></td>
+	<td class="summary">Sets the Actor's cull mode to <code>mode</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:decelerate">Actor:decelerate (float, fRate)</a></td>
+	<td class="summary">Plays the commands that follow at an decelerated rate (1 - (1-<code>fRate</code>) * (1-<code>fRate</code>)), where <code>fRate</code> is in seconds.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:diffuse">Actor:diffuse (color, c)</a></td>
+	<td class="summary">Set the Actor's diffuse color to <code>c</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:diffusealpha">Actor:diffusealpha (float, fAlpha)</a></td>
+	<td class="summary">Sets the Actor's alpha level to <code>fAlpha</code>, where <code>fAlpha</code> is in the range 0..1.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:diffuseblink">Actor:diffuseblink ()</a></td>
+	<td class="summary">Makes the Actor switch between two colors immediately.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:diffusebottomedge">Actor:diffusebottomedge ()</a></td>
+	<td class="summary">Sets the Actor's bottom edge color to <code>c</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:diffusecolor">Actor:diffusecolor (color, c)</a></td>
+	<td class="summary">Set the Actor's diffuse color to <code>c</code>, ignoring any alpha value in <code>c</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:diffuseleftedge">Actor:diffuseleftedge (color, c)</a></td>
+	<td class="summary">Sets the Actor's left edge color to <code>c</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:diffuselowerleft">Actor:diffuselowerleft (color, c)</a></td>
+	<td class="summary">Sets the Actor's lower left corner color to <code>c</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:diffuselowerright">Actor:diffuselowerright (color, c)</a></td>
+	<td class="summary">Sets the Actor's lower right corner color to <code>c</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:diffuseramp">Actor:diffuseramp ()</a></td>
+	<td class="summary">Makes the Actor switch between two colors, jumping back to the first after reaching the second.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:diffuserightedge">Actor:diffuserightedge (color, c)</a></td>
+	<td class="summary">Sets the Actor's right edge color to <code>c</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:diffuseshift">Actor:diffuseshift ()</a></td>
+	<td class="summary">Makes the Actor shift between two colors smoothly.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:diffusetopedge">Actor:diffusetopedge (color, c)</a></td>
+	<td class="summary">Sets the Actor's top edge color to <code>c</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:diffuseupperleft">Actor:diffuseupperleft (color, c)</a></td>
+	<td class="summary">Sets the Actor's upper left corner color to <code>c</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:diffuseupperright">Actor:diffuseupperright (color, c)</a></td>
+	<td class="summary">Sets the Actor's upper right corner color to <code>c</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:Draw">Actor:Draw ()</a></td>
+	<td class="summary">Tells the Actor to draw itself.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:draworder">Actor:draworder (int, iOrder)</a></td>
+	<td class="summary">Sets the Actor's draworder to <code>iOrder</code>, where larger values display first.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:drop">Actor:drop (time)</a></td>
+	<td class="summary">Set the Actor's effect clock to <code>s</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:ease">Actor:ease (time, ease)</a></td>
+	<td class="summary">Set the Actor's effect clock to <code>s</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:effectclock">Actor:effectclock (string, s)</a></td>
+	<td class="summary">Set the Actor's effect clock to <code>s</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:effectcolor1">Actor:effectcolor1 (color, c)</a></td>
+	<td class="summary">Sets the first effect color to <code>c</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:effectcolor2">Actor:effectcolor2 (color, c)</a></td>
+	<td class="summary">Sets the second effect color to <code>c</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:effectmagnitude">Actor:effectmagnitude (float, fX, float, fY, float, fZ)</a></td>
+	<td class="summary">Set the Actor's effect magnitude in each direction to the given values.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:effectoffset">Actor:effectoffset (float, fTime)</a></td>
+	<td class="summary">Set the Actor's effect offset to <code>fTime</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:effectperiod">Actor:effectperiod (float, fTime)</a></td>
+	<td class="summary">Set the Actor's effect period to <code>fTime</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:effecttiming">Actor:effecttiming (float, ramp_to_half, float, hold_at_half, float, ramp_to_full, float, hold_at_zero, float, hold_at_full)</a></td>
+	<td class="summary">
+<p>Set the Actor's effect timing.<br /></p>
+<pre><code>    hold_at_zero is before hold_at_full in the argument list for compatibility.
+</code></pre>
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:effect_hold_at_full">Actor:effect_hold_at_full (float, hold_at_full)</a></td>
+	<td class="summary">Set the hold<em>at</em>full part of the effect timing while leaving the others unchanged.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:fadebottom">Actor:fadebottom (float, percent)</a></td>
+	<td class="summary">Fades <code>percent</code> of the Actor from the bottom where <code>percent</code> is in the range 0..1.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:fadeleft">Actor:fadeleft (float, percent)</a></td>
+	<td class="summary">Fades <code>percent</code> of the Actor from the left where <code>percent</code> is in the range 0..1.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:faderight">Actor:faderight (float, percent)</a></td>
+	<td class="summary">Fades <code>percent</code> of the Actor from the right where <code>percent</code> is in the range 0..1.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:fadetop">Actor:fadetop (float, percent)</a></td>
+	<td class="summary">Fades <code>percent</code> of the Actor from the top where <code>percent</code> is in the range 0..1.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:finishtweening">Actor:finishtweening ()</a></td>
+	<td class="summary">Finishes up an Actor's tween immediately.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:FullScreen">Actor:FullScreen ()</a></td>
+	<td class="summary">Stretches an Actor to fill the entire screen.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:getaux">Actor:getaux ()</a></td>
+	<td class="summary">Returns the Actor's aux value.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetBaseZoomX">Actor:GetBaseZoomX ()</a></td>
+	<td class="summary">Returns the Actor's base X zoom value.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetBaseZoomY">Actor:GetBaseZoomY ()</a></td>
+	<td class="summary">Returns the Actor's base Y zoom value.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetBaseZoomZ">Actor:GetBaseZoomZ ()</a></td>
+	<td class="summary">Returns the Actor's base Z zoom value.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetCommand">Actor:GetCommand (string, sCmdName)</a></td>
+	<td class="summary">Returns <code>true</code> if the Actor has a command named <code>sCmdName</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetDiffuse">Actor:GetDiffuse ()</a></td>
+	<td class="summary">Returns the Actor's current diffuse color.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetDiffuseAlpha">Actor:GetDiffuseAlpha ()</a></td>
+	<td class="summary">Returns the Actor's current diffusealpha.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetEffectDelta">Actor:GetEffectDelta ()</a></td>
+	<td class="summary">Returns the Actor's current effect delta.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:geteffectmagnitude">Actor:geteffectmagnitude ()</a></td>
+	<td class="summary">Returns the Actor's current effect magnitude as three floats (not one; I hate Lua.xsd).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetGlow">Actor:GetGlow ()</a></td>
+	<td class="summary">Returns the Actor's current glow color.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetHAlign">Actor:GetHAlign ()</a></td>
+	<td class="summary">Returns the Actor's horizontal alignment as a number in the range 0..1.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetName">Actor:GetName ()</a></td>
+	<td class="summary">Returns the Actor's name.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetNumStates">Actor:GetNumStates ()</a></td>
+	<td class="summary">Returns the number of states the Actor has.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetHeight">Actor:GetHeight ()</a></td>
+	<td class="summary">Returns the Actor's current height.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetRotationX">Actor:GetRotationX ()</a></td>
+	<td class="summary">Returns the Actor's current X rotation.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetRotationY">Actor:GetRotationY ()</a></td>
+	<td class="summary">Returns the Actor's current Y rotation.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetRotationZ">Actor:GetRotationZ ()</a></td>
+	<td class="summary">Returns the Actor's current Z rotation.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetSecsIntoEffect">Actor:GetSecsIntoEffect ()</a></td>
+	<td class="summary">Returns the number of seconds into the currently running effect (e.g.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetTweenTimeLeft">Actor:GetTweenTimeLeft ()</a></td>
+	<td class="summary">Returns how much time is remaining for the current tween.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetVAlign">Actor:GetVAlign ()</a></td>
+	<td class="summary">Returns the Actor's vertical alignment as a number in the range 0..1.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetWidth">Actor:GetWidth ()</a></td>
+	<td class="summary">Returns the Actor's current width.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetZoomedHeight">Actor:GetZoomedHeight ()</a></td>
+	<td class="summary">Returns the zoomed height of an Actor.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:GetZoomedWidth">Actor:GetZoomedWidth ()</a></td>
+	<td class="summary">Returns the zoomed width of an Actor.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:get_tween_uses_effect_delta">Actor:get_tween_uses_effect_delta ()</a></td>
+	<td class="summary">Returns true if this actor is currently set to use the effect delta for tweening.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:glow">Actor:glow (color, c)</a></td>
+	<td class="summary">Sets the Actor's glow color.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:glowblink">Actor:glowblink ()</a></td>
+	<td class="summary">Makes the Actor glow between two colors immediately.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:glowramp">Actor:glowramp ()</a></td>
+	<td class="summary">Makes the Actor glow between two colors smoothly, jumping back to the first at the end.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:glowshift">Actor:glowshift ()</a></td>
+	<td class="summary">Makes the Actor glow between two colors smoothly.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:halign">Actor:halign (float, fAlign)</a></td>
+	<td class="summary">Set the fractional horizontal alignment of the Actor according to <code>fAlign</code> which should be a float in the range 0..1.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:heading">Actor:heading (float, fHeading)</a></td>
+	<td class="summary">Sets the heading of this Actor to <code>fHeading</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:hibernate">Actor:hibernate (float, fTime)</a></td>
+	<td class="summary">Hides the Actor for the specified amount of time.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:hidden">Actor:hidden (b)</a></td>
+	<td class="summary">Compatibility alias for the hidden command, which was removed in sm-ssc.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:hide_if">Actor:hide_if (b)</a></td>
+	<td class="summary">Compatibility alias for the hidden command, which was removed in sm-ssc.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:horizalign">Actor:horizalign (HorizAlign, align)</a></td>
+	<td class="summary">Set the horizontal alignment of the Actor according to <code>align</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:hurrytweening">Actor:hurrytweening (float, factor)</a></td>
+	<td class="summary">Hurries up an Actor's tweening by <code>factor</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:linear">Actor:linear (float, fRate)</a></td>
+	<td class="summary">Plays the commands that follow at a normal rate, where <code>fRate</code> is in seconds.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:linear">Actor:linear (side)</a></td>
+	<td class="summary">Plays the lyric command for the specified <code>side</code> (<code>"Back"</code> or <code>"Front"</code>).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:name">Actor:name (string, sName)</a></td>
+	<td class="summary">Sets the Actor's name to <code>sName</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:pause">Actor:pause ()</a></td>
+	<td class="summary">Stops the Actor's movement.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:pitch">Actor:pitch (float, fPitch)</a></td>
+	<td class="summary">Sets the pitch of this Actor to <code>fPitch</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:play">Actor:play ()</a></td>
+	<td class="summary">Starts the Actor's movement.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:playcommand">Actor:playcommand (string, sCommandName, table, params)</a></td>
+	<td class="summary">Plays a command named <code>sCommandName</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:playcommand">Actor:playcommand (playerNumber)</a></td>
+	<td class="summary">Sets the visibility of the Actor based on <code>p</code> being a human player.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:pulse">Actor:pulse ()</a></td>
+	<td class="summary">Makes the Actor grow and shrink.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:queuecommand">Actor:queuecommand (string, sCommandName)</a></td>
+	<td class="summary">Queues a command named <code>sCommandName</code> to be played.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:queuemessage">Actor:queuemessage (string, sMessageName)</a></td>
+	<td class="summary">Basically creates a command named <code>!sMessageName</code> (Note the ! at the beginning.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:rainbow">Actor:rainbow ()</a></td>
+	<td class="summary">Makes the Actor change colors continually using colors of the rainbow.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:roll">Actor:roll (float, fRoll)</a></td>
+	<td class="summary">Sets the roll of this Actor to <code>fRoll</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:rotationx">Actor:rotationx (float, fRotation)</a></td>
+	<td class="summary">Set the Actor's rotation on the X axis to <code>fAlign</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:rotationy">Actor:rotationy (float, fRotation)</a></td>
+	<td class="summary">Set the Actor's rotation on the Y axis to <code>fAlign</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:rotationz">Actor:rotationz (float, fRotation)</a></td>
+	<td class="summary">Set the Actor's rotation on the Z axis to <code>fAlign</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:rotationz">Actor:rotationz (float, fRotation)</a></td>
+	<td class="summary">Set the Actor's rotation on the Z axis to <code>fAlign</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:rotationz">Actor:rotationz (float, fRotation)</a></td>
+	<td class="summary">Set the Actor's rotation on the Z axis to <code>fAlign</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:scale_or_crop_alternative">Actor:scale_or_crop_alternative (float, fRotation)</a></td>
+	<td class="summary">An alternative version of <a href="../classes/Actor.html#Actor:scale_or_crop_background">scale_or_crop_background</a></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:scale_or_crop_background">Actor:scale_or_crop_background (float, fRotation)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:scaletocover">Actor:scaletocover (float, fLeft, float, fTop, float, fRight, float, fBottom)</a></td>
+	<td class="summary">Scales the Actor to cover a rectangle defined by the four float arguments.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:scaletofit">Actor:scaletofit (float, fLeft, float, fTop, float, fRight, float, fBottom)</a></td>
+	<td class="summary">Scales the Actor to fit inside a rectangle defined by the four float arguments.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:SetHeight">Actor:SetHeight (float, height)</a></td>
+	<td class="summary">Sets the height of the Actor.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:setsize">Actor:setsize (width, height)</a></td>
+	<td class="summary">Sets the size of the Actor.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:SetSize">Actor:SetSize (width, height)</a></td>
+	<td class="summary">Alias for setsize.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:setstate">Actor:setstate (int, iNewState)</a></td>
+	<td class="summary">Sets a multi-framed Actor's state to <code>iNewState</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:SetWidth">Actor:SetWidth (float, width)</a></td>
+	<td class="summary">Sets the width of the Actor.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:set_tween_uses_effect_delta">Actor:set_tween_uses_effect_delta (bool)</a></td>
+	<td class="summary">Use this to make the actor use the effect clock to tween instead of using the global frame delta.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:shadowcolor">Actor:shadowcolor (color, c)</a></td>
+	<td class="summary">Sets the shadow's color to <code>c</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:shadowlength">Actor:shadowlength (float, fLength)</a></td>
+	<td class="summary">Sets the Actor's shadow length to <code>fLength</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:shadowlengthx">Actor:shadowlengthx (float, fLength)</a></td>
+	<td class="summary">Sets the Actor's horizontal shadow length to <code>fLength</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:shadowlengthy">Actor:shadowlengthy (float, fLength)</a></td>
+	<td class="summary">Sets the Actor's vertical shadow length to <code>fLength</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:skewx">Actor:skewx (float, fAmount)</a></td>
+	<td class="summary">Skews the Actor on the x axis by <code>fAmount</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:skewy">Actor:skewy (float, fAmount)</a></td>
+	<td class="summary">Skews the Actor on the y axis by <code>fAmount</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:sleep">Actor:sleep (float, fSeconds)</a></td>
+	<td class="summary">Waits <code>fSeconds</code> before executing the next command.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:smooth">Actor:smooth (time)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:spin">Actor:spin ()</a></td>
+	<td class="summary">Tells the Actor to spin.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:stopeffect">Actor:stopeffect ()</a></td>
+	<td class="summary">Stops any effect the Actor has.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:stoptweening">Actor:stoptweening ()</a></td>
+	<td class="summary">Stops any tweening.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:stretchto">Actor:stretchto (float, x1, float, y1, float, x2, float, y2)</a></td>
+	<td class="summary">Stretches the Actor to a rectangle of a specific size.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:texturetranslate">Actor:texturetranslate (float, x, float, y)</a></td>
+	<td class="summary">Translates the texture of the actor by x and y.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:texturewrapping">Actor:texturewrapping (bool, bWrap)</a></td>
+	<td class="summary">Determines if the Actor should use texture wrapping or not.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:tween">Actor:tween (time, tweentype, params)</a></td>
+	<td class="summary">Uses type to determine the tween to use.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:valign">Actor:valign (float, fAlign)</a></td>
+	<td class="summary">Set the fractional vertical alignment of the Actor according to <code>fAlign</code> which should be a float in the range 0..1.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:vertalign">Actor:vertalign (VertAlign, align)</a></td>
+	<td class="summary">Set the vertical alignment of the Actor according to <code>align</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:vibrate">Actor:vibrate ()</a></td>
+	<td class="summary">Makes the Actor vibrate violently.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:visible">Actor:visible (bool, b)</a></td>
+	<td class="summary">Sets an Actor's visibility to b.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:wag">Actor:wag ()</a></td>
+	<td class="summary">Makes the Actor wag.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:x">Actor:x (float, xPos)</a></td>
+	<td class="summary">Set the x position of the Actor to <code>xPos</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:y">Actor:y (float, yPos)</a></td>
+	<td class="summary">Set the y position of the Actor to <code>yPos</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:z">Actor:z (float, zPos)</a></td>
+	<td class="summary">Set the z position of the Actor to <code>zPos</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:zbias">Actor:zbias (float, fBias)</a></td>
+	<td class="summary">Sets the z bias to <code>fBias</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:zbuffer">Actor:zbuffer (bool, bUse)</a></td>
+	<td class="summary">Enables/disables z-buffer depending on <code>bUse</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:zoom">Actor:zoom (float, zoom)</a></td>
+	<td class="summary">Zooms the Actor to <code>zoom</code> scale.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:zoomto">Actor:zoomto (float, zoomX, float, zoomY)</a></td>
+	<td class="summary">Zooms the Actor on both the X and Y axis using <code>zoomX</code> and <code>zoomY</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:zoomtoheight">Actor:zoomtoheight (float, zoom)</a></td>
+	<td class="summary">Zooms the Actor to <code>zoom</code> height.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:zoomtowidth">Actor:zoomtowidth (float, zoom)</a></td>
+	<td class="summary">Zooms the Actor to <code>zoom</code> width.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:zoomx">Actor:zoomx (float, zoom)</a></td>
+	<td class="summary">Zooms the Actor to <code>zoom</code> scale on the X axis.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:zoomy">Actor:zoomy (float, zoom)</a></td>
+	<td class="summary">Zooms the Actor to <code>zoom</code> scale on the Y axis.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:zoomz">Actor:zoomz (float, zoom)</a></td>
+	<td class="summary">Zooms the Actor to <code>zoom</code> scale on the Z axis.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:ztest">Actor:ztest (bool, bTest)</a></td>
+	<td class="summary">Sets the z testing mode to write on pass if <code>true</code>, turns it off if <code>false</code></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:ztestmode">Actor:ztestmode (ZTestMode, testMode)</a></td>
+	<td class="summary">Sets the z testing mode to <code>testMode</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:zwrite">Actor:zwrite (bool, bWrite)</a></td>
+	<td class="summary">Sets z writing to <code>true</code> or <code>false</code> based on <code>bWrite</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:bezier">Actor:bezier (time, curve)</a></td>
+	<td class="summary">Plays the commands that follow using a bezier curve to determine the rate.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:FullScreen">Actor:FullScreen ()</a></td>
+	<td class="summary">Stretches an Actor to cover the screen.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:MaskDest">Actor:MaskDest ()</a></td>
+	<td class="summary">Sets and Actor as a mask destination.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:MaskSource">Actor:MaskSource ()</a></td>
+	<td class="summary">Sets an Actor as a mask source.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:Real">Actor:Real (f)</a></td>
+	<td class="summary">Make graphics their true size at any resolution.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:RealInverse">Actor:RealInverse (f)</a></td>
+	<td class="summary">Scale things back up after they have already been scaled down.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:thump">Actor:thump (fEffectPeriod)</a></td>
+	<td class="summary">A customized version of pulse that is more appealing for on-beat effects.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Actor:xy">Actor:xy (float, actorX, float, actorY)</a></td>
+	<td class="summary">Sets the x and y location of the Actor in one command.</td>
+	</tr>
+</table>
 
 <br/>
 <br/>
 
 
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "Actor:AddWrapperState"></a>
+    <strong>Actor:AddWrapperState ()</strong>
+    </dt>
+    <dd>
+
+<p>This adds a wrapper state around the Actor, which is like wrapping the Actor in an ActorFrame, except that you can use it on any actor, and add or remove wrapper states in response to things that happen while the screen is being used.  (wrapping an Actor in an ActorFrame normally requires setting it up before the screen starts)<br /></p>
+<pre><code>    The ActorFrame that is returned is the wrapper state, for convenience.&lt;br /&gt;
+    An Actor can have any number of wrapper states.  Use GetWrapperState to access wrapper states for the actor.
+</code></pre>
+
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        ActorFrame
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetNumWrapperStates"></a>
+    <strong>Actor:GetNumWrapperStates ()</strong>
+    </dt>
+    <dd>
+    Returns the number of wrapper states the actor has.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        ActorFrame
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetWrapperState"></a>
+    <strong>Actor:GetWrapperState (i)</strong>
+    </dt>
+    <dd>
+    Returns the wrapper state at index i.   Think of wrapper states with a higher index as being "further out".  Actor is inside Wrapper 1, Wrapper 1 is inside Wrapper 2, Wrapper 2 is inside Wrapper 3, and so on.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">i</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        ActorFrame
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:RemoveWrapperState"></a>
+    <strong>Actor:RemoveWrapperState (int, i)</strong>
+    </dt>
+    <dd>
+    Removes the wrapper state at index i.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">int</span>
+
+
+
+        </li>
+        <li><span class="parameter">i</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetParent"></a>
+    <strong>Actor:GetParent ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's parent, or <code>nil</code> if it doesn't have one.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Actor
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetFakeParent"></a>
+    <strong>Actor:GetFakeParent ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's fake parent, or <code>nil</code> if it doesn't have one.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Actor
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:SetFakeParent"></a>
+    <strong>Actor:SetFakeParent (Actor, p)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's fake parent to p, or clears it if p is nil.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Actor</span>
+
+
+
+        </li>
+        <li><span class="parameter">p</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetVisible"></a>
+    <strong>Actor:GetVisible ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's visibility.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        bool
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetX"></a>
+    <strong>Actor:GetX ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's x position.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetY"></a>
+    <strong>Actor:GetY ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's y position.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetZ"></a>
+    <strong>Actor:GetZ ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's z position.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetDestX"></a>
+    <strong>Actor:GetDestX ()</strong>
+    </dt>
+    <dd>
+    Returns what the Actor's x position will be when it reaches its destination tween state.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetDestY"></a>
+    <strong>Actor:GetDestY ()</strong>
+    </dt>
+    <dd>
+    Returns what the Actor's y position will be when it reaches its destination tween state.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetDestZ"></a>
+    <strong>Actor:GetDestZ ()</strong>
+    </dt>
+    <dd>
+    Returns what the Actor's z position will be when it reaches its destination tween state.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetZoom"></a>
+    <strong>Actor:GetZoom ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's zoom.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetZoomX"></a>
+    <strong>Actor:GetZoomX ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's X zoom.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetZoomY"></a>
+    <strong>Actor:GetZoomY ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's Y zoom.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetZoomZ"></a>
+    <strong>Actor:GetZoomZ ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's Z zoom.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:SetTextureFiltering"></a>
+    <strong>Actor:SetTextureFiltering (bool, b)</strong>
+    </dt>
+    <dd>
+    Sets Texture Filtering for an Actor to <code>b</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+
+
+
+        </li>
+        <li><span class="parameter">b</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:accelerate"></a>
+    <strong>Actor:accelerate (float, fRate)</strong>
+    </dt>
+    <dd>
+    Plays the commands that follow at an accelerated rate (<code>fRate</code> * <code>fRate</code>), where <code>fRate</code> is in seconds.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fRate</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:addcommand"></a>
+    <strong>Actor:addcommand (string, sName, ActorCommand, cmd)</strong>
+    </dt>
+    <dd>
+    Adds a command to the Actor.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sName</span>
+
+
+
+        </li>
+        <li><span class="parameter">ActorCommand</span>
+
+
+
+        </li>
+        <li><span class="parameter">cmd</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:addrotationx"></a>
+    <strong>Actor:addrotationx (float, rot)</strong>
+    </dt>
+    <dd>
+    Adds <code>rot</code> to the Actor's current x rotation.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">rot</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:addrotationy"></a>
+    <strong>Actor:addrotationy (float, rot)</strong>
+    </dt>
+    <dd>
+    Adds <code>rot</code> to the Actor's current y rotation.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">rot</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:addrotationz"></a>
+    <strong>Actor:addrotationz (float, rot)</strong>
+    </dt>
+    <dd>
+    Adds <code>rot</code> to the Actor's current z rotation.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">rot</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:addx"></a>
+    <strong>Actor:addx (float, xPos)</strong>
+    </dt>
+    <dd>
+    Adds <code>xPos</code> to the Actor's current x position.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">xPos</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:addy"></a>
+    <strong>Actor:addy (float, yPos)</strong>
+    </dt>
+    <dd>
+    Adds <code>yPos</code> to the Actor's current y position.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">yPos</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:addz"></a>
+    <strong>Actor:addz (float, zPos)</strong>
+    </dt>
+    <dd>
+    Adds <code>zPos</code> to the Actor's current z position.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">zPos</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:align"></a>
+    <strong>Actor:align (h, v)</strong>
+    </dt>
+    <dd>
+    Sets the alignment of an Actor, where <code>h</code> and <code>v</code> are in the range 0..1.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">h</span>
+
+
+
+        </li>
+        <li><span class="parameter">v</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:animate"></a>
+    <strong>Actor:animate (bool, b)</strong>
+    </dt>
+    <dd>
+    Sets whether or not the Actor should animate.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+
+
+
+        </li>
+        <li><span class="parameter">b</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:aux"></a>
+    <strong>Actor:aux (float, fAux)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's aux value.  (This can be a solution for coupling data with an Actor.)
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fAux</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:backfacecull"></a>
+    <strong>Actor:backfacecull (bool, b)</strong>
+    </dt>
+    <dd>
+    If <code>true</code>, cull the Actor's back faces.  See also: <Link class='Actor' function='cullmode' />.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+
+
+
+        </li>
+        <li><span class="parameter">b</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:basealpha"></a>
+    <strong>Actor:basealpha (float, fAlpha)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's base alpha to <code>fAlpha</code>, where <code>fAlpha</code> is in the range 0..1.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fAlpha</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:baserotationx"></a>
+    <strong>Actor:baserotationx (float, rot)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's base X rotation to <code>rot</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">rot</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:baserotationy"></a>
+    <strong>Actor:baserotationy (float, rot)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's base Y rotation to <code>rot</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">rot</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:baserotationz"></a>
+    <strong>Actor:baserotationz (float, rot)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's base Z rotation to <code>rot</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">rot</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:basezoom"></a>
+    <strong>Actor:basezoom (float, zoom)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's base zoom to <code>zoom</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">zoom</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:basezoomx"></a>
+    <strong>Actor:basezoomx (float, zoom)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's base X zoom to <code>zoom</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">zoom</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:basezoomy"></a>
+    <strong>Actor:basezoomy (float, zoom)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's base Y zoom to <code>zoom</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">zoom</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:basezoomz"></a>
+    <strong>Actor:basezoomz (float, zoom)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's base Z zoom to <code>zoom</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">zoom</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:blend"></a>
+    <strong>Actor:blend (BlendMode, mode)</strong>
+    </dt>
+    <dd>
+    Sets the Actor to use the specified blend mode.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">BlendMode</span>
+
+
+
+        </li>
+        <li><span class="parameter">mode</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:bob"></a>
+    <strong>Actor:bob ()</strong>
+    </dt>
+    <dd>
+    Makes the Actor bob up and down.  Can use <Link function='effectmagnitude' /> to define different bobbing behavior.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:bounce"></a>
+    <strong>Actor:bounce ()</strong>
+    </dt>
+    <dd>
+    Makes the Actor bounce, similar to bob but with one point acting as the ground.  Can use <Link function='effectmagnitude' /> to define different bouncing behavior (with effectmagnitude values relating to x, y, and z movement).
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:Center"></a>
+    <strong>Actor:Center (time)</strong>
+    </dt>
+    <dd>
+    Centers an Actor on the screen.  (equivalent to <code>x,SCREEN<em>CENTER</em>X;y,SCREEN<em>CENTER</em>Y</code>)
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">time</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:CenterX"></a>
+    <strong>Actor:CenterX (time)</strong>
+    </dt>
+    <dd>
+    Centers an Actor on the X axis.  (equivalent to <code>x,SCREEN<em>CENTER</em>X</code>)
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">time</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:CenterY"></a>
+    <strong>Actor:CenterY (time)</strong>
+    </dt>
+    <dd>
+    Centers an Actor on the y axis.  (equivalent to <code>y,SCREEN<em>CENTER</em>Y</code>)
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">time</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:clearzbuffer"></a>
+    <strong>Actor:clearzbuffer (bool, bClear)</strong>
+    </dt>
+    <dd>
+    Determines if the z-buffer should be cleared or not.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+
+
+
+        </li>
+        <li><span class="parameter">bClear</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:compound"></a>
+    <strong>Actor:compound (length, tweens)</strong>
+    </dt>
+    <dd>
+
+<p>Combines multiple interpolators for complex tweens.  <code>tweens</code></p>
+<pre><code>    can either be a string like &lt;code&gt;"linear,0.25,accelerate,0.75"&lt;/code&gt; or
+    a table with tween information &lt;code&gt;{ {Type="linear", Percent=0.25, Bezier=nil}, {Type="accelerate", Percent=0.75, Bezier=nil} }&lt;/code&gt;
+</code></pre>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">length</span>
+            <span class="types"><span class="type">number</span></span>
+
+
+
+        </li>
+        <li><span class="parameter">tweens</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:cropbottom"></a>
+    <strong>Actor:cropbottom (float, percent)</strong>
+    </dt>
+    <dd>
+    Crops <code>percent</code> of the Actor from the bottom, where <code>percent</code> is in the range 0..1.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">percent</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:cropleft"></a>
+    <strong>Actor:cropleft (float, percent)</strong>
+    </dt>
+    <dd>
+    Crops <code>percent</code> of the Actor from the left, where <code>percent</code> is in the range 0..1.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">percent</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:cropright"></a>
+    <strong>Actor:cropright (float, percent)</strong>
+    </dt>
+    <dd>
+    Crops <code>percent</code> of the Actor from the right, where <code>percent</code> is in the range 0..1.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">percent</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:croptop"></a>
+    <strong>Actor:croptop (float, percent)</strong>
+    </dt>
+    <dd>
+    Crops <code>percent</code> of the Actor from the top, where <code>percent</code> is in the range 0..1.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">percent</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:cullmode"></a>
+    <strong>Actor:cullmode (CullMode, mode)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's cull mode to <code>mode</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">CullMode</span>
+
+
+
+        </li>
+        <li><span class="parameter">mode</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:decelerate"></a>
+    <strong>Actor:decelerate (float, fRate)</strong>
+    </dt>
+    <dd>
+    Plays the commands that follow at an decelerated rate (1 - (1-<code>fRate</code>) * (1-<code>fRate</code>)), where <code>fRate</code> is in seconds.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fRate</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:diffuse"></a>
+    <strong>Actor:diffuse (color, c)</strong>
+    </dt>
+    <dd>
+    Set the Actor's diffuse color to <code>c</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+
+
+        </li>
+        <li><span class="parameter">c</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:diffusealpha"></a>
+    <strong>Actor:diffusealpha (float, fAlpha)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's alpha level to <code>fAlpha</code>, where <code>fAlpha</code> is in the range 0..1.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fAlpha</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:diffuseblink"></a>
+    <strong>Actor:diffuseblink ()</strong>
+    </dt>
+    <dd>
+    Makes the Actor switch between two colors immediately.   See Themerdocs/effect_colors.txt for an example.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:diffusebottomedge"></a>
+    <strong>Actor:diffusebottomedge ()</strong>
+    </dt>
+    <dd>
+    Sets the Actor's bottom edge color to <code>c</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:diffusecolor"></a>
+    <strong>Actor:diffusecolor (color, c)</strong>
+    </dt>
+    <dd>
+    Set the Actor's diffuse color to <code>c</code>, ignoring any alpha value in <code>c</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+
+
+        </li>
+        <li><span class="parameter">c</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:diffuseleftedge"></a>
+    <strong>Actor:diffuseleftedge (color, c)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's left edge color to <code>c</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+
+
+        </li>
+        <li><span class="parameter">c</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:diffuselowerleft"></a>
+    <strong>Actor:diffuselowerleft (color, c)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's lower left corner color to <code>c</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+
+
+        </li>
+        <li><span class="parameter">c</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:diffuselowerright"></a>
+    <strong>Actor:diffuselowerright (color, c)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's lower right corner color to <code>c</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+
+
+        </li>
+        <li><span class="parameter">c</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:diffuseramp"></a>
+    <strong>Actor:diffuseramp ()</strong>
+    </dt>
+    <dd>
+    Makes the Actor switch between two colors, jumping back to the first after reaching the second.   See Themerdocs/effect_colors.txt for an example.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:diffuserightedge"></a>
+    <strong>Actor:diffuserightedge (color, c)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's right edge color to <code>c</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+
+
+        </li>
+        <li><span class="parameter">c</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:diffuseshift"></a>
+    <strong>Actor:diffuseshift ()</strong>
+    </dt>
+    <dd>
+    Makes the Actor shift between two colors smoothly.   See Themerdocs/effect_colors.txt for an example.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:diffusetopedge"></a>
+    <strong>Actor:diffusetopedge (color, c)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's top edge color to <code>c</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+
+
+        </li>
+        <li><span class="parameter">c</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:diffuseupperleft"></a>
+    <strong>Actor:diffuseupperleft (color, c)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's upper left corner color to <code>c</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+
+
+        </li>
+        <li><span class="parameter">c</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:diffuseupperright"></a>
+    <strong>Actor:diffuseupperright (color, c)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's upper right corner color to <code>c</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+
+
+        </li>
+        <li><span class="parameter">c</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:Draw"></a>
+    <strong>Actor:Draw ()</strong>
+    </dt>
+    <dd>
+    Tells the Actor to draw itself.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:draworder"></a>
+    <strong>Actor:draworder (int, iOrder)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's draworder to <code>iOrder</code>, where larger values display first.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">int</span>
+
+
+
+        </li>
+        <li><span class="parameter">iOrder</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:drop"></a>
+    <strong>Actor:drop (time)</strong>
+    </dt>
+    <dd>
+    Set the Actor's effect clock to <code>s</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">time</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:ease"></a>
+    <strong>Actor:ease (time, ease)</strong>
+    </dt>
+    <dd>
+    Set the Actor's effect clock to <code>s</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">time</span>
+
+
+
+        </li>
+        <li><span class="parameter">ease</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:effectclock"></a>
+    <strong>Actor:effectclock (string, s)</strong>
+    </dt>
+    <dd>
+    Set the Actor's effect clock to <code>s</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">s</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:effectcolor1"></a>
+    <strong>Actor:effectcolor1 (color, c)</strong>
+    </dt>
+    <dd>
+    Sets the first effect color to <code>c</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+
+
+        </li>
+        <li><span class="parameter">c</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:effectcolor2"></a>
+    <strong>Actor:effectcolor2 (color, c)</strong>
+    </dt>
+    <dd>
+    Sets the second effect color to <code>c</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+
+
+        </li>
+        <li><span class="parameter">c</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:effectmagnitude"></a>
+    <strong>Actor:effectmagnitude (float, fX, float, fY, float, fZ)</strong>
+    </dt>
+    <dd>
+    Set the Actor's effect magnitude in each direction to the given values.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fX</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fY</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fZ</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:effectoffset"></a>
+    <strong>Actor:effectoffset (float, fTime)</strong>
+    </dt>
+    <dd>
+    Set the Actor's effect offset to <code>fTime</code>.   The offset is added to the time into the effect before calculating percent<em>through</em>effect.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fTime</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:effectperiod"></a>
+    <strong>Actor:effectperiod (float, fTime)</strong>
+    </dt>
+    <dd>
+    Set the Actor's effect period to <code>fTime</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fTime</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:effecttiming"></a>
+    <strong>Actor:effecttiming (float, ramp_to_half, float, hold_at_half, float, ramp_to_full, float, hold_at_zero, float, hold_at_full)</strong>
+    </dt>
+    <dd>
+
+<p>Set the Actor's effect timing.<br /></p>
+<pre><code>    hold_at_zero is before hold_at_full in the argument list for compatibility.   A future version will probably swap them because it makes more sense to have hold_at_full come before hold_at_zero.&lt;br /&gt;
+    All effect timings must be greater than or equal to zero, at least one of them must be greater than zero.&lt;br /&gt;
+    The effect timing controls how long it takes an effect to cycle and how long it spends in each phase.&lt;br /&gt;
+    Depending on the effect clock, the actor's time into effect is updated every frame.  That time is then translated into a percent_through_effect using the parameters to this function.&lt;br /&gt;
+    &lt;br /&gt;
+    ramp_to_half is the amount of time for percent_through_effect to reach 0.5.&lt;br /&gt;
+    hold_at_half is the amount of time percent_through_effect will stay at 0.5.&lt;br /&gt;
+    ramp_to_full is the amount of time percent_through_effect will take to go from 0.5 to 1.0.&lt;br /&gt;
+    hold_at_full is the amount of time percent_through_effect will stay at 1.0.&lt;br /&gt;
+    After reaching the end of hold_at_full, percent_through_effect stays at 0 until hold_at_zero is over.&lt;br /&gt;
+    &lt;br /&gt;
+    The different effects use percent_through_effect in different ways.  Some use it to calculate percent_between_colors with this sine wave:  sin((percent_through_effect + 0.25f) * 2 * PI ) / 2 + 0.5f&lt;br /&gt;
+    Some effects check the internal bool blink_on.  blink_on is true if percent_through_effect is greater than 0.5 and false if percent_through_effect is less than or equal to 0.5.&lt;br /&gt;
+    Check the effect functions for individual explanations:  diffuseblink, diffuseshift, glowblink, glowshift, glowramp, rainbow, wag, bounce, bob, pulse, spin, vibrate.
+</code></pre>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">ramp_to_half</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">hold_at_half</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">ramp_to_full</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">hold_at_zero</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">hold_at_full</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:effect_hold_at_full"></a>
+    <strong>Actor:effect_hold_at_full (float, hold_at_full)</strong>
+    </dt>
+    <dd>
+    Set the hold<em>at</em>full part of the effect timing while leaving the others unchanged.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">hold_at_full</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:fadebottom"></a>
+    <strong>Actor:fadebottom (float, percent)</strong>
+    </dt>
+    <dd>
+    Fades <code>percent</code> of the Actor from the bottom where <code>percent</code> is in the range 0..1.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">percent</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:fadeleft"></a>
+    <strong>Actor:fadeleft (float, percent)</strong>
+    </dt>
+    <dd>
+    Fades <code>percent</code> of the Actor from the left where <code>percent</code> is in the range 0..1.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">percent</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:faderight"></a>
+    <strong>Actor:faderight (float, percent)</strong>
+    </dt>
+    <dd>
+    Fades <code>percent</code> of the Actor from the right where <code>percent</code> is in the range 0..1.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">percent</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:fadetop"></a>
+    <strong>Actor:fadetop (float, percent)</strong>
+    </dt>
+    <dd>
+    Fades <code>percent</code> of the Actor from the top where <code>percent</code> is in the range 0..1.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">percent</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:finishtweening"></a>
+    <strong>Actor:finishtweening ()</strong>
+    </dt>
+    <dd>
+    Finishes up an Actor's tween immediately.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:FullScreen"></a>
+    <strong>Actor:FullScreen ()</strong>
+    </dt>
+    <dd>
+    Stretches an Actor to fill the entire screen.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:getaux"></a>
+    <strong>Actor:getaux ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's aux value.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetBaseZoomX"></a>
+    <strong>Actor:GetBaseZoomX ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's base X zoom value.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetBaseZoomY"></a>
+    <strong>Actor:GetBaseZoomY ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's base Y zoom value.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetBaseZoomZ"></a>
+    <strong>Actor:GetBaseZoomZ ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's base Z zoom value.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetCommand"></a>
+    <strong>Actor:GetCommand (string, sCmdName)</strong>
+    </dt>
+    <dd>
+    Returns <code>true</code> if the Actor has a command named <code>sCmdName</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sCmdName</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        bool
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetDiffuse"></a>
+    <strong>Actor:GetDiffuse ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's current diffuse color.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        color
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetDiffuseAlpha"></a>
+    <strong>Actor:GetDiffuseAlpha ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's current diffusealpha.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetEffectDelta"></a>
+    <strong>Actor:GetEffectDelta ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's current effect delta.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:geteffectmagnitude"></a>
+    <strong>Actor:geteffectmagnitude ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's current effect magnitude as three floats (not one; I hate Lua.xsd).
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetGlow"></a>
+    <strong>Actor:GetGlow ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's current glow color.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        color
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetHAlign"></a>
+    <strong>Actor:GetHAlign ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's horizontal alignment as a number in the range 0..1.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetName"></a>
+    <strong>Actor:GetName ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's name.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        string
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetNumStates"></a>
+    <strong>Actor:GetNumStates ()</strong>
+    </dt>
+    <dd>
+    Returns the number of states the Actor has.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetHeight"></a>
+    <strong>Actor:GetHeight ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's current height.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetRotationX"></a>
+    <strong>Actor:GetRotationX ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's current X rotation.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetRotationY"></a>
+    <strong>Actor:GetRotationY ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's current Y rotation.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetRotationZ"></a>
+    <strong>Actor:GetRotationZ ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's current Z rotation.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetSecsIntoEffect"></a>
+    <strong>Actor:GetSecsIntoEffect ()</strong>
+    </dt>
+    <dd>
+    Returns the number of seconds into the currently running effect (e.g.  diffuseshift, bob).
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetTweenTimeLeft"></a>
+    <strong>Actor:GetTweenTimeLeft ()</strong>
+    </dt>
+    <dd>
+    Returns how much time is remaining for the current tween.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetVAlign"></a>
+    <strong>Actor:GetVAlign ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's vertical alignment as a number in the range 0..1.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetWidth"></a>
+    <strong>Actor:GetWidth ()</strong>
+    </dt>
+    <dd>
+    Returns the Actor's current width.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetZoomedHeight"></a>
+    <strong>Actor:GetZoomedHeight ()</strong>
+    </dt>
+    <dd>
+    Returns the zoomed height of an Actor.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:GetZoomedWidth"></a>
+    <strong>Actor:GetZoomedWidth ()</strong>
+    </dt>
+    <dd>
+    Returns the zoomed width of an Actor.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:get_tween_uses_effect_delta"></a>
+    <strong>Actor:get_tween_uses_effect_delta ()</strong>
+    </dt>
+    <dd>
+    Returns true if this actor is currently set to use the effect delta for tweening.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        bool
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:glow"></a>
+    <strong>Actor:glow (color, c)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's glow color.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+
+
+        </li>
+        <li><span class="parameter">c</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:glowblink"></a>
+    <strong>Actor:glowblink ()</strong>
+    </dt>
+    <dd>
+    Makes the Actor glow between two colors immediately.   See Themerdocs/effect_colors.txt for an example.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:glowramp"></a>
+    <strong>Actor:glowramp ()</strong>
+    </dt>
+    <dd>
+    Makes the Actor glow between two colors smoothly, jumping back to the first at the end.   See Themerdocs/effect_colors.txt for an example.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:glowshift"></a>
+    <strong>Actor:glowshift ()</strong>
+    </dt>
+    <dd>
+    Makes the Actor glow between two colors smoothly.   See Themerdocs/effect_colors.txt for an example.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:halign"></a>
+    <strong>Actor:halign (float, fAlign)</strong>
+    </dt>
+    <dd>
+    Set the fractional horizontal alignment of the Actor according to <code>fAlign</code> which should be a float in the range 0..1.  An alignment of 0 is left aligned while an alignment of 1 is right aligned. See <Link function='horizalign' /> for the common case.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fAlign</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:heading"></a>
+    <strong>Actor:heading (float, fHeading)</strong>
+    </dt>
+    <dd>
+    Sets the heading of this Actor to <code>fHeading</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fHeading</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:hibernate"></a>
+    <strong>Actor:hibernate (float, fTime)</strong>
+    </dt>
+    <dd>
+    Hides the Actor for the specified amount of time.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fTime</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:hidden"></a>
+    <strong>Actor:hidden (b)</strong>
+    </dt>
+    <dd>
+    Compatibility alias for the hidden command, which was removed in sm-ssc.  Use <Link function='visible' /> instead.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">b</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:hide_if"></a>
+    <strong>Actor:hide_if (b)</strong>
+    </dt>
+    <dd>
+    Compatibility alias for the hidden command, which was removed in sm-ssc.  Use <a href="../classes/Actor.html#Actor:visible">visible</a> instead.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">b</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:horizalign"></a>
+    <strong>Actor:horizalign (HorizAlign, align)</strong>
+    </dt>
+    <dd>
+    Set the horizontal alignment of the Actor according to <code>align</code>.  See <Link function='halign' /> for fractional alignment.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">HorizAlign</span>
+
+
+
+        </li>
+        <li><span class="parameter">align</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:hurrytweening"></a>
+    <strong>Actor:hurrytweening (float, factor)</strong>
+    </dt>
+    <dd>
+    Hurries up an Actor's tweening by <code>factor</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">factor</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:linear"></a>
+    <strong>Actor:linear (float, fRate)</strong>
+    </dt>
+    <dd>
+    Plays the commands that follow at a normal rate, where <code>fRate</code> is in seconds.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fRate</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:linear"></a>
+    <strong>Actor:linear (side)</strong>
+    </dt>
+    <dd>
+    Plays the lyric command for the specified <code>side</code> (<code>"Back"</code> or <code>"Front"</code>).
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">side</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:name"></a>
+    <strong>Actor:name (string, sName)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's name to <code>sName</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sName</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:pause"></a>
+    <strong>Actor:pause ()</strong>
+    </dt>
+    <dd>
+    Stops the Actor's movement.  (Usually used for Sprites or Models.)
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:pitch"></a>
+    <strong>Actor:pitch (float, fPitch)</strong>
+    </dt>
+    <dd>
+    Sets the pitch of this Actor to <code>fPitch</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fPitch</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:play"></a>
+    <strong>Actor:play ()</strong>
+    </dt>
+    <dd>
+    Starts the Actor's movement.  (Usually used for Sprites or Models.)
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:playcommand"></a>
+    <strong>Actor:playcommand (string, sCommandName, table, params)</strong>
+    </dt>
+    <dd>
+    Plays a command named <code>sCommandName</code>.   <code>params</code> is passed to the command as an argument if it is a table.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sCommandName</span>
+
+
+
+        </li>
+        <li><span class="parameter">table</span>
+
+
+
+        </li>
+        <li><span class="parameter">params</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:playcommand"></a>
+    <strong>Actor:playcommand (playerNumber)</strong>
+    </dt>
+    <dd>
+    Sets the visibility of the Actor based on <code>p</code> being a human player.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerNumber</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:pulse"></a>
+    <strong>Actor:pulse ()</strong>
+    </dt>
+    <dd>
+    Makes the Actor grow and shrink.  Can use <Link function='effectmagnitude' /> to define different pulsing behavior.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:queuecommand"></a>
+    <strong>Actor:queuecommand (string, sCommandName)</strong>
+    </dt>
+    <dd>
+    Queues a command named <code>sCommandName</code> to be played.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sCommandName</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:queuemessage"></a>
+    <strong>Actor:queuemessage (string, sMessageName)</strong>
+    </dt>
+    <dd>
+    Basically creates a command named <code>!sMessageName</code> (Note the ! at the beginning.  The source code says this: "Hack: use "!" as a marker to broadcast a command, instead of playing a command, so we don't have to add yet another element to every tween state for this rarely-used command.")
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sMessageName</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:rainbow"></a>
+    <strong>Actor:rainbow ()</strong>
+    </dt>
+    <dd>
+    Makes the Actor change colors continually using colors of the rainbow.   Each channel follows a cosine wave, red starts at 0, green starts at 2pi/3, and blue starts at 4pi/3.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:roll"></a>
+    <strong>Actor:roll (float, fRoll)</strong>
+    </dt>
+    <dd>
+    Sets the roll of this Actor to <code>fRoll</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fRoll</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:rotationx"></a>
+    <strong>Actor:rotationx (float, fRotation)</strong>
+    </dt>
+    <dd>
+    Set the Actor's rotation on the X axis to <code>fAlign</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fRotation</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:rotationy"></a>
+    <strong>Actor:rotationy (float, fRotation)</strong>
+    </dt>
+    <dd>
+    Set the Actor's rotation on the Y axis to <code>fAlign</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fRotation</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:rotationz"></a>
+    <strong>Actor:rotationz (float, fRotation)</strong>
+    </dt>
+    <dd>
+    Set the Actor's rotation on the Z axis to <code>fAlign</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fRotation</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:rotationz"></a>
+    <strong>Actor:rotationz (float, fRotation)</strong>
+    </dt>
+    <dd>
+    Set the Actor's rotation on the Z axis to <code>fAlign</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fRotation</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:rotationz"></a>
+    <strong>Actor:rotationz (float, fRotation)</strong>
+    </dt>
+    <dd>
+    Set the Actor's rotation on the Z axis to <code>fAlign</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fRotation</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:scale_or_crop_alternative"></a>
+    <strong>Actor:scale_or_crop_alternative (float, fRotation)</strong>
+    </dt>
+    <dd>
+    An alternative version of <a href="../classes/Actor.html#Actor:scale_or_crop_background">scale_or_crop_background</a>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fRotation</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:scale_or_crop_background"></a>
+    <strong>Actor:scale_or_crop_background (float, fRotation)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fRotation</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:scaletocover"></a>
+    <strong>Actor:scaletocover (float, fLeft, float, fTop, float, fRight, float, fBottom)</strong>
+    </dt>
+    <dd>
+    Scales the Actor to cover a rectangle defined by the four float arguments.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fLeft</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fTop</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fRight</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fBottom</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:scaletofit"></a>
+    <strong>Actor:scaletofit (float, fLeft, float, fTop, float, fRight, float, fBottom)</strong>
+    </dt>
+    <dd>
+    Scales the Actor to fit inside a rectangle defined by the four float arguments.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fLeft</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fTop</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fRight</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fBottom</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:SetHeight"></a>
+    <strong>Actor:SetHeight (float, height)</strong>
+    </dt>
+    <dd>
+    Sets the height of the Actor.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">height</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:setsize"></a>
+    <strong>Actor:setsize (width, height)</strong>
+    </dt>
+    <dd>
+    Sets the size of the Actor.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">width</span>
+
+
+
+        </li>
+        <li><span class="parameter">height</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:SetSize"></a>
+    <strong>Actor:SetSize (width, height)</strong>
+    </dt>
+    <dd>
+    Alias for setsize.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">width</span>
+
+
+
+        </li>
+        <li><span class="parameter">height</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:setstate"></a>
+    <strong>Actor:setstate (int, iNewState)</strong>
+    </dt>
+    <dd>
+    Sets a multi-framed Actor's state to <code>iNewState</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">int</span>
+
+
+
+        </li>
+        <li><span class="parameter">iNewState</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:SetWidth"></a>
+    <strong>Actor:SetWidth (float, width)</strong>
+    </dt>
+    <dd>
+    Sets the width of the Actor.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">width</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:set_tween_uses_effect_delta"></a>
+    <strong>Actor:set_tween_uses_effect_delta (bool)</strong>
+    </dt>
+    <dd>
+    Use this to make the actor use the effect clock to tween instead of using the global frame delta.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:shadowcolor"></a>
+    <strong>Actor:shadowcolor (color, c)</strong>
+    </dt>
+    <dd>
+    Sets the shadow's color to <code>c</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+
+
+
+        </li>
+        <li><span class="parameter">c</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:shadowlength"></a>
+    <strong>Actor:shadowlength (float, fLength)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's shadow length to <code>fLength</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fLength</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:shadowlengthx"></a>
+    <strong>Actor:shadowlengthx (float, fLength)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's horizontal shadow length to <code>fLength</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fLength</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:shadowlengthy"></a>
+    <strong>Actor:shadowlengthy (float, fLength)</strong>
+    </dt>
+    <dd>
+    Sets the Actor's vertical shadow length to <code>fLength</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fLength</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:skewx"></a>
+    <strong>Actor:skewx (float, fAmount)</strong>
+    </dt>
+    <dd>
+    Skews the Actor on the x axis by <code>fAmount</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fAmount</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:skewy"></a>
+    <strong>Actor:skewy (float, fAmount)</strong>
+    </dt>
+    <dd>
+    Skews the Actor on the y axis by <code>fAmount</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fAmount</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:sleep"></a>
+    <strong>Actor:sleep (float, fSeconds)</strong>
+    </dt>
+    <dd>
+    Waits <code>fSeconds</code> before executing the next command.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fSeconds</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:smooth"></a>
+    <strong>Actor:smooth (time)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">time</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:spin"></a>
+    <strong>Actor:spin ()</strong>
+    </dt>
+    <dd>
+    Tells the Actor to spin.  Can use <Link function='effectmagnitude' /> to define different spinning behavior.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:stopeffect"></a>
+    <strong>Actor:stopeffect ()</strong>
+    </dt>
+    <dd>
+    Stops any effect the Actor has.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:stoptweening"></a>
+    <strong>Actor:stoptweening ()</strong>
+    </dt>
+    <dd>
+    Stops any tweening.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:stretchto"></a>
+    <strong>Actor:stretchto (float, x1, float, y1, float, x2, float, y2)</strong>
+    </dt>
+    <dd>
+    Stretches the Actor to a rectangle of a specific size.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">x1</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">y1</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">x2</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">y2</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:texturetranslate"></a>
+    <strong>Actor:texturetranslate (float, x, float, y)</strong>
+    </dt>
+    <dd>
+    Translates the texture of the actor by x and y.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">x</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">y</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:texturewrapping"></a>
+    <strong>Actor:texturewrapping (bool, bWrap)</strong>
+    </dt>
+    <dd>
+    Determines if the Actor should use texture wrapping or not.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+
+
+
+        </li>
+        <li><span class="parameter">bWrap</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:tween"></a>
+    <strong>Actor:tween (time, tweentype, params)</strong>
+    </dt>
+    <dd>
+
+<p>Uses type to determine the tween to use.   The type must be one of the TweenType enum values.  If the type is note TweenType<em>Bezier, the params table is ignored.  If the type is TweenType</em>Bezier, then the params table must have 4 or 8 numbers.  4 numbers in the params creates a 1 dimensional bezier curve, 8 numbers creates a 2 dimensional bezier curve.<br /></p>
+<pre><code>    It's usually more convenient to use Actor:linear, Actor:accelerate, and so on, rather than using Actor:tween directly.
+</code></pre>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">time</span>
+
+
+
+        </li>
+        <li><span class="parameter">tweentype</span>
+
+
+
+        </li>
+        <li><span class="parameter">params</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:valign"></a>
+    <strong>Actor:valign (float, fAlign)</strong>
+    </dt>
+    <dd>
+    Set the fractional vertical alignment of the Actor according to <code>fAlign</code> which should be a float in the range 0..1.  An alignment of 0 is top aligned while an alignment of 1 is bottom aligned. See <Link function="vertalign" /> for the common case.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fAlign</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:vertalign"></a>
+    <strong>Actor:vertalign (VertAlign, align)</strong>
+    </dt>
+    <dd>
+    Set the vertical alignment of the Actor according to <code>align</code>.  See <Link function="valign" /> for fractional alignment.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">VertAlign</span>
+
+
+
+        </li>
+        <li><span class="parameter">align</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:vibrate"></a>
+    <strong>Actor:vibrate ()</strong>
+    </dt>
+    <dd>
+    Makes the Actor vibrate violently.  Can use <Link function='effectmagnitude' /> to define different vibration behavior.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:visible"></a>
+    <strong>Actor:visible (bool, b)</strong>
+    </dt>
+    <dd>
+    Sets an Actor's visibility to b.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+
+
+
+        </li>
+        <li><span class="parameter">b</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:wag"></a>
+    <strong>Actor:wag ()</strong>
+    </dt>
+    <dd>
+    Makes the Actor wag.  Use <Link function='effectmagnitude' /> to define different wag behavior.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:x"></a>
+    <strong>Actor:x (float, xPos)</strong>
+    </dt>
+    <dd>
+    Set the x position of the Actor to <code>xPos</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">xPos</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:y"></a>
+    <strong>Actor:y (float, yPos)</strong>
+    </dt>
+    <dd>
+    Set the y position of the Actor to <code>yPos</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">yPos</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:z"></a>
+    <strong>Actor:z (float, zPos)</strong>
+    </dt>
+    <dd>
+    Set the z position of the Actor to <code>zPos</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">zPos</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:zbias"></a>
+    <strong>Actor:zbias (float, fBias)</strong>
+    </dt>
+    <dd>
+    Sets the z bias to <code>fBias</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fBias</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:zbuffer"></a>
+    <strong>Actor:zbuffer (bool, bUse)</strong>
+    </dt>
+    <dd>
+    Enables/disables z-buffer depending on <code>bUse</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+
+
+
+        </li>
+        <li><span class="parameter">bUse</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:zoom"></a>
+    <strong>Actor:zoom (float, zoom)</strong>
+    </dt>
+    <dd>
+    Zooms the Actor to <code>zoom</code> scale.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">zoom</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:zoomto"></a>
+    <strong>Actor:zoomto (float, zoomX, float, zoomY)</strong>
+    </dt>
+    <dd>
+    Zooms the Actor on both the X and Y axis using <code>zoomX</code> and <code>zoomY</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">zoomX</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">zoomY</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:zoomtoheight"></a>
+    <strong>Actor:zoomtoheight (float, zoom)</strong>
+    </dt>
+    <dd>
+    Zooms the Actor to <code>zoom</code> height.  See also: <Link function='zoomy' />.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">zoom</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:zoomtowidth"></a>
+    <strong>Actor:zoomtowidth (float, zoom)</strong>
+    </dt>
+    <dd>
+    Zooms the Actor to <code>zoom</code> width.  See also: <Link function='zoomx' />.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">zoom</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:zoomx"></a>
+    <strong>Actor:zoomx (float, zoom)</strong>
+    </dt>
+    <dd>
+    Zooms the Actor to <code>zoom</code> scale on the X axis.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">zoom</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:zoomy"></a>
+    <strong>Actor:zoomy (float, zoom)</strong>
+    </dt>
+    <dd>
+    Zooms the Actor to <code>zoom</code> scale on the Y axis.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">zoom</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:zoomz"></a>
+    <strong>Actor:zoomz (float, zoom)</strong>
+    </dt>
+    <dd>
+    Zooms the Actor to <code>zoom</code> scale on the Z axis.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">zoom</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:ztest"></a>
+    <strong>Actor:ztest (bool, bTest)</strong>
+    </dt>
+    <dd>
+    Sets the z testing mode to write on pass if <code>true</code>, turns it off if <code>false</code>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+
+
+
+        </li>
+        <li><span class="parameter">bTest</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:ztestmode"></a>
+    <strong>Actor:ztestmode (ZTestMode, testMode)</strong>
+    </dt>
+    <dd>
+    Sets the z testing mode to <code>testMode</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ZTestMode</span>
+
+
+
+        </li>
+        <li><span class="parameter">testMode</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:zwrite"></a>
+    <strong>Actor:zwrite (bool, bWrite)</strong>
+    </dt>
+    <dd>
+    Sets z writing to <code>true</code> or <code>false</code> based on <code>bWrite</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+
+
+
+        </li>
+        <li><span class="parameter">bWrite</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:bezier"></a>
+    <strong>Actor:bezier (time, curve)</strong>
+    </dt>
+    <dd>
+    Plays the commands that follow using a bezier curve to determine the rate.   The curve must have 4 or 8 elements.  This is a convenience wrapper around calling Actor:tween with TweenType_Bezier.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">time</span>
+
+
+
+        </li>
+        <li><span class="parameter">curve</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:FullScreen"></a>
+    <strong>Actor:FullScreen ()</strong>
+    </dt>
+    <dd>
+    Stretches an Actor to cover the screen.  (equivalent to <code>stretchto,0,0,SCREEN<em>WIDTH,SCREEN</em>HEIGHT</code>)
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:MaskDest"></a>
+    <strong>Actor:MaskDest ()</strong>
+    </dt>
+    <dd>
+    Sets and Actor as a mask destination.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:MaskSource"></a>
+    <strong>Actor:MaskSource ()</strong>
+    </dt>
+    <dd>
+    Sets an Actor as a mask source.  (Also clears zbuffer; other mask sources need to not clear the zbuffer)
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:Real"></a>
+    <strong>Actor:Real (f)</strong>
+    </dt>
+    <dd>
+    Make graphics their true size at any resolution.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">f</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:RealInverse"></a>
+    <strong>Actor:RealInverse (f)</strong>
+    </dt>
+    <dd>
+    Scale things back up after they have already been scaled down.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">f</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:thump"></a>
+    <strong>Actor:thump (fEffectPeriod)</strong>
+    </dt>
+    <dd>
+    A customized version of pulse that is more appealing for on-beat effects.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">fEffectPeriod</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Actor:xy"></a>
+    <strong>Actor:xy (float, actorX, float, actorY)</strong>
+    </dt>
+    <dd>
+    Sets the x and y location of the Actor in one command.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">actorX</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">actorY</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+</dl>
 
 
 </div> <!-- id="content" -->
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2018-11-28 18:32:53 </i>
+<i style="float:right;">Last updated 2018-11-28 18:35:44 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
