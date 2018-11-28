@@ -1,0 +1,1368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Etterna lua docs</title>
+    <link rel="stylesheet" href="../ldoc_fixed.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Etterna</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/Actor.html">Actor</a></li>
+  <li><a href="../classes/ActorFrame.html">ActorFrame</a></li>
+  <li><a href="../classes/ActorFrameTexture.html">ActorFrameTexture</a></li>
+  <li><strong>ActorMultiVertex</strong></li>
+  <li><a href="../classes/BitmapText.html">BitmapText</a></li>
+  <li><a href="../classes/DownloadManager.html">DownloadManager</a></li>
+  <li><a href="../classes/ScreenManager.html">ScreenManager</a></li>
+  <li><a href="../classes/SongManager.html">SongManager</a></li>
+  <li><a href="../classes/Sprite.html">Sprite</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/00_Utility.html">00_Utility</a></li>
+  <li><a href="../modules/00_init.html">00_init</a></li>
+  <li><a href="../modules/01_IniFile.html">01_IniFile</a></li>
+  <li><a href="../modules/01_alias.html">01_alias</a></li>
+  <li><a href="../modules/01_base.html">01_base</a></li>
+  <li><a href="../modules/02_ActorDef.html">02_ActorDef</a></li>
+  <li><a href="../modules/02_Serialize.html">02_Serialize</a></li>
+  <li><a href="../modules/03.html">03</a></li>
+  <li><a href="../modules/09_SimNSkinPreview.html">09_SimNSkinPreview</a></li>
+  <li><a href="../modules/10.html">10</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="../topics/actor-commands.md.html">Actor Commands</a></li>
+  <li><a href="../topics/quickstart.md.html">QuickStart</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>ActorMultiVertex</code></h1>
+<p>ActorMultiVertex (Inherits <a href="../classes/Actor.html#">Actor</a>)</p>
+<p>
+
+</p>
+
+
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:AddQuadState">ActorMultiVertex:AddQuadState (offset)</a></td>
+	<td class="summary">The list of quad states is used to determine which animation state is used for each quad.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:AddState">ActorMultiVertex:AddState (table, state_data)</a></td>
+	<td class="summary">Adds an animation state to the ActorMultiVertex.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:ForceStateUpdate">ActorMultiVertex:ForceStateUpdate ()</a></td>
+	<td class="summary">Forces the AMV to update the texture coordinates on all its quads, even if the current state has not changed.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:GetUseAnimationState">ActorMultiVertex:GetUseAnimationState ()</a></td>
+	<td class="summary">Returns whether the AMV uses the animation state.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:SetUseAnimationState">ActorMultiVertex:SetUseAnimationState (use)</a></td>
+	<td class="summary">
+<p>Sets whether the AMV uses the animation state.<br /></p>
+<pre><code>    This works best when using DrawMode_Quads.&lt;br /&gt;
+    AMV's can have animated textures like sprites.
+</code></pre>
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:GetNumStates">ActorMultiVertex:GetNumStates ()</a></td>
+	<td class="summary">Returns the number of states the AMV has.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:GetNumQuadStates">ActorMultiVertex:GetNumQuadStates ()</a></td>
+	<td class="summary">Returns the number of quad states in the destination tween state for the AMV.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:GetState">ActorMultiVertex:GetState ()</a></td>
+	<td class="summary">Returns the id of the current state.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:GetDecodeMovie">ActorMultiVertex:GetDecodeMovie ()</a></td>
+	<td class="summary">Gets whether the AMV should call the decode function for its texture during updates.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:SetDecodeMovie">ActorMultiVertex:SetDecodeMovie (bool, decode)</a></td>
+	<td class="summary">Sets whether the AMV should call the decode function for its texture during updates.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:SetVertex">ActorMultiVertex:SetVertex (index, table)</a></td>
+	<td class="summary">Sets vertex number <code>index</code> with the properties provided.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:SetVertices">ActorMultiVertex:SetVertices (first, vertices)</a></td>
+	<td class="summary">Sets multiple vertices at once.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:SetVertsFromSplines">ActorMultiVertex:SetVertsFromSplines ()</a></td>
+	<td class="summary">
+<p>Sets all the drawn verts of the ActorMultiVertex by evaluating the splines.<br /></p>
+<pre><code>    ("all the drawn verts" means all the verts between FirstToDraw and NumToDraw, the verts that are set to draw in the current tween state.)&lt;br /&gt;
+    The parts of the ActorMultiVertex are evenly spaced along the spline in terms of t value.&lt;br /&gt;
+    The exact behavior depends on the draw mode.&lt;br /&gt;
+    DrawMode_Quads uses all 4 splines, one for each corner.&lt;br /&gt;
+    DrawMode_QuadStrip and DrawMode_Strip use 2 splines, one for each edge of the strip.&lt;br /&gt;
+    DrawMode_Fan uses one spline, for the edge verts of the fan.
+</code></pre>
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:GetSpline">ActorMultiVertex:GetSpline (i)</a></td>
+	<td class="summary">Returns the requested spline.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:SetNumVertices">ActorMultiVertex:SetNumVertices (num)</a></td>
+	<td class="summary">Sets the number of vertices.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:GetNumVertices">ActorMultiVertex:GetNumVertices (void)</a></td>
+	<td class="summary">Returns the number of vertices</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:SetDrawState">ActorMultiVertex:SetDrawState (table)</a></td>
+	<td class="summary">
+<p>Sets the draw state variables to the values in the table.<br /></p>
+<pre><code>    Mode must be a &lt;Link class='ENUM' function='DrawMode'&gt;DrawMode&lt;/Link&gt;.&lt;br /&gt;
+    First is the index of the first vertex to draw.&lt;br /&gt;
+    Num is the number of vertices to draw.
+</code></pre>
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:SetState">ActorMultiVertex:SetState (int)</a></td>
+	<td class="summary">Sets the current state.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:GetQuadState">ActorMultiVertex:GetQuadState (void)</a></td>
+	<td class="summary">Returns the offset of the requested quad state.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:SetQuadState">ActorMultiVertex:SetQuadState (id, offset)</a></td>
+	<td class="summary">Sets the offset of the requested quad state.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:GetStateData">ActorMultiVertex:GetStateData (id)</a></td>
+	<td class="summary">Returns a table containing the data for the requested state.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:SetStateData">ActorMultiVertex:SetStateData (id, table)</a></td>
+	<td class="summary">Sets the requested state to the data in state_data.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:SetStateProperties">ActorMultiVertex:SetStateProperties (table)</a></td>
+	<td class="summary">Each element of the table must be a state_data and is used to construct one state.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:RemoveState">ActorMultiVertex:RemoveState (id)</a></td>
+	<td class="summary">Removes the requested state from the state list.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:RemoveQuadState">ActorMultiVertex:RemoveQuadState (id)</a></td>
+	<td class="summary">Removes the requested quad state from the quad state list.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:SetAllStateDelays">ActorMultiVertex:SetAllStateDelays (delay)</a></td>
+	<td class="summary">Sets the delay for every state to delay.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:SetSecondsIntoAnimation">ActorMultiVertex:SetSecondsIntoAnimation (seconds)</a></td>
+	<td class="summary">Sets how far into its animation the AMV is.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:GetDestDrawMode">ActorMultiVertex:GetDestDrawMode (void)</a></td>
+	<td class="summary">Get the <Link class='ENUM' function='DrawMode'>DrawMode</Link> of the destination tween state.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:GetDestFirstToDraw">ActorMultiVertex:GetDestFirstToDraw (void)</a></td>
+	<td class="summary">Get the FirstToDraw of the destination tween state.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:GetDestNumToDraw">ActorMultiVertex:GetDestNumToDraw (void)</a></td>
+	<td class="summary">Get the NumToDraw of the destination tween state.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:GetCurrDrawMode">ActorMultiVertex:GetCurrDrawMode (void)</a></td>
+	<td class="summary">Get the <Link class='ENUM' function='DrawMode'>DrawMode</Link> of the current tween state.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:GetCurrFirstToDraw">ActorMultiVertex:GetCurrFirstToDraw (void)</a></td>
+	<td class="summary">Get the FirstToDraw of the current tween state.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:GetCurrNumToDraw">ActorMultiVertex:GetCurrNumToDraw (void)</a></td>
+	<td class="summary">Get the NumToDraw of the current tween state.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:GetTexture">ActorMultiVertex:GetTexture ()</a></td>
+	<td class="summary">Returns the ActorMultiVertex's texture.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:SetEffectMode">ActorMultiVertex:SetEffectMode (EffectMode, em)</a></td>
+	<td class="summary">Sets the <Link class='ENUM' function='EffectMode'>EffectMode</Link> of the ActorMultiVertex.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:SetTextureMode">ActorMultiVertex:SetTextureMode (TextureMode, tm)</a></td>
+	<td class="summary">Sets the <Link class='ENUM' function='TextureMode'>TextureMode</Link> of the ActorMultiVertex.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:SetLineWidth">ActorMultiVertex:SetLineWidth (float, width)</a></td>
+	<td class="summary">Sets the width of the line for DrawMode_LineStrip.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:SetTexture">ActorMultiVertex:SetTexture (RageTexture, texture)</a></td>
+	<td class="summary">Sets the texture to <code>texture</code></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ActorMultiVertex:LoadTexture">ActorMultiVertex:LoadTexture (string, path)</a></td>
+	<td class="summary">Sets the texture at from the file path <code>path</code>.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "ActorMultiVertex:AddQuadState"></a>
+    <strong>ActorMultiVertex:AddQuadState (offset)</strong>
+    </dt>
+    <dd>
+    The list of quad states is used to determine which animation state is used for each quad.   The offset is added to the AMV's current state, and the resulting state is used.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">offset</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:AddState"></a>
+    <strong>ActorMultiVertex:AddState (table, state_data)</strong>
+    </dt>
+    <dd>
+
+<p>Adds an animation state to the ActorMultiVertex.   The state_data table must be like this:<br /></p>
+<pre><code>    {{left, top, right, bottom}, delay}&lt;br /&gt;
+    left, top, right, and bottom are pixel coordinates, starting at 0.  If delay is 0 or negative, the state will last forever.
+</code></pre>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">table</span>
+
+
+
+        </li>
+        <li><span class="parameter">state_data</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:ForceStateUpdate"></a>
+    <strong>ActorMultiVertex:ForceStateUpdate ()</strong>
+    </dt>
+    <dd>
+    Forces the AMV to update the texture coordinates on all its quads, even if the current state has not changed.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:GetUseAnimationState"></a>
+    <strong>ActorMultiVertex:GetUseAnimationState ()</strong>
+    </dt>
+    <dd>
+    Returns whether the AMV uses the animation state.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        bool
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:SetUseAnimationState"></a>
+    <strong>ActorMultiVertex:SetUseAnimationState (use)</strong>
+    </dt>
+    <dd>
+
+<p>Sets whether the AMV uses the animation state.<br /></p>
+<pre><code>    This works best when using DrawMode_Quads.&lt;br /&gt;
+    AMV's can have animated textures like sprites.   Each state tells the AMV what part of the texture to use, and how long the state lasts.&lt;br /&gt;
+    Use AddState to add a state onto the end, or SetStateProperties to set all the states at once, or SetState to set a single state.&lt;br /&gt;
+    Each quad has its own offset that is added to the current state.  Use AddQuadState to add to the list of quad states, or SetQuadState to set an existing quad state.
+</code></pre>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">use</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:GetNumStates"></a>
+    <strong>ActorMultiVertex:GetNumStates ()</strong>
+    </dt>
+    <dd>
+    Returns the number of states the AMV has.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:GetNumQuadStates"></a>
+    <strong>ActorMultiVertex:GetNumQuadStates ()</strong>
+    </dt>
+    <dd>
+    Returns the number of quad states in the destination tween state for the AMV.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:GetState"></a>
+    <strong>ActorMultiVertex:GetState ()</strong>
+    </dt>
+    <dd>
+    Returns the id of the current state.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:GetDecodeMovie"></a>
+    <strong>ActorMultiVertex:GetDecodeMovie ()</strong>
+    </dt>
+    <dd>
+    Gets whether the AMV should call the decode function for its texture during updates.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        bool
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:SetDecodeMovie"></a>
+    <strong>ActorMultiVertex:SetDecodeMovie (bool, decode)</strong>
+    </dt>
+    <dd>
+    Sets whether the AMV should call the decode function for its texture during updates.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+
+
+
+        </li>
+        <li><span class="parameter">decode</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:SetVertex"></a>
+    <strong>ActorMultiVertex:SetVertex (index, table)</strong>
+    </dt>
+    <dd>
+    Sets vertex number <code>index</code> with the properties provided.  The tables of properties are each optional and can be provided in any order.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">index</span>
+            <span class="types"><span class="type">number</span></span>
+
+
+
+        </li>
+        <li><span class="parameter">table</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         pos, table color, table textcoords }
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:SetVertices"></a>
+    <strong>ActorMultiVertex:SetVertices (first, vertices)</strong>
+    </dt>
+    <dd>
+
+<p>Sets multiple vertices at once.  The elements of <code>vertices</code> should themselves be tables, of the form provided to <Link class='ActorMultiVertex' function='SetVertex'>SetVertex</Link>. If <code>vertices</code> is the first argument it will start from vertex 1. If an integer is provided before <code>vertices</code> it will start from that vertex. It will add vertices as necessary.</p>
+<pre><code>    Example: self:SetVertices( { { { x1, y1, z1 } , { r1,g1,b1,a1 } , { tcx1,tcy1 } }; { { x2, y2, z2 } , { r2,g2,b2,a2 } , { tcx2,tcy2 } } } )
+</code></pre>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">first</span>
+
+
+
+        </li>
+        <li><span class="parameter">vertices</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:SetVertsFromSplines"></a>
+    <strong>ActorMultiVertex:SetVertsFromSplines ()</strong>
+    </dt>
+    <dd>
+
+<p>Sets all the drawn verts of the ActorMultiVertex by evaluating the splines.<br /></p>
+<pre><code>    ("all the drawn verts" means all the verts between FirstToDraw and NumToDraw, the verts that are set to draw in the current tween state.)&lt;br /&gt;
+    The parts of the ActorMultiVertex are evenly spaced along the spline in terms of t value.&lt;br /&gt;
+    The exact behavior depends on the draw mode.&lt;br /&gt;
+    DrawMode_Quads uses all 4 splines, one for each corner.&lt;br /&gt;
+    DrawMode_QuadStrip and DrawMode_Strip use 2 splines, one for each edge of the strip.&lt;br /&gt;
+    DrawMode_Fan uses one spline, for the edge verts of the fan.   The first vert is not touched because it is the center.&lt;br /&gt;
+    DrawMode_Triangles uses 3 splines, one for each corner.&lt;br /&gt;
+    DrawMode_SymmetricQuadStrip uses 3 splines, one on each edge and one in the center.&lt;br /&gt;
+    DrawMode_LineStrip uses 1 spline.&lt;br /&gt;
+</code></pre>
+
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:GetSpline"></a>
+    <strong>ActorMultiVertex:GetSpline (i)</strong>
+    </dt>
+    <dd>
+
+<p>Returns the requested spline.   Spline indices range from 1 to 4.<br /></p>
+<pre><code>    ActorMultiVertex splines are not inside the tween state, and will not change the verts until you call SetVertsFromSplines.
+</code></pre>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">i</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        CubicSplineN
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:SetNumVertices"></a>
+    <strong>ActorMultiVertex:SetNumVertices (num)</strong>
+    </dt>
+    <dd>
+    Sets the number of vertices.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">num</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:GetNumVertices"></a>
+    <strong>ActorMultiVertex:GetNumVertices (void)</strong>
+    </dt>
+    <dd>
+    Returns the number of vertices
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">void</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:SetDrawState"></a>
+    <strong>ActorMultiVertex:SetDrawState (table)</strong>
+    </dt>
+    <dd>
+
+<p>Sets the draw state variables to the values in the table.<br /></p>
+<pre><code>    Mode must be a &lt;Link class='ENUM' function='DrawMode'&gt;DrawMode&lt;/Link&gt;.&lt;br /&gt;
+    First is the index of the first vertex to draw.&lt;br /&gt;
+    Num is the number of vertices to draw.   -1 for Num means draw all verts after First.&lt;br /&gt;
+    Any value not in the table defaults to the already set value.&lt;br /&gt;
+    Examples:&lt;br /&gt;
+    -- Sets all three parts of the draw state.&lt;br /&gt;
+    self:SetDrawState{Mode="DrawMode_Quads", First= 1, Num= -1}&lt;br /&gt;
+    -- Set only the draw mode.  First and Num remain unchanged from previous.&lt;br /&gt;
+    self:SetDrawState{Mode="DrawMode_Quads"}&lt;br /&gt;
+    -- Set the first and number to draw.  Draw mode remains unchanged.&lt;br /&gt;
+    self:SetDrawState{First= 3, Num= 4}&lt;br /&gt;
+</code></pre>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">table</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         { Mode= mode, First= first, Num= num }
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:SetState"></a>
+    <strong>ActorMultiVertex:SetState (int)</strong>
+    </dt>
+    <dd>
+    Sets the current state.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">int</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:GetQuadState"></a>
+    <strong>ActorMultiVertex:GetQuadState (void)</strong>
+    </dt>
+    <dd>
+    Returns the offset of the requested quad state.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">void</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:SetQuadState"></a>
+    <strong>ActorMultiVertex:SetQuadState (id, offset)</strong>
+    </dt>
+    <dd>
+    Sets the offset of the requested quad state.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">id</span>
+
+
+
+        </li>
+        <li><span class="parameter">offset</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:GetStateData"></a>
+    <strong>ActorMultiVertex:GetStateData (id)</strong>
+    </dt>
+    <dd>
+    Returns a table containing the data for the requested state.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">id</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        table
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:SetStateData"></a>
+    <strong>ActorMultiVertex:SetStateData (id, table)</strong>
+    </dt>
+    <dd>
+    Sets the requested state to the data in state_data.   Similar to AddState, but SetStateData only works on states that have already been added.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">id</span>
+
+
+
+        </li>
+        <li><span class="parameter">table</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:SetStateProperties"></a>
+    <strong>ActorMultiVertex:SetStateProperties (table)</strong>
+    </dt>
+    <dd>
+    Each element of the table must be a state_data and is used to construct one state.   The table as a whole is the entire list of all states for the AMV.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">table</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         {state_data, ...}
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:RemoveState"></a>
+    <strong>ActorMultiVertex:RemoveState (id)</strong>
+    </dt>
+    <dd>
+    Removes the requested state from the state list.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">id</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:RemoveQuadState"></a>
+    <strong>ActorMultiVertex:RemoveQuadState (id)</strong>
+    </dt>
+    <dd>
+    Removes the requested quad state from the quad state list.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">id</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        table
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:SetAllStateDelays"></a>
+    <strong>ActorMultiVertex:SetAllStateDelays (delay)</strong>
+    </dt>
+    <dd>
+    Sets the delay for every state to delay.  (seconds)
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">delay</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:SetSecondsIntoAnimation"></a>
+    <strong>ActorMultiVertex:SetSecondsIntoAnimation (seconds)</strong>
+    </dt>
+    <dd>
+    Sets how far into its animation the AMV is.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">seconds</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        table
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:GetDestDrawMode"></a>
+    <strong>ActorMultiVertex:GetDestDrawMode (void)</strong>
+    </dt>
+    <dd>
+    Get the <Link class='ENUM' function='DrawMode'>DrawMode</Link> of the destination tween state.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">void</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        DrawMode
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:GetDestFirstToDraw"></a>
+    <strong>ActorMultiVertex:GetDestFirstToDraw (void)</strong>
+    </dt>
+    <dd>
+    Get the FirstToDraw of the destination tween state.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">void</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:GetDestNumToDraw"></a>
+    <strong>ActorMultiVertex:GetDestNumToDraw (void)</strong>
+    </dt>
+    <dd>
+    Get the NumToDraw of the destination tween state.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">void</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:GetCurrDrawMode"></a>
+    <strong>ActorMultiVertex:GetCurrDrawMode (void)</strong>
+    </dt>
+    <dd>
+    Get the <Link class='ENUM' function='DrawMode'>DrawMode</Link> of the current tween state.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">void</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        DrawMode
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:GetCurrFirstToDraw"></a>
+    <strong>ActorMultiVertex:GetCurrFirstToDraw (void)</strong>
+    </dt>
+    <dd>
+    Get the FirstToDraw of the current tween state.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">void</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:GetCurrNumToDraw"></a>
+    <strong>ActorMultiVertex:GetCurrNumToDraw (void)</strong>
+    </dt>
+    <dd>
+    Get the NumToDraw of the current tween state.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">void</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:GetTexture"></a>
+    <strong>ActorMultiVertex:GetTexture ()</strong>
+    </dt>
+    <dd>
+    Returns the ActorMultiVertex's texture.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        RageTexture
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:SetEffectMode"></a>
+    <strong>ActorMultiVertex:SetEffectMode (EffectMode, em)</strong>
+    </dt>
+    <dd>
+    Sets the <Link class='ENUM' function='EffectMode'>EffectMode</Link> of the ActorMultiVertex.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">EffectMode</span>
+
+
+
+        </li>
+        <li><span class="parameter">em</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:SetTextureMode"></a>
+    <strong>ActorMultiVertex:SetTextureMode (TextureMode, tm)</strong>
+    </dt>
+    <dd>
+    Sets the <Link class='ENUM' function='TextureMode'>TextureMode</Link> of the ActorMultiVertex.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">TextureMode</span>
+
+
+
+        </li>
+        <li><span class="parameter">tm</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:SetLineWidth"></a>
+    <strong>ActorMultiVertex:SetLineWidth (float, width)</strong>
+    </dt>
+    <dd>
+    Sets the width of the line for DrawMode_LineStrip.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">width</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:SetTexture"></a>
+    <strong>ActorMultiVertex:SetTexture (RageTexture, texture)</strong>
+    </dt>
+    <dd>
+    Sets the texture to <code>texture</code>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">RageTexture</span>
+
+
+
+        </li>
+        <li><span class="parameter">texture</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ActorMultiVertex:LoadTexture"></a>
+    <strong>ActorMultiVertex:LoadTexture (string, path)</strong>
+    </dt>
+    <dd>
+    Sets the texture at from the file path <code>path</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">path</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2018-11-28 18:29:39 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

@@ -40,7 +40,12 @@
 <ul class="nowrap">
   <li><a href="../classes/Actor.html">Actor</a></li>
   <li><a href="../classes/ActorFrame.html">ActorFrame</a></li>
+  <li><a href="../classes/ActorFrameTexture.html">ActorFrameTexture</a></li>
+  <li><a href="../classes/ActorMultiVertex.html">ActorMultiVertex</a></li>
   <li><a href="../classes/BitmapText.html">BitmapText</a></li>
+  <li><a href="../classes/DownloadManager.html">DownloadManager</a></li>
+  <li><a href="../classes/ScreenManager.html">ScreenManager</a></li>
+  <li><a href="../classes/SongManager.html">SongManager</a></li>
   <li><strong>Sprite</strong></li>
 </ul>
 <h2>Modules</h2>
@@ -76,166 +81,144 @@
 <h2><a href="#Methods">Methods</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#Sprite:Load">Sprite:Load ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:LoadBanner">Sprite:LoadBanner ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:LoadBackground">Sprite:LoadBackground ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:LoadFromCached">Sprite:LoadFromCached ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:customtexturerect">Sprite:customtexturerect ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:SetCustomImageRect">Sprite:SetCustomImageRect ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:SetCustomPosCoords">Sprite:SetCustomPosCoords ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:StopUsingCustomPosCoords">Sprite:StopUsingCustomPosCoords ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:texcoordvelocity">Sprite:texcoordvelocity ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:get_use_effect_clock_for_texcoords">Sprite:get_use_effect_clock_for_texcoords ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:set_use_effect_clock_for_texcoords">Sprite:set_use_effect_clock_for_texcoords ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:scaletoclipped">Sprite:scaletoclipped ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:CropTo">Sprite:CropTo ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:stretchtexcoords">Sprite:stretchtexcoords ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:addimagecoords">Sprite:addimagecoords ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:setstate">Sprite:setstate ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:GetState">Sprite:GetState ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:SetStateProperties">Sprite:SetStateProperties ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#Sprite:GetAnimationLengthSeconds">Sprite:GetAnimationLengthSeconds ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:SetSecondsIntoAnimation">Sprite:SetSecondsIntoAnimation ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:SetTexture">Sprite:SetTexture ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:GetTexture">Sprite:GetTexture ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:SetEffectMode">Sprite:SetEffectMode ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:GetNumStates">Sprite:GetNumStates ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#Sprite:SetAllStateDelays">Sprite:SetAllStateDelays ()</a></td>
-	<td class="summary">
-
-</td>
+	<td class="summary">Returns the length of the animation in seconds.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Sprite:GetDecodeMovie">Sprite:GetDecodeMovie ()</a></td>
-	<td class="summary">
-
-</td>
+	<td class="summary">Gets whether the Sprite should call the decode function for its texture during updates.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#Sprite:SetDecodeMovie">Sprite:SetDecodeMovie ()</a></td>
-	<td class="summary">
-
-</td>
+	<td class="name" nowrap><a href="#Sprite:GetNumStates">Sprite:GetNumStates ()</a></td>
+	<td class="summary">Return the number of states this Sprite has.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:GetState">Sprite:GetState ()</a></td>
+	<td class="summary">Returns the Sprite's current state (frame number in a multi-frame sprite).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:GetTexture">Sprite:GetTexture ()</a></td>
+	<td class="summary">Returns the Sprite's texture.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:LinearFrames">Sprite:LinearFrames ()</a></td>
+	<td class="summary">Returns a Frames table consisting of iNumFrames frames lasting for a total of fSeconds seconds.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:Load">Sprite:Load (string, sPath)</a></td>
+	<td class="summary">If <code>sPath</code> is <code>nil</code>, then unload the texture.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:LoadBackground">Sprite:LoadBackground (string, sPath)</a></td>
+	<td class="summary">Load the song background texture at <code>sPath</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:LoadBanner">Sprite:LoadBanner (string, sPath)</a></td>
+	<td class="summary">Load the song banner texture at <code>sPath</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:LoadFromCached">Sprite:LoadFromCached (string, sType, string, sPath)</a></td>
+	<td class="summary">Loads the image of type <code>sType</code> from the cache based on <code>sPath</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:LoadFromCurrentSongBackground">Sprite:LoadFromCurrentSongBackground ()</a></td>
+	<td class="summary">Loads the background from the current Song or the first Trail entry.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:LoadFromSongBackground">Sprite:LoadFromSongBackground (song)</a></td>
+	<td class="summary">Load the texture for <code>Song</code> background.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:LoadFromSongBanner">Sprite:LoadFromSongBanner (song)</a></td>
+	<td class="summary">Load the texture for <code>Song</code> banner.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:SetCustomImageRect">Sprite:SetCustomImageRect (float, fLeft, float, fTop, float, fRight, float, fBottom)</a></td>
+	<td class="summary">Sets the custom image rectangle.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:SetCustomPosCoords">Sprite:SetCustomPosCoords (float, ulx, float, uly, float, llx, float, lly, float, lrx, float, lry, float, urx, float, ury)</a></td>
+	<td class="summary">Sets custom offsets for the corners of the Sprite.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:StopUsingCustomPosCoords">Sprite:StopUsingCustomPosCoords ()</a></td>
+	<td class="summary">Turns off the custom pos coords for the sprite.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:SetDecodeMovie">Sprite:SetDecodeMovie (bool, decode)</a></td>
+	<td class="summary">Sets whether the Sprite should call the decode function for its texture during updates.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:SetEffectMode">Sprite:SetEffectMode (EffectMode, mode)</a></td>
+	<td class="summary">Set the <Link class='ENUM' function='EffectMode' /> to <code>mode</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:SetSecondsIntoAnimation">Sprite:SetSecondsIntoAnimation (float, fSeconds)</a></td>
+	<td class="summary">Sets the number of seconds into the animation to <code>fSeconds</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:SetStateProperties">Sprite:SetStateProperties (table)</a></td>
+	<td class="summary">Sets the properties of the states of the sprite.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:SetTexture">Sprite:SetTexture (RageTexture, texture)</a></td>
+	<td class="summary">Set the texture to <code>texture</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:addimagecoords">Sprite:addimagecoords (float, fX, float, fY)</a></td>
+	<td class="summary"><!-- XXX: how does this work?</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:customtexturerect">Sprite:customtexturerect (float, fLeft, float, fTop, float, fRight, float, fBottom)</a></td>
+	<td class="summary">Allows the themer to set a custom texture rectangle that effects the way the texture is drawn.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:get_use_effect_clock_for_texcoords">Sprite:get_use_effect_clock_for_texcoords ()</a></td>
+	<td class="summary">Returns true if the sprite is using the effect clock for texcoordvelocity.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:loop">Sprite:loop (bLoop)</a></td>
+	<td class="summary">Call loop on the <code>RageTexture</code></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:position">Sprite:position (fPos)</a></td>
+	<td class="summary">Call position on the <code>RageTexture</code></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:rate">Sprite:rate (fRate)</a></td>
+	<td class="summary">Call rate on the <code>RageTexture</code></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:scaletoclipped">Sprite:scaletoclipped (float, fWidth, float, fHeight)</a></td>
+	<td class="summary">Scale the Sprite to width <code>fWidth</code> and height <code>fHeight</code> clipping if the dimensions do not match.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:setstate">Sprite:setstate (iNewState)</a></td>
+	<td class="summary">Set the Sprite's state to <code>iNewState</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:set_use_effect_clock_for_texcoords">Sprite:set_use_effect_clock_for_texcoords (bool, use)</a></td>
+	<td class="summary">If <code>use</code> is true, then the sprite will use the effect clock for texcoordvelocity.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:stretchtexcoords">Sprite:stretchtexcoords (float, fX, float, fY)</a></td>
+	<td class="summary"><!-- XXX: What does this do?</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:texcoordvelocity">Sprite:texcoordvelocity (float, fVelX, float, fVelY)</a></td>
+	<td class="summary">Set the texture coordinate velocity which controls how the Sprite changes as it animates.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:CropTo">Sprite:CropTo (float, fWidth, float, fHeight)</a></td>
+	<td class="summary">Crops the Sprite to <code>fWidth</code>x<code>fHeight</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:cropto">Sprite:cropto (float, fWidth, float, fHeight)</a></td>
+	<td class="summary">Alias for CropTo</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sprite:SetAllStateDelays">Sprite:SetAllStateDelays (float, fRate)</a></td>
+	<td class="summary">Sets all the state delays to <code>fRate</code>.</td>
 	</tr>
 </table>
 
@@ -247,549 +230,18 @@
 
     <dl class="function">
     <dt>
-    <a name = "Sprite:Load"></a>
-    <strong>Sprite:Load ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:LoadBanner"></a>
-    <strong>Sprite:LoadBanner ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:LoadBackground"></a>
-    <strong>Sprite:LoadBackground ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:LoadFromCached"></a>
-    <strong>Sprite:LoadFromCached ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:customtexturerect"></a>
-    <strong>Sprite:customtexturerect ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:SetCustomImageRect"></a>
-    <strong>Sprite:SetCustomImageRect ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:SetCustomPosCoords"></a>
-    <strong>Sprite:SetCustomPosCoords ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:StopUsingCustomPosCoords"></a>
-    <strong>Sprite:StopUsingCustomPosCoords ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:texcoordvelocity"></a>
-    <strong>Sprite:texcoordvelocity ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:get_use_effect_clock_for_texcoords"></a>
-    <strong>Sprite:get_use_effect_clock_for_texcoords ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:set_use_effect_clock_for_texcoords"></a>
-    <strong>Sprite:set_use_effect_clock_for_texcoords ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:scaletoclipped"></a>
-    <strong>Sprite:scaletoclipped ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:CropTo"></a>
-    <strong>Sprite:CropTo ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:stretchtexcoords"></a>
-    <strong>Sprite:stretchtexcoords ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:addimagecoords"></a>
-    <strong>Sprite:addimagecoords ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:setstate"></a>
-    <strong>Sprite:setstate ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:GetState"></a>
-    <strong>Sprite:GetState ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:SetStateProperties"></a>
-    <strong>Sprite:SetStateProperties ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
     <a name = "Sprite:GetAnimationLengthSeconds"></a>
     <strong>Sprite:GetAnimationLengthSeconds ()</strong>
     </dt>
     <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:SetSecondsIntoAnimation"></a>
-    <strong>Sprite:SetSecondsIntoAnimation ()</strong>
-    </dt>
-    <dd>
-
-
-
+    Returns the length of the animation in seconds.
 
 
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:SetTexture"></a>
-    <strong>Sprite:SetTexture ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:GetTexture"></a>
-    <strong>Sprite:GetTexture ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:SetEffectMode"></a>
-    <strong>Sprite:SetEffectMode ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:GetNumStates"></a>
-    <strong>Sprite:GetNumStates ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "Sprite:SetAllStateDelays"></a>
-    <strong>Sprite:SetAllStateDelays ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
+        float
     </ol>
 
 
@@ -801,17 +253,494 @@
     <strong>Sprite:GetDecodeMovie ()</strong>
     </dt>
     <dd>
-
-
-
+    Gets whether the Sprite should call the decode function for its texture during updates.
 
 
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
+        bool
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:GetNumStates"></a>
+    <strong>Sprite:GetNumStates ()</strong>
+    </dt>
+    <dd>
+    Return the number of states this Sprite has.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:GetState"></a>
+    <strong>Sprite:GetState ()</strong>
+    </dt>
+    <dd>
+    Returns the Sprite's current state (frame number in a multi-frame sprite).
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:GetTexture"></a>
+    <strong>Sprite:GetTexture ()</strong>
+    </dt>
+    <dd>
+    Returns the Sprite's texture.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        RageTexture
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:LinearFrames"></a>
+    <strong>Sprite:LinearFrames ()</strong>
+    </dt>
+    <dd>
+    Returns a Frames table consisting of iNumFrames frames lasting for a total of fSeconds seconds.  This function is not a member function and should be used as Frames = Sprite.LinearFrames( 5, 2.6 ).
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Frames
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:Load"></a>
+    <strong>Sprite:Load (string, sPath)</strong>
+    </dt>
+    <dd>
+    If <code>sPath</code> is <code>nil</code>, then unload the texture.  Otherwise, load the texture at path <code>sPath</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sPath</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:LoadBackground"></a>
+    <strong>Sprite:LoadBackground (string, sPath)</strong>
+    </dt>
+    <dd>
+    Load the song background texture at <code>sPath</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sPath</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:LoadBanner"></a>
+    <strong>Sprite:LoadBanner (string, sPath)</strong>
+    </dt>
+    <dd>
+    Load the song banner texture at <code>sPath</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sPath</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:LoadFromCached"></a>
+    <strong>Sprite:LoadFromCached (string, sType, string, sPath)</strong>
+    </dt>
+    <dd>
+
+<p>Loads the image of type <code>sType</code> from the cache based on <code>sPath</code>. </p>
+<pre><code>    Internal types: "Banner", "Background", "CDTitle", "Jacket", "CDImage" and "Disc".
+</code></pre>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sType</span>
+
+
+
+        </li>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sPath</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:LoadFromCurrentSongBackground"></a>
+    <strong>Sprite:LoadFromCurrentSongBackground ()</strong>
+    </dt>
+    <dd>
+    Loads the background from the current Song or the first Trail entry.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:LoadFromSongBackground"></a>
+    <strong>Sprite:LoadFromSongBackground (song)</strong>
+    </dt>
+    <dd>
+    Load the texture for <code>Song</code> background.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">song</span>
+            <span class="types"><span class="type">Song</span></span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:LoadFromSongBanner"></a>
+    <strong>Sprite:LoadFromSongBanner (song)</strong>
+    </dt>
+    <dd>
+    Load the texture for <code>Song</code> banner.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">song</span>
+            <span class="types"><span class="type">Song</span></span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:SetCustomImageRect"></a>
+    <strong>Sprite:SetCustomImageRect (float, fLeft, float, fTop, float, fRight, float, fBottom)</strong>
+    </dt>
+    <dd>
+    Sets the custom image rectangle.  (Works in image pixel space.)
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fLeft</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fTop</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fRight</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fBottom</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:SetCustomPosCoords"></a>
+    <strong>Sprite:SetCustomPosCoords (float, ulx, float, uly, float, llx, float, lly, float, lrx, float, lry, float, urx, float, ury)</strong>
+    </dt>
+    <dd>
+
+<p>Sets custom offsets for the corners of the Sprite.   Coordinates are paired,</p>
+<pre><code>    corner order is upper left, lower left, lower right, upper right.
+</code></pre>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">ulx</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">uly</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">llx</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">lly</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">lrx</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">lry</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">urx</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">ury</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:StopUsingCustomPosCoords"></a>
+    <strong>Sprite:StopUsingCustomPosCoords ()</strong>
+    </dt>
+    <dd>
+    Turns off the custom pos coords for the sprite.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
     </ol>
 
 
@@ -820,20 +749,680 @@
 </dd>
     <dt>
     <a name = "Sprite:SetDecodeMovie"></a>
-    <strong>Sprite:SetDecodeMovie ()</strong>
+    <strong>Sprite:SetDecodeMovie (bool, decode)</strong>
+    </dt>
+    <dd>
+    Sets whether the Sprite should call the decode function for its texture during updates.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+
+
+
+        </li>
+        <li><span class="parameter">decode</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:SetEffectMode"></a>
+    <strong>Sprite:SetEffectMode (EffectMode, mode)</strong>
+    </dt>
+    <dd>
+    Set the <Link class='ENUM' function='EffectMode' /> to <code>mode</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">EffectMode</span>
+
+
+
+        </li>
+        <li><span class="parameter">mode</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:SetSecondsIntoAnimation"></a>
+    <strong>Sprite:SetSecondsIntoAnimation (float, fSeconds)</strong>
+    </dt>
+    <dd>
+    Sets the number of seconds into the animation to <code>fSeconds</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fSeconds</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:SetStateProperties"></a>
+    <strong>Sprite:SetStateProperties (table)</strong>
+    </dt>
+    <dd>
+
+<p>Sets the properties of the states of the sprite.   The properties table is identical to the "Frames" table that can be put in the sprite when calling Def.Sprite.<br /></p>
+<pre><code>    Example:&lt;br /&gt;
+    {{Frame= 0, Delay= .016, {0, 0}, {.25, .25}},&lt;br /&gt;
+    {Frame= 1, Delay= .016, {0, 0}, {.25, .25}},&lt;br /&gt;
+    {Frame= 2, Delay= .016, {0, 0}, {.25, .25}},&lt;br /&gt;
+    {Frame= 3, Delay= .016, {0, 0}, {.25, .25}},&lt;br /&gt;
+    }&lt;br /&gt;
+    Frame is optional, defaulting to 0.&lt;br /&gt;
+    Delay is optional, defaulting to 0.&lt;br /&gt;
+    The two tables are optional upper left and lower right corners of the fraction of the frame to use.  The example makes the sprite only use the upper left corner of each frame.&lt;br /&gt;
+    Simpler example:&lt;br /&gt;
+    {{Frame= 0, Delay= .016}, {Frame= 1, Delay= .016}, {Frame= 2, Delay= .016}, {Frame= 3, Delay= .016}}&lt;br /&gt;
+    This example makes the sprite use the whole of each frame.
+</code></pre>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">table</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:SetTexture"></a>
+    <strong>Sprite:SetTexture (RageTexture, texture)</strong>
+    </dt>
+    <dd>
+    Set the texture to <code>texture</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">RageTexture</span>
+
+
+
+        </li>
+        <li><span class="parameter">texture</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:addimagecoords"></a>
+    <strong>Sprite:addimagecoords (float, fX, float, fY)</strong>
     </dt>
     <dd>
 
 
+<!-- XXX: how does this work?  -->
 
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fX</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fY</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:customtexturerect"></a>
+    <strong>Sprite:customtexturerect (float, fLeft, float, fTop, float, fRight, float, fBottom)</strong>
+    </dt>
+    <dd>
+    Allows the themer to set a custom texture rectangle that effects the way the texture is drawn.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fLeft</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fTop</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fRight</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fBottom</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:get_use_effect_clock_for_texcoords"></a>
+    <strong>Sprite:get_use_effect_clock_for_texcoords ()</strong>
+    </dt>
+    <dd>
+    Returns true if the sprite is using the effect clock for texcoordvelocity.
 
 
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/Sprite.html#">Sprite</a></span>
-        self
+        bool
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:loop"></a>
+    <strong>Sprite:loop (bLoop)</strong>
+    </dt>
+    <dd>
+    Call loop on the <code>RageTexture</code>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bLoop</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        bool
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:position"></a>
+    <strong>Sprite:position (fPos)</strong>
+    </dt>
+    <dd>
+    Call position on the <code>RageTexture</code>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">fPos</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        bool
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:rate"></a>
+    <strong>Sprite:rate (fRate)</strong>
+    </dt>
+    <dd>
+    Call rate on the <code>RageTexture</code>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">fRate</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        bool
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:scaletoclipped"></a>
+    <strong>Sprite:scaletoclipped (float, fWidth, float, fHeight)</strong>
+    </dt>
+    <dd>
+    Scale the Sprite to width <code>fWidth</code> and height <code>fHeight</code> clipping if the dimensions do not match.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fWidth</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fHeight</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:setstate"></a>
+    <strong>Sprite:setstate (iNewState)</strong>
+    </dt>
+    <dd>
+    Set the Sprite's state to <code>iNewState</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">iNewState</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:set_use_effect_clock_for_texcoords"></a>
+    <strong>Sprite:set_use_effect_clock_for_texcoords (bool, use)</strong>
+    </dt>
+    <dd>
+    If <code>use</code> is true, then the sprite will use the effect clock for texcoordvelocity.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+
+
+
+        </li>
+        <li><span class="parameter">use</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:stretchtexcoords"></a>
+    <strong>Sprite:stretchtexcoords (float, fX, float, fY)</strong>
+    </dt>
+    <dd>
+
+
+<!-- XXX: What does this do?  -->
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fX</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fY</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:texcoordvelocity"></a>
+    <strong>Sprite:texcoordvelocity (float, fVelX, float, fVelY)</strong>
+    </dt>
+    <dd>
+    Set the texture coordinate velocity which controls how the Sprite changes as it animates.   A velocity of 1 makes the texture scroll all the way once per second.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fVelX</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fVelY</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:CropTo"></a>
+    <strong>Sprite:CropTo (float, fWidth, float, fHeight)</strong>
+    </dt>
+    <dd>
+    Crops the Sprite to <code>fWidth</code>x<code>fHeight</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fWidth</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fHeight</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:cropto"></a>
+    <strong>Sprite:cropto (float, fWidth, float, fHeight)</strong>
+    </dt>
+    <dd>
+    Alias for CropTo
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fWidth</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fHeight</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sprite:SetAllStateDelays"></a>
+    <strong>Sprite:SetAllStateDelays (float, fRate)</strong>
+    </dt>
+    <dd>
+    Sets all the state delays to <code>fRate</code>.  Useful for Sprites that need to change by BPM (e.g. Tran from DDR 5th Mix, the cube from DS EuroMix 2).
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">fRate</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
     </ol>
 
 
@@ -847,7 +1436,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2018-11-24 22:20:27 </i>
+<i style="float:right;">Last updated 2018-11-28 18:29:39 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

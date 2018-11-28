@@ -1,0 +1,1329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Etterna lua docs</title>
+    <link rel="stylesheet" href="../ldoc_fixed.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Etterna</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/Actor.html">Actor</a></li>
+  <li><a href="../classes/ActorFrame.html">ActorFrame</a></li>
+  <li><a href="../classes/ActorFrameTexture.html">ActorFrameTexture</a></li>
+  <li><a href="../classes/ActorMultiVertex.html">ActorMultiVertex</a></li>
+  <li><a href="../classes/BitmapText.html">BitmapText</a></li>
+  <li><a href="../classes/DownloadManager.html">DownloadManager</a></li>
+  <li><a href="../classes/ScreenManager.html">ScreenManager</a></li>
+  <li><strong>SongManager</strong></li>
+  <li><a href="../classes/Sprite.html">Sprite</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/00_Utility.html">00_Utility</a></li>
+  <li><a href="../modules/00_init.html">00_init</a></li>
+  <li><a href="../modules/01_IniFile.html">01_IniFile</a></li>
+  <li><a href="../modules/01_alias.html">01_alias</a></li>
+  <li><a href="../modules/01_base.html">01_base</a></li>
+  <li><a href="../modules/02_ActorDef.html">02_ActorDef</a></li>
+  <li><a href="../modules/02_Serialize.html">02_Serialize</a></li>
+  <li><a href="../modules/03.html">03</a></li>
+  <li><a href="../modules/09_SimNSkinPreview.html">09_SimNSkinPreview</a></li>
+  <li><a href="../modules/10.html">10</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="../topics/actor-commands.md.html">Actor Commands</a></li>
+  <li><a href="../topics/quickstart.md.html">QuickStart</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>SongManager</code></h1>
+<p>SongManager singleton</p>
+<p>
+
+</p>
+
+
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:DoesCourseGroupExist">SongManager:DoesCourseGroupExist (string, sGroup)</a></td>
+	<td class="summary">Returns <code>true</code> if the specified course group exists.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:DoesSongGroupExist">SongManager:DoesSongGroupExist (string, sGroup)</a></td>
+	<td class="summary">Returns <code>true</code> if the specified song group exists.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:FindCourse">SongManager:FindCourse (string, sCourse)</a></td>
+	<td class="summary">Returns a Course if one matching <code>sCourse</code> is found.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:FindSong">SongManager:FindSong (string, sSong)</a></td>
+	<td class="summary">Returns a Song if one matching <code>sSong</code> is found.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetAllCourses">SongManager:GetAllCourses (bool, bIncludeAutogen)</a></td>
+	<td class="summary">Returns an array of all the installed courses.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetAllSongs">SongManager:GetAllSongs ()</a></td>
+	<td class="summary">Returns an array of all the installed songs.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetCourseColor">SongManager:GetCourseColor (Course, c)</a></td>
+	<td class="summary">Returns the course color of Course <code>c</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetCourseGroupBannerPath">SongManager:GetCourseGroupBannerPath (string, sGroup)</a></td>
+	<td class="summary">Returns the path to the specified course group's banner.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetCourseGroupNames">SongManager:GetCourseGroupNames ()</a></td>
+	<td class="summary">Returns a table containing all of the course group names.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetCoursesInGroup">SongManager:GetCoursesInGroup (string, sGroup, bool, bIncludeAutogen)</a></td>
+	<td class="summary">Returns a table with all of the courses in the specified group.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetExtraStageInfo">SongManager:GetExtraStageInfo (bool, bExtra2, Style, s)</a></td>
+	<td class="summary">Returns the extra stage info (Song, Steps) for the specified Style <code>s</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetNumAdditionalCourses">SongManager:GetNumAdditionalCourses ()</a></td>
+	<td class="summary">Returns the number of courses loaded via Additional folders.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetNumAdditionalSongs">SongManager:GetNumAdditionalSongs ()</a></td>
+	<td class="summary">Returns the number of songs loaded via Additional folders.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetNumCourseGroups">SongManager:GetNumCourseGroups ()</a></td>
+	<td class="summary">Returns the number of course groups.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetNumCourses">SongManager:GetNumCourses ()</a></td>
+	<td class="summary">Returns the number of courses.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetNumSelectableAndUnlockedSongs">SongManager:GetNumSelectableAndUnlockedSongs ()</a></td>
+	<td class="summary">Returns the number of selectable and unlocked songs.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetNumSongGroups">SongManager:GetNumSongGroups ()</a></td>
+	<td class="summary">Returns the number of song groups.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetNumSongs">SongManager:GetNumSongs ()</a></td>
+	<td class="summary">Returns the number of songs.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetNumLockedSongs">SongManager:GetNumLockedSongs ()</a></td>
+	<td class="summary">Returns the number of locked songs, regardless of reason for locking.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetNumUnlockedSongs">SongManager:GetNumUnlockedSongs ()</a></td>
+	<td class="summary">Returns the number of unlocked songs.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetPopularCourses">SongManager:GetPopularCourses (CourseType, ct)</a></td>
+	<td class="summary">Returns a table of popular courses for the specified CourseType.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetPopularSongs">SongManager:GetPopularSongs ()</a></td>
+	<td class="summary">Returns a table of popular songs.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetPreferredSortCourses">SongManager:GetPreferredSortCourses (CourseType, ct, bool, bIncludeAutogen)</a></td>
+	<td class="summary">Returns a table of courses as they'd appear in preferred sort.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetPreferredSortSongs">SongManager:GetPreferredSortSongs ()</a></td>
+	<td class="summary">Returns a table of songs as they'd appear in preferred sort.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetRandomCourse">SongManager:GetRandomCourse ()</a></td>
+	<td class="summary">Returns a random course.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetRandomSong">SongManager:GetRandomSong ()</a></td>
+	<td class="summary">Returns a random song.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetSongColor">SongManager:GetSongColor (Song, s)</a></td>
+	<td class="summary">Returns the song color of Song <code>s</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetSongFromSteps">SongManager:GetSongFromSteps (Steps, st)</a></td>
+	<td class="summary">Returns a Song given a set of Steps <code>st</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetSongGroupBannerPath">SongManager:GetSongGroupBannerPath (string, sGroup)</a></td>
+	<td class="summary">Returns the path to the specified song group's banner.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetSongGroupColor">SongManager:GetSongGroupColor (string, sGroupName)</a></td>
+	<td class="summary">Returns the song group color of <code>sGroupName</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetSongGroupNames">SongManager:GetSongGroupNames ()</a></td>
+	<td class="summary">Returns a table containing all of the song group names.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetSongRank">SongManager:GetSongRank (Song, s)</a></td>
+	<td class="summary">Returns the rank (popularity) of Song <code>s</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:GetSongsInGroup">SongManager:GetSongsInGroup (string, sGroupName)</a></td>
+	<td class="summary">Returns a table containing all of the songs in group <code>sGroupName</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:ShortenGroupName">SongManager:ShortenGroupName (string, sGroupName)</a></td>
+	<td class="summary">Returns the shortened group name (based on entries in Translations.xml).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:SetPreferredCourses">SongManager:SetPreferredCourses (string, sListName)</a></td>
+	<td class="summary">Loads preferred courses from <code>{theme}/Other/SongManager sListName.txt</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:SetPreferredSongs">SongManager:SetPreferredSongs (string, sListName)</a></td>
+	<td class="summary">Loads preferred songs from <code>{theme}/Other/SongManager sListName.txt</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:SongToPreferredSortSectionName">SongManager:SongToPreferredSortSectionName (Song, s)</a></td>
+	<td class="summary">Returns the preferred sort section name for the specified Song.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:WasLoadedFromAdditionalCourses">SongManager:WasLoadedFromAdditionalCourses (Course, c)</a></td>
+	<td class="summary">Returns <code>true</code> if the specified course was loaded from AdditionalCourses.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SongManager:WasLoadedFromAdditionalSongs">SongManager:WasLoadedFromAdditionalSongs (Song, s)</a></td>
+	<td class="summary">Returns <code>true</code> if the specified song was loaded from AdditionalSongs.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "SongManager:DoesCourseGroupExist"></a>
+    <strong>SongManager:DoesCourseGroupExist (string, sGroup)</strong>
+    </dt>
+    <dd>
+    Returns <code>true</code> if the specified course group exists.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sGroup</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        bool
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:DoesSongGroupExist"></a>
+    <strong>SongManager:DoesSongGroupExist (string, sGroup)</strong>
+    </dt>
+    <dd>
+    Returns <code>true</code> if the specified song group exists.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sGroup</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        bool
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:FindCourse"></a>
+    <strong>SongManager:FindCourse (string, sCourse)</strong>
+    </dt>
+    <dd>
+    Returns a Course if one matching <code>sCourse</code> is found.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sCourse</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Course
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:FindSong"></a>
+    <strong>SongManager:FindSong (string, sSong)</strong>
+    </dt>
+    <dd>
+    Returns a Song if one matching <code>sSong</code> is found.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sSong</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Song
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetAllCourses"></a>
+    <strong>SongManager:GetAllCourses (bool, bIncludeAutogen)</strong>
+    </dt>
+    <dd>
+    Returns an array of all the installed courses.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+
+
+
+        </li>
+        <li><span class="parameter">bIncludeAutogen</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        {Course}
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetAllSongs"></a>
+    <strong>SongManager:GetAllSongs ()</strong>
+    </dt>
+    <dd>
+    Returns an array of all the installed songs.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        {Song}
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetCourseColor"></a>
+    <strong>SongManager:GetCourseColor (Course, c)</strong>
+    </dt>
+    <dd>
+    Returns the course color of Course <code>c</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Course</span>
+
+
+
+        </li>
+        <li><span class="parameter">c</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        color
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetCourseGroupBannerPath"></a>
+    <strong>SongManager:GetCourseGroupBannerPath (string, sGroup)</strong>
+    </dt>
+    <dd>
+    Returns the path to the specified course group's banner.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sGroup</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        string
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetCourseGroupNames"></a>
+    <strong>SongManager:GetCourseGroupNames ()</strong>
+    </dt>
+    <dd>
+    Returns a table containing all of the course group names.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        {string}
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetCoursesInGroup"></a>
+    <strong>SongManager:GetCoursesInGroup (string, sGroup, bool, bIncludeAutogen)</strong>
+    </dt>
+    <dd>
+    Returns a table with all of the courses in the specified group.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sGroup</span>
+
+
+
+        </li>
+        <li><span class="parameter">bool</span>
+
+
+
+        </li>
+        <li><span class="parameter">bIncludeAutogen</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        {Course}
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetExtraStageInfo"></a>
+    <strong>SongManager:GetExtraStageInfo (bool, bExtra2, Style, s)</strong>
+    </dt>
+    <dd>
+    Returns the extra stage info (Song, Steps) for the specified Style <code>s</code>.  (If <code>bExtra2</code> is true, it will use the second Extra Stage data instead of the first. Again, Lua.xsd sucks)
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+
+
+
+        </li>
+        <li><span class="parameter">bExtra2</span>
+
+
+
+        </li>
+        <li><span class="parameter">Style</span>
+
+
+
+        </li>
+        <li><span class="parameter">s</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        various
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetNumAdditionalCourses"></a>
+    <strong>SongManager:GetNumAdditionalCourses ()</strong>
+    </dt>
+    <dd>
+    Returns the number of courses loaded via Additional folders.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetNumAdditionalSongs"></a>
+    <strong>SongManager:GetNumAdditionalSongs ()</strong>
+    </dt>
+    <dd>
+    Returns the number of songs loaded via Additional folders.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetNumCourseGroups"></a>
+    <strong>SongManager:GetNumCourseGroups ()</strong>
+    </dt>
+    <dd>
+    Returns the number of course groups.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetNumCourses"></a>
+    <strong>SongManager:GetNumCourses ()</strong>
+    </dt>
+    <dd>
+    Returns the number of courses.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetNumSelectableAndUnlockedSongs"></a>
+    <strong>SongManager:GetNumSelectableAndUnlockedSongs ()</strong>
+    </dt>
+    <dd>
+    Returns the number of selectable and unlocked songs.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetNumSongGroups"></a>
+    <strong>SongManager:GetNumSongGroups ()</strong>
+    </dt>
+    <dd>
+    Returns the number of song groups.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetNumSongs"></a>
+    <strong>SongManager:GetNumSongs ()</strong>
+    </dt>
+    <dd>
+    Returns the number of songs.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetNumLockedSongs"></a>
+    <strong>SongManager:GetNumLockedSongs ()</strong>
+    </dt>
+    <dd>
+    Returns the number of locked songs, regardless of reason for locking.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetNumUnlockedSongs"></a>
+    <strong>SongManager:GetNumUnlockedSongs ()</strong>
+    </dt>
+    <dd>
+    Returns the number of unlocked songs.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetPopularCourses"></a>
+    <strong>SongManager:GetPopularCourses (CourseType, ct)</strong>
+    </dt>
+    <dd>
+    Returns a table of popular courses for the specified CourseType.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">CourseType</span>
+
+
+
+        </li>
+        <li><span class="parameter">ct</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        {Course}
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetPopularSongs"></a>
+    <strong>SongManager:GetPopularSongs ()</strong>
+    </dt>
+    <dd>
+    Returns a table of popular songs.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        {Song}
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetPreferredSortCourses"></a>
+    <strong>SongManager:GetPreferredSortCourses (CourseType, ct, bool, bIncludeAutogen)</strong>
+    </dt>
+    <dd>
+    Returns a table of courses as they'd appear in preferred sort.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">CourseType</span>
+
+
+
+        </li>
+        <li><span class="parameter">ct</span>
+
+
+
+        </li>
+        <li><span class="parameter">bool</span>
+
+
+
+        </li>
+        <li><span class="parameter">bIncludeAutogen</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        {Course}
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetPreferredSortSongs"></a>
+    <strong>SongManager:GetPreferredSortSongs ()</strong>
+    </dt>
+    <dd>
+    Returns a table of songs as they'd appear in preferred sort.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        {Song}
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetRandomCourse"></a>
+    <strong>SongManager:GetRandomCourse ()</strong>
+    </dt>
+    <dd>
+    Returns a random course.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Course
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetRandomSong"></a>
+    <strong>SongManager:GetRandomSong ()</strong>
+    </dt>
+    <dd>
+    Returns a random song.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Song
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetSongColor"></a>
+    <strong>SongManager:GetSongColor (Song, s)</strong>
+    </dt>
+    <dd>
+    Returns the song color of Song <code>s</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Song</span>
+
+
+
+        </li>
+        <li><span class="parameter">s</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        color
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetSongFromSteps"></a>
+    <strong>SongManager:GetSongFromSteps (Steps, st)</strong>
+    </dt>
+    <dd>
+    Returns a Song given a set of Steps <code>st</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Steps</span>
+
+
+
+        </li>
+        <li><span class="parameter">st</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Song
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetSongGroupBannerPath"></a>
+    <strong>SongManager:GetSongGroupBannerPath (string, sGroup)</strong>
+    </dt>
+    <dd>
+    Returns the path to the specified song group's banner.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sGroup</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        string
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetSongGroupColor"></a>
+    <strong>SongManager:GetSongGroupColor (string, sGroupName)</strong>
+    </dt>
+    <dd>
+    Returns the song group color of <code>sGroupName</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sGroupName</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        color
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetSongGroupNames"></a>
+    <strong>SongManager:GetSongGroupNames ()</strong>
+    </dt>
+    <dd>
+    Returns a table containing all of the song group names.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        {string}
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetSongRank"></a>
+    <strong>SongManager:GetSongRank (Song, s)</strong>
+    </dt>
+    <dd>
+    Returns the rank (popularity) of Song <code>s</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Song</span>
+
+
+
+        </li>
+        <li><span class="parameter">s</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        int
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:GetSongsInGroup"></a>
+    <strong>SongManager:GetSongsInGroup (string, sGroupName)</strong>
+    </dt>
+    <dd>
+    Returns a table containing all of the songs in group <code>sGroupName</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sGroupName</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        {Song}
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:ShortenGroupName"></a>
+    <strong>SongManager:ShortenGroupName (string, sGroupName)</strong>
+    </dt>
+    <dd>
+    Returns the shortened group name (based on entries in Translations.xml).
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sGroupName</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        string
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:SetPreferredCourses"></a>
+    <strong>SongManager:SetPreferredCourses (string, sListName)</strong>
+    </dt>
+    <dd>
+    Loads preferred courses from <code>{theme}/Other/SongManager sListName.txt</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sListName</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:SetPreferredSongs"></a>
+    <strong>SongManager:SetPreferredSongs (string, sListName)</strong>
+    </dt>
+    <dd>
+    Loads preferred songs from <code>{theme}/Other/SongManager sListName.txt</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sListName</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:SongToPreferredSortSectionName"></a>
+    <strong>SongManager:SongToPreferredSortSectionName (Song, s)</strong>
+    </dt>
+    <dd>
+    Returns the preferred sort section name for the specified Song.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Song</span>
+
+
+
+        </li>
+        <li><span class="parameter">s</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        string
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:WasLoadedFromAdditionalCourses"></a>
+    <strong>SongManager:WasLoadedFromAdditionalCourses (Course, c)</strong>
+    </dt>
+    <dd>
+    Returns <code>true</code> if the specified course was loaded from AdditionalCourses.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Course</span>
+
+
+
+        </li>
+        <li><span class="parameter">c</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        bool
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SongManager:WasLoadedFromAdditionalSongs"></a>
+    <strong>SongManager:WasLoadedFromAdditionalSongs (Song, s)</strong>
+    </dt>
+    <dd>
+    Returns <code>true</code> if the specified song was loaded from AdditionalSongs.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Song</span>
+
+
+
+        </li>
+        <li><span class="parameter">s</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        bool
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2018-11-28 18:29:39 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

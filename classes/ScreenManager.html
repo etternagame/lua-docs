@@ -1,0 +1,550 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Etterna lua docs</title>
+    <link rel="stylesheet" href="../ldoc_fixed.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Etterna</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/Actor.html">Actor</a></li>
+  <li><a href="../classes/ActorFrame.html">ActorFrame</a></li>
+  <li><a href="../classes/ActorFrameTexture.html">ActorFrameTexture</a></li>
+  <li><a href="../classes/ActorMultiVertex.html">ActorMultiVertex</a></li>
+  <li><a href="../classes/BitmapText.html">BitmapText</a></li>
+  <li><a href="../classes/DownloadManager.html">DownloadManager</a></li>
+  <li><strong>ScreenManager</strong></li>
+  <li><a href="../classes/SongManager.html">SongManager</a></li>
+  <li><a href="../classes/Sprite.html">Sprite</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/00_Utility.html">00_Utility</a></li>
+  <li><a href="../modules/00_init.html">00_init</a></li>
+  <li><a href="../modules/01_IniFile.html">01_IniFile</a></li>
+  <li><a href="../modules/01_alias.html">01_alias</a></li>
+  <li><a href="../modules/01_base.html">01_base</a></li>
+  <li><a href="../modules/02_ActorDef.html">02_ActorDef</a></li>
+  <li><a href="../modules/02_Serialize.html">02_Serialize</a></li>
+  <li><a href="../modules/03.html">03</a></li>
+  <li><a href="../modules/09_SimNSkinPreview.html">09_SimNSkinPreview</a></li>
+  <li><a href="../modules/10.html">10</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="../topics/actor-commands.md.html">Actor Commands</a></li>
+  <li><a href="../topics/quickstart.md.html">QuickStart</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>ScreenManager</code></h1>
+<p>ScreenManager singleton</p>
+<p>
+
+</p>
+
+
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#ScreenManager:AddNewScreenToTop">ScreenManager:AddNewScreenToTop (string, sScreenName, string, sMessage)</a></td>
+	<td class="summary">Adds a screen at the top of the screen stack.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ScreenManager:GetTopScreen">ScreenManager:GetTopScreen ()</a></td>
+	<td class="summary">Gets the screen at the top of the screen stack.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ScreenManager:get_input_redirected">ScreenManager:get_input_redirected (PlayerNumber, pn)</a></td>
+	<td class="summary">Returns whether the input for the player has been redirected away from the normal screen input function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ScreenManager:PlayInvalidSound">ScreenManager:PlayInvalidSound ()</a></td>
+	<td class="summary">Plays the invalid sound.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ScreenManager:PlayStartSound">ScreenManager:PlayStartSound ()</a></td>
+	<td class="summary">Plays the start sound.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ScreenManager:PlayCoinSound">ScreenManager:PlayCoinSound ()</a></td>
+	<td class="summary">Plays the coin sound.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ScreenManager:PlayCancelSound">ScreenManager:PlayCancelSound ()</a></td>
+	<td class="summary">Plays the cancel sound.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ScreenManager:PlayScreenshotSound">ScreenManager:PlayScreenshotSound ()</a></td>
+	<td class="summary">Plays the screenshot sound.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ScreenManager:ReloadOverlayScreens">ScreenManager:ReloadOverlayScreens ()</a></td>
+	<td class="summary">Reloads any loaded overlay screens.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ScreenManager:ScreenClassExists">ScreenManager:ScreenClassExists (string, s)</a></td>
+	<td class="summary">Returns <code>true</code> if screen class <code>s</code> exists.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ScreenManager:ScreenIsPrepped">ScreenManager:ScreenIsPrepped (string, s)</a></td>
+	<td class="summary">Returns <code>true</code> if screen <code>s</code> is prepared.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ScreenManager:SetNewScreen">ScreenManager:SetNewScreen (string, s)</a></td>
+	<td class="summary">Sets the next screen to <code>s</code>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ScreenManager:set_input_redirected">ScreenManager:set_input_redirected (PlayerNumber, pn, bool, redir)</a></td>
+	<td class="summary">Sets whether the input for the player has been redirected away from the normal screen input function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ScreenManager:SystemMessage">ScreenManager:SystemMessage (string, s)</a></td>
+	<td class="summary">Broadcasts a system message.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "ScreenManager:AddNewScreenToTop"></a>
+    <strong>ScreenManager:AddNewScreenToTop (string, sScreenName, string, sMessage)</strong>
+    </dt>
+    <dd>
+    Adds a screen at the top of the screen stack.  (<code>sMessage</code> is an optional ScreenMessage posted once the new screen is finished.)
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sScreenName</span>
+
+
+
+        </li>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">sMessage</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ScreenManager:GetTopScreen"></a>
+    <strong>ScreenManager:GetTopScreen ()</strong>
+    </dt>
+    <dd>
+    Gets the screen at the top of the screen stack.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Screen
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ScreenManager:get_input_redirected"></a>
+    <strong>ScreenManager:get_input_redirected (PlayerNumber, pn)</strong>
+    </dt>
+    <dd>
+    Returns whether the input for the player has been redirected away from the normal screen input function.   Input that has been redirected is only sent to lua input callbacks.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">PlayerNumber</span>
+
+
+
+        </li>
+        <li><span class="parameter">pn</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        bool
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ScreenManager:PlayInvalidSound"></a>
+    <strong>ScreenManager:PlayInvalidSound ()</strong>
+    </dt>
+    <dd>
+    Plays the invalid sound.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ScreenManager:PlayStartSound"></a>
+    <strong>ScreenManager:PlayStartSound ()</strong>
+    </dt>
+    <dd>
+    Plays the start sound.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ScreenManager:PlayCoinSound"></a>
+    <strong>ScreenManager:PlayCoinSound ()</strong>
+    </dt>
+    <dd>
+    Plays the coin sound.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ScreenManager:PlayCancelSound"></a>
+    <strong>ScreenManager:PlayCancelSound ()</strong>
+    </dt>
+    <dd>
+    Plays the cancel sound.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ScreenManager:PlayScreenshotSound"></a>
+    <strong>ScreenManager:PlayScreenshotSound ()</strong>
+    </dt>
+    <dd>
+    Plays the screenshot sound.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ScreenManager:ReloadOverlayScreens"></a>
+    <strong>ScreenManager:ReloadOverlayScreens ()</strong>
+    </dt>
+    <dd>
+    Reloads any loaded overlay screens.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ScreenManager:ScreenClassExists"></a>
+    <strong>ScreenManager:ScreenClassExists (string, s)</strong>
+    </dt>
+    <dd>
+    Returns <code>true</code> if screen class <code>s</code> exists.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">s</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        bool
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ScreenManager:ScreenIsPrepped"></a>
+    <strong>ScreenManager:ScreenIsPrepped (string, s)</strong>
+    </dt>
+    <dd>
+    Returns <code>true</code> if screen <code>s</code> is prepared.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">s</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        bool
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ScreenManager:SetNewScreen"></a>
+    <strong>ScreenManager:SetNewScreen (string, s)</strong>
+    </dt>
+    <dd>
+    Sets the next screen to <code>s</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">s</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ScreenManager:set_input_redirected"></a>
+    <strong>ScreenManager:set_input_redirected (PlayerNumber, pn, bool, redir)</strong>
+    </dt>
+    <dd>
+
+<p>Sets whether the input for the player has been redirected away from the normal screen input function.   Input that has been redirected is only sent to lua input callbacks.<br /></p>
+<pre><code>    This can be useful when putting a custom menu on a screen, and you want to disable the built in actors while the menu is open.  Then you handle input through an input callback until the player closes the menu.
+</code></pre>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">PlayerNumber</span>
+
+
+
+        </li>
+        <li><span class="parameter">pn</span>
+
+
+
+        </li>
+        <li><span class="parameter">bool</span>
+
+
+
+        </li>
+        <li><span class="parameter">redir</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        bool
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ScreenManager:SystemMessage"></a>
+    <strong>ScreenManager:SystemMessage (string, s)</strong>
+    </dt>
+    <dd>
+    Broadcasts a system message.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">s</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2018-11-28 18:29:39 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

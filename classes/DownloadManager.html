@@ -1,0 +1,687 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Etterna lua docs</title>
+    <link rel="stylesheet" href="../ldoc_fixed.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Etterna</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/Actor.html">Actor</a></li>
+  <li><a href="../classes/ActorFrame.html">ActorFrame</a></li>
+  <li><a href="../classes/ActorFrameTexture.html">ActorFrameTexture</a></li>
+  <li><a href="../classes/ActorMultiVertex.html">ActorMultiVertex</a></li>
+  <li><a href="../classes/BitmapText.html">BitmapText</a></li>
+  <li><strong>DownloadManager</strong></li>
+  <li><a href="../classes/ScreenManager.html">ScreenManager</a></li>
+  <li><a href="../classes/SongManager.html">SongManager</a></li>
+  <li><a href="../classes/Sprite.html">Sprite</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/00_Utility.html">00_Utility</a></li>
+  <li><a href="../modules/00_init.html">00_init</a></li>
+  <li><a href="../modules/01_IniFile.html">01_IniFile</a></li>
+  <li><a href="../modules/01_alias.html">01_alias</a></li>
+  <li><a href="../modules/01_base.html">01_base</a></li>
+  <li><a href="../modules/02_ActorDef.html">02_ActorDef</a></li>
+  <li><a href="../modules/02_Serialize.html">02_Serialize</a></li>
+  <li><a href="../modules/03.html">03</a></li>
+  <li><a href="../modules/09_SimNSkinPreview.html">09_SimNSkinPreview</a></li>
+  <li><a href="../modules/10.html">10</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="../topics/actor-commands.md.html">Actor Commands</a></li>
+  <li><a href="../topics/quickstart.md.html">QuickStart</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>DownloadManager</code></h1>
+<p>DownloadManager singleton</p>
+<p>
+
+</p>
+
+
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:GetPacklist">DownloadManager:GetPacklist ()</a></td>
+	<td class="summary">Returns the packlist (Which is requested at startup automatically).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:GetDownloadingPacks">DownloadManager:GetDownloadingPacks ()</a></td>
+	<td class="summary">Returns an indexed table of the currently downloading downloadable packs.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:GetUsername">DownloadManager:GetUsername ()</a></td>
+	<td class="summary">Returns the currently logged in user's username (Or an empty string if not logged in)</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:GetSkillsetRank">DownloadManager:GetSkillsetRank (string)</a></td>
+	<td class="summary">Returns the currently logged in user's online rank for the provided skillset</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:GetSkillsetRating">DownloadManager:GetSkillsetRating ()</a></td>
+	<td class="summary">Returns the currently logged in user's online MSD rating for the provided skillset</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:GetDownloads">DownloadManager:GetDownloads ()</a></td>
+	<td class="summary">Returns an indexed table with all the currently downloading download tables.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:IsLoggedIn">DownloadManager:IsLoggedIn ()</a></td>
+	<td class="summary">Returns a boolean that indicates if the player is currently logged in to the API server</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:Login">DownloadManager:Login (string, string)</a></td>
+	<td class="summary">Begins an asynchronous attempt to login with the provided username (First parameter) and password (Second one)</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:LoginWithToken">DownloadManager:LoginWithToken (string)</a></td>
+	<td class="summary">Begins an asynchronous attempt to login with the provided auth Token</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:Logout">DownloadManager:Logout ()</a></td>
+	<td class="summary">Ends the current session (If it exists)</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:GetLastVersion">DownloadManager:GetLastVersion ()</a></td>
+	<td class="summary">Returns the string for the latest version (According to the API server)</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:GetTopSkillsetScore">DownloadManager:GetTopSkillsetScore (float, string)</a></td>
+	<td class="summary">
+<p>Returns the Nth (First parameter) top online score for the given skillset (Second param)</p>
+<pre><code>    The lua tables for Online Profile Scores are defined here: https://github.com/etternagame/etterna/blob/develop/src/DownloadManager.cpp#L1645-L1659
+    TODO: Properly document online profile cores
+</code></pre>
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:GetTopChartScoreCount">DownloadManager:GetTopChartScoreCount (string)</a></td>
+	<td class="summary">Returns the amount of leaderboard scores for the given chart</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:GetTopChartScore">DownloadManager:GetTopChartScore (string, float)</a></td>
+	<td class="summary">
+<p>Returns the Nth (Second parameter) top online score for the given skillset (First param)</p>
+<pre><code>    The lua tables for Online Chart Leaderboard Scores are defined here: https://github.com/etternagame/etterna/blob/develop/src/DownloadManager.cpp#L1686-L1727
+    TODO: Properly document online chart leaderboard scores
+</code></pre>
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:GetCoreBundle">DownloadManager:GetCoreBundle (string)</a></td>
+	<td class="summary">Returns the packs in the core bundle in an indexed table.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:DownloadCoreBundle">DownloadManager:DownloadCoreBundle (string)</a></td>
+	<td class="summary">Queues all the packs in the bundle named after the first parameter for download.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:GetToken">DownloadManager:GetToken ()</a></td>
+	<td class="summary">Returns the current Authenthication Token used for the server API.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:RequestChartLeaderBoard">DownloadManager:RequestChartLeaderBoard (string)</a></td>
+	<td class="summary">Recieves a chartkey, and returns the online leaderboard for that chart.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:ToggleRateFilter">DownloadManager:ToggleRateFilter (bool)</a></td>
+	<td class="summary">RetuSets rate filtering to the boolean passed for the chart leaderboards</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DownloadManager:GetCurrentRateFilter">DownloadManager:GetCurrentRateFilter ()</a></td>
+	<td class="summary">Returns true if rate filtering is enabled for the chart leaderboards</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "DownloadManager:GetPacklist"></a>
+    <strong>DownloadManager:GetPacklist ()</strong>
+    </dt>
+    <dd>
+    Returns the packlist (Which is requested at startup automatically).
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        PackList
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DownloadManager:GetDownloadingPacks"></a>
+    <strong>DownloadManager:GetDownloadingPacks ()</strong>
+    </dt>
+    <dd>
+    Returns an indexed table of the currently downloading downloadable packs.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        {DownloadablePack}
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DownloadManager:GetUsername"></a>
+    <strong>DownloadManager:GetUsername ()</strong>
+    </dt>
+    <dd>
+    Returns the currently logged in user's username (Or an empty string if not logged in)
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        string
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DownloadManager:GetSkillsetRank"></a>
+    <strong>DownloadManager:GetSkillsetRank (string)</strong>
+    </dt>
+    <dd>
+    Returns the currently logged in user's online rank for the provided skillset
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        PackList
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DownloadManager:GetSkillsetRating"></a>
+    <strong>DownloadManager:GetSkillsetRating ()</strong>
+    </dt>
+    <dd>
+    Returns the currently logged in user's online MSD rating for the provided skillset
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        PackList
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DownloadManager:GetDownloads"></a>
+    <strong>DownloadManager:GetDownloads ()</strong>
+    </dt>
+    <dd>
+    Returns an indexed table with all the currently downloading download tables.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        {Download}
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DownloadManager:IsLoggedIn"></a>
+    <strong>DownloadManager:IsLoggedIn ()</strong>
+    </dt>
+    <dd>
+    Returns a boolean that indicates if the player is currently logged in to the API server
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        bool
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DownloadManager:Login"></a>
+    <strong>DownloadManager:Login (string, string)</strong>
+    </dt>
+    <dd>
+    Begins an asynchronous attempt to login with the provided username (First parameter) and password (Second one)
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DownloadManager:LoginWithToken"></a>
+    <strong>DownloadManager:LoginWithToken (string)</strong>
+    </dt>
+    <dd>
+    Begins an asynchronous attempt to login with the provided auth Token
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DownloadManager:Logout"></a>
+    <strong>DownloadManager:Logout ()</strong>
+    </dt>
+    <dd>
+    Ends the current session (If it exists)
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DownloadManager:GetLastVersion"></a>
+    <strong>DownloadManager:GetLastVersion ()</strong>
+    </dt>
+    <dd>
+    Returns the string for the latest version (According to the API server)
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        string
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DownloadManager:GetTopSkillsetScore"></a>
+    <strong>DownloadManager:GetTopSkillsetScore (float, string)</strong>
+    </dt>
+    <dd>
+
+<p>Returns the Nth (First parameter) top online score for the given skillset (Second param)</p>
+<pre><code>    The lua tables for Online Profile Scores are defined here: https://github.com/etternagame/etterna/blob/develop/src/DownloadManager.cpp#L1645-L1659
+    TODO: Properly document online profile cores
+</code></pre>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        OnlineProfileScore
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DownloadManager:GetTopChartScoreCount"></a>
+    <strong>DownloadManager:GetTopChartScoreCount (string)</strong>
+    </dt>
+    <dd>
+    Returns the amount of leaderboard scores for the given chart
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        float
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DownloadManager:GetTopChartScore"></a>
+    <strong>DownloadManager:GetTopChartScore (string, float)</strong>
+    </dt>
+    <dd>
+
+<p>Returns the Nth (Second parameter) top online score for the given skillset (First param)</p>
+<pre><code>    The lua tables for Online Chart Leaderboard Scores are defined here: https://github.com/etternagame/etterna/blob/develop/src/DownloadManager.cpp#L1686-L1727
+    TODO: Properly document online chart leaderboard scores
+</code></pre>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+        <li><span class="parameter">float</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        ChartLeaderboardScore
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DownloadManager:GetCoreBundle"></a>
+    <strong>DownloadManager:GetCoreBundle (string)</strong>
+    </dt>
+    <dd>
+
+<p>Returns the packs in the core bundle in an indexed table. </p>
+<pre><code>    Additionally, the table has key TotalSize and AveragePackDifficulty
+    with the appropiate values in it for ease of use.
+</code></pre>
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        {DownloadablePack}
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DownloadManager:DownloadCoreBundle"></a>
+    <strong>DownloadManager:DownloadCoreBundle (string)</strong>
+    </dt>
+    <dd>
+    Queues all the packs in the bundle named after the first parameter for download.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DownloadManager:GetToken"></a>
+    <strong>DownloadManager:GetToken ()</strong>
+    </dt>
+    <dd>
+
+<p>Returns the current Authenthication Token used for the server API. </p>
+<pre><code>        It is recommended that themes store this to automatically relogin and not the username/password for security reasons.
+</code></pre>
+
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        string
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DownloadManager:RequestChartLeaderBoard"></a>
+    <strong>DownloadManager:RequestChartLeaderBoard (string)</strong>
+    </dt>
+    <dd>
+    Recieves a chartkey, and returns the online leaderboard for that chart.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        {HighScore}
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DownloadManager:ToggleRateFilter"></a>
+    <strong>DownloadManager:ToggleRateFilter (bool)</strong>
+    </dt>
+    <dd>
+    RetuSets rate filtering to the boolean passed for the chart leaderboards
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DownloadManager:GetCurrentRateFilter"></a>
+    <strong>DownloadManager:GetCurrentRateFilter ()</strong>
+    </dt>
+    <dd>
+    Returns true if rate filtering is enabled for the chart leaderboards
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        bool
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2018-11-28 18:29:39 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
