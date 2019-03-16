@@ -39,6 +39,8 @@
 <li><a href="#ScreenGameplay">ScreenGameplay </a></li>
 <li><a href="#ActorScroller_specific">ActorScroller specific </a></li>
 <li><a href="#Downloads">Downloads </a></li>
+<li><a href="#Profile_Tracker">Profile Tracker </a></li>
+<li><a href="#Multiplayer">Multiplayer </a></li>
 </ul>
 
 
@@ -102,7 +104,7 @@ Def.ActorFrame {
 <p><a name="Universal_Commands"></a></p>
 <h2>Universal Commands</h2>
 
-<p>These are Commands which are usable for all actors, regardless of screen.</p>
+<p>These are Commands which are usable for all actors, regardless of screen and type of actor.</p>
 
 <h3>InitCommand</h3>
 
@@ -143,12 +145,254 @@ CodePrevJudge=<span class="string">"EffectDown"</span>
 CodeToggleHands=<span class="string">"MenuDown"</span>
 </pre>
 
+<h3>DFRStartedMessageCommand</h3>
+
+<p>Broadcast when starting a Differential Song Reload.</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>DFRFinishedMessageCommand</h3>
+
+<p>Broadcast when finishing a Differential Song Reload.</p>
+
+
+<pre>
+params = {
+    newsongs = number
+}
+</pre>
+
+<h3>DFRUpdateMessageCommand</h3>
+
+<p>Broadcast during Differential Song Reload to update the loading text lua.</p>
+
+
+<pre>
+params = {
+    txt = <span class="global">string</span>,<span class="comment">-- Something like "Loading:\nPackName\nSongName"
+</span>}
+</pre>
+
+<h3>SystemMessageMessageCommand</h3>
+
+<p>Broadcast when a SystemMessage is sent.</p>
+
+
+<pre>
+params = {
+    Message = <span class="global">string</span>,
+    NoAnimate = bool
+}
+</pre>
+
+<h3>HideSystemMessageMessageCommand</h3>
+
+<p>Broadcast when the currently displayed SystemMessage is hidden (Stops displaying).</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>RefreshCreditTextMessageCommand</h3>
+
+<p>Broadcast when the credits text is refreshed</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>ScreenChangedMessageCommand</h3>
+
+<p>Broadcast when the current Screen changes.</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>NewPlaylistMessageCommmand</h3>
+
+<p>Broadcast when a playlist is created. Sends a <code>Playlist</code></p>
+
+
+<pre>
+params = {
+    newplaylist = playlist
+}
+</pre>
+
+<h3>CrossedBeatMessageCommand</h3>
+
+<p>Broadcast when playing sound from a Song/Chart and a beat passes.</p>
+
+
+<pre>
+params = {
+    Beat = number(integer)
+}
+</pre>
+
+<h3>LeftClickMessageCommand</h3>
+
+<p>Broadcast when left mouse button is clicked</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>RightClickMessageCommand</h3>
+
+<p>Broadcast when right mouse button is clicked</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>MiddleClickMessageCommand</h3>
+
+<p>Broadcast when middle mouse button is clicked</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>WheelDownMessageCommand</h3>
+
+<p>Broadcast when the mouse wheel wheel is scrolled down</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>WheelUpMessageCommand</h3>
+
+<p>Broadcast when the mouse wheel wheel is scrolled up</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>MenuUpP1MessageCommand</h3>
+
+<p>Broadcast when the MenuUp button gets input.</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>MenuLeftP1MessageCommand</h3>
+
+<p>Broadcast when the MenuLeft button gets input.</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>MenuRightP1MessageCommand</h3>
+
+<p>Broadcast when the MenuRight button gets input.</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>MenuDownP1MessageCommand</h3>
+
+<p>Broadcast when the MenuDown button gets input.</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>DLProgressAndQueueUpdateMessageCommand</h3>
+
+<p>Broadcast when the pack download user interface needs to be updated.</p>
+
+
+<pre>
+params = {
+    dlsize:number of packs being downloaded right now,
+    dlprogress: <span class="global">string</span> with the status of current downloads,
+    queuesize: number of packs <span class="keyword">in</span> the queue (Not downloading at the moment),
+    queuedpacks: <span class="global">string</span> with the names of queued packs
+</pre>
+
+<p>}</p>
+
+<h3>GoalTableRefreshMessageCommand</h3>
+
+<p>Broadcast when goals change (Added, removed or changed). See GetPlayerOrMachineProfile(PLAYER_1):GetGoalTable() <code>Profile</code></p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>XPreferenceChangedMessageCommand</h3>
+
+<p>Broadcast when preference X changes (Like AdditionalSongsFolderPreferenceChangedMessageCommand)</p>
+
+
+<pre>
+params = { }
+</pre>
+
 <h1>Screen Specific</h1>
 
-<p>Note: In case something is missing in any particular screen, you can check the ScreenX.cpp files under /src/ in the github repository, checking what is broadcasted by MESSAGEMAN.</p>
+<p>Note: In case something is missing in any particular screen, you can check the ScreenX.cpp files under /src/ in the github repository, checking what is broadcast by MESSAGEMAN.</p>
 
 <p><a name="ScreenSelectMusic"></a></p>
 <h2>ScreenSelectMusic</h2>
+
+<p>Note: All of this should apply in ScreenNetSelectMusic too</p>
+
+<h3>RouletteStoppedMessageCommand</h3>
+
+<p>Broadcast when the roulette is used, after it stops.</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>FilterResultsMessageCommand</h3>
+
+<p>Broadcast rebuilding the music wheel. This usually happens at screen creation and whenever a search or filter is performed.</p>
+
+
+<pre>
+params = {
+    Total = number, <span class="comment">-- total songs
+</span>    Matches = number, <span class="comment">-- number of songs that fall within the search/filter criteria
+</span>}
+</pre>
+
+<h3>DelayedChartUpdateMessageCommand</h3>
+
+<p>Broadcast after a small delay of not scrolling in the music wheel. Should be used to update "heavy" objects that we dont want to update while scrolling.</p>
+
+
+<pre>
+params = { }
+
+            Message msg(<span class="string">"FavoritesUpdated"</span>);
+            MESSAGEMAN-&gt;Broadcast(msg);
+    MESSAGEMAN-&gt;Broadcast(<span class="string">"PlayingSampleMusic"</span>);
+</pre>
 
 <h3>SetMessageCommand</h3>
 
@@ -162,6 +406,15 @@ params = {
     HasFocus = If the <span class="backtick"><code>MusicWheelItem</code></span> is focused <span class="keyword">or</span> <span class="keyword">not</span>,
     Text = The name of the song group this <span class="backtick"><code>MusicWheelItem</code></span> is from,
 }
+</pre>
+
+<h3>RateChangedMessageCommand</h3>
+
+<p>Broadcast when the current rate changes (So things like the current chart difficulty and song length can be updated).</p>
+
+
+<pre>
+params = { }
 </pre>
 
 <h3>CurrentStepsP1ChangedMessageCommand</h3>
@@ -183,7 +436,7 @@ params = {
 
 <pre>
 params = {
-    Player =PLAYER_1 <span class="keyword">or</span> PLAYER_2,
+    Player =PLAYER_1,
     Direction = <span class="number">1</span> <span class="keyword">or</span> -<span class="number">1</span>,
 }
 </pre>
@@ -191,86 +444,132 @@ params = {
 <p><a name="ScreenGameplay"></a></p>
 <h2>ScreenGameplay</h2>
 
+<h3>ToastyAchievedMessageCommand</h3>
+
+<p>Broadcast when a toasty is achieved</p>
+
+
+<pre>
+params = {
+    PlayerNumber = PLAYER_1,
+    ToastyCombo = number,
+    Level = number
+}
+</pre>
+
 <h3>LifeChangedMessageCommand</h3>
 
-<p>Activated whenever a player's life changes.</p>
+<p>Broadcast globally whenever a player's life changes.</p>
 
-<p>| Parameters | Description                             |
-| ---------- | --------------------------------------- |
-| Player     | Either PLAYER<em>1 or PLAYER</em>2             |
-| LifeMeter  | Amount of life in a decimal from 0 to 1 |</p>
 
-<p>If the lifebar is type is battery it will also have LivesLeft and LostLife.</p>
+<pre>
+params = {
+    Player =PLAYER_1,
+    LifeMeter = Amount of life <span class="keyword">in</span> a decimal from <span class="number">0</span> to <span class="number">1</span>,
+}
+</pre>
 
 <h3>HealthStateChangedMessageCommand</h3>
 
 <p>Activated whenever a player's health state changes...</p>
 
-<p>| Parameters     | Description                                                                                                              |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| PlayerNumber   | Either PLAYER<em>1 or PLAYER</em>2                                                                                              |
-| HealthState    | A HealthState Enum, which is either <code>HealthState_Hot</code>, <code>HealthState_Alive</code>, <code>HealthState_Danger</code>, or <code>HealthState_Dead</code>. |
-| OldHealthState | self explanatory.                                                                                                        |</p>
+
+<pre>
+params = {
+    PlayerNumber = PLAYER_1,
+    HealthState = A HealthState Enum, which is either <span class="backtick"><code>HealthState_Hot</code></span>, <span class="backtick"><code>HealthState_Alive</code></span>, <span class="backtick"><code>HealthState_Danger</code></span>, <span class="keyword">or</span> <span class="backtick"><code>HealthState_Dead</code></span>.,
+    OldHeathState= same as above, but old one
+}
+</pre>
 
 <h3>PlayerFailedMessageCommand</h3>
 
 <p>This one's obvious.</p>
 
-<p>| Parameters   | Description                 |
-| ------------ | --------------------------- |
-| PlayerNumber | Either PLAYER<em>1 or PLAYER</em>2 |</p>
 
-<h3>ScoreChangedMessageCommand</h3>
-
-<p>Activated whenever a player's score changes. Params include PlayerNumber and MultiPlayer, but can also include ToastyCombo in certain cases.</p>
-
-<p>| Parameters   | Description                 |
-| ------------ | --------------------------- |
-| PlayerNumber | Either PLAYER<em>1 or PLAYER</em>2 |
-| MultiPlayer  | ???                         |</p>
+<pre>
+params = {
+    PlayerNumber = PLAYER_1
+}
+</pre>
 
 <h3>JudgmentMessageCommand</h3>
 
 <p>Triggered when a judgment happens, either because a player stepped on a note or they completely missed it.</p>
 
-<p>| Parameters    | Description                      |
-| ------------- | -------------------------------- |
-| Player        | Either PLAYER<em>1 or PLAYER</em>2      |
-| MultiPlayer   | If they're multiplayer, probably |
-| TapNoteSccre  | The TapNoteScore                 |
-| Early         | True if early, false if late     |
-| TapNoteOffset | Offset of the judgement          |
-| HoldNoteScore | The HoldNoteScore                |</p>
+
+<pre>
+params = {
+    Player = PLAYER_1,
+    TapNoteScore= <span class="global">string</span>,
+    HoldNoteScore = <span class="global">string</span> <span class="keyword">or</span> <span class="keyword">nil</span>, <span class="comment">-- only present for holds
+</span>    NoteRow = number <span class="keyword">or</span> <span class="keyword">nil</span>,<span class="comment">-- only present for taps
+</span>    TapNoteOffset = decimal number <span class="keyword">or</span> <span class="keyword">nil</span>, <span class="comment">-- only present for taps. In miliseconds
+</span>    Offset = decimal number <span class="keyword">or</span> <span class="keyword">nil</span>, <span class="comment">-- only present for non miss taps. TapNoteOffset*1000
+</span>    Early = bool, <span class="comment">-- only present for taps. TapNoteOffset &gt; 0
+</span>    FirstTrack=number, <span class="comment">-- track/column of the judgment if CCoff, otherwise first column/track
+</span>    Judgment=<span class="global">string</span>, <span class="comment">-- one of 'TapNoteScore_W1' to W5 or 'TapNoteScore_Miss'
+</span>    Type=<span class="string">"Tap"</span> <span class="keyword">or</span> <span class="string">"Mine"</span> <span class="keyword">or</span> <span class="string">"Hold"</span>,
+    CurWifeScore=decimal number, <span class="comment">-- current score at this point in the chart
+</span>    MaxWifeScore=decimal number, <span class="comment">-- max possible score at this point in the chart
+</span>    WifeDifferential= decimal number, <span class="comment">-- distance/differential to the target score (NOT percent)
+</span>    TotalPercent=number between -<span class="number">500</span> <span class="keyword">and</span> <span class="number">100</span>, <span class="comment">-- 100 * curwifescore / totalwifescore
+</span>    WifePercent=number between -<span class="number">500</span> <span class="keyword">and</span> <span class="number">100</span>, <span class="comment">-- 100 * curwifescore / maxwifescore
+</span>    <span class="comment">-- These 2 PB ones are nil if pb%=targetgoal%
+</span>    WifePBDifferential=<span class="keyword">nil</span> <span class="keyword">or</span> decimal number, <span class="comment">-- curwifescore - maxwifescore * wifescorepersonalbest
+</span>    WifePBGoal=<span class="keyword">nil</span> <span class="keyword">or</span> decimal number between -<span class="number">500</span> <span class="keyword">and</span> <span class="number">100</span>, <span class="comment">-- percentage
+</span>    NumTracks = number <span class="keyword">or</span> <span class="keyword">nil</span>, <span class="comment">-- nil for mines/taps
+</span>    Val = number <span class="keyword">or</span> <span class="keyword">nil</span>, <span class="comment">-- nil for mines. Unknown usage
+</span>    TapNote = TapNote <span class="keyword">or</span> <span class="keyword">nil</span>, <span class="comment">-- not nil for holds. Unknown usage
+</span>    MultiPlayer = number, <span class="comment">-- unknown usage
+</span>    Holds = {HoldHead}, <span class="comment">-- Only present for taps. Held holds table
+</span>    Taps= {TapNote}, <span class="comment">-- Only present for taps
+</span>}
+</pre>
+
+<h3>ScoreNoneMessageCommand</h3>
+
+<p>Broadcast globally whenever a TapScoreNone is scored (I'm not sure when that is :/ )</p>
+
+
+<pre>
+params = { }
+</pre>
 
 <h3>ComboChangedMessageCommand</h3>
 
-<p>Activated whenever a combo changes.</p>
+<p>Broadcast globally whenever combo changes.</p>
 
-<p>| Parameters       | Description                                                      |
-| ---------------- | ---------------------------------------------------------------- |
-| Player           | Either PLAYER<em>1 or PLAYER</em>2                                      |
-| OldCombo         | ???                                                              |
-| OldMissCombo     | ???                                                              |
-| PlayerState      | An instance of PlayerState. This may not always be present.      |
-| PlayerStageStats | An instance of PlayerStageStats. This may not always be present. |</p>
 
-<h3>ToastyAchievedMessageCommand</h3>
-
-<p>| Parameters   | Description                 |
-| ------------ | --------------------------- |
-| PlayerNumber | Either PLAYER<em>1 or PLAYER</em>2 |
-| ToastyCombo  | ???                         |
-| Level        | ???                         |</p>
+<pre>
+params = {
+    Player =PLAYER_1,
+    OldCombo = number (integer),
+    OldMissCombo = number (integer),
+    PlayerState = <span class="keyword">nil</span> <span class="keyword">or</span> PlayerState,
+    m_pPlayerStageStats = <span class="keyword">nil</span> <span class="keyword">or</span> m_pPlayerStageStats,
+}
+</pre>
 
 <h3>ToastyDroppedMessageCommand</h3>
 
-<p>| Parameters   | Description                 |
-| ------------ | --------------------------- |
-| PlayerNumber | Either PLAYER<em>1 or PLAYER</em>2 |</p>
+<p>Broadcast when the toasty combo is broken (Non perfect/marvelous is scored)</p>
+
+
+<pre>
+params = {
+    PlayerNumber = PLAYER_1
+}
+</pre>
 
 <h3>DoneLoadingNextSongMessageCommand</h3>
 
 <p>Unknown, might be triggered during course mode</p>
+
+
+<pre>
+params = { }
+</pre>
 
 <p><a name="ActorScroller_specific"></a></p>
 <h2>ActorScroller specific</h2>
@@ -279,21 +578,217 @@ params = {
 
 <p>Triggered when the ActorScroller is selected</p>
 
+
+<pre>
+params = { }
+</pre>
+
 <h3>LoseFocusCommand</h3>
 
 <p>Triggered when the ActorScroller is deselected</p>
 
+
+<pre>
+params = { }
+</pre>
+
 <p><a name="Downloads"></a></p>
 <h2>Downloads</h2>
 
-<h3></h3>
+<h3>PausingDownloadsMessageCommand</h3>
+
+<p>Broadcast when we're pausing all downloads because of gameplay screen. Should hide or minimize the pack downloader UI.</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>ResumingDownloadsMessageCommand</h3>
+
+<p>Broadcast when we're unpausing all downloads because of leaving gameplay screen. Should show or maximize the pack downloader UI.</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>AllDownloadsCompletedMessageCommand</h3>
+
+<p>Broadcast when no downloads are left.</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>DownloadFailedMessageCommand</h3>
+
+<p>Broadcast when a pack download succeeds. See <code>DownloadablePack</code></p>
+
+
+<pre>
+params = {
+    pack = DownloadablePack
+}
+</pre>
+
+<h3>DownloadFailedMessageCommand</h3>
+
+<p>Broadcast when a pack download fails. See <code>DownloadablePack</code></p>
+
+
+<pre>
+params = {
+    pack = DownloadablePack
+}
+</pre>
+
+<p><a name="Profile_Tracker"></a></p>
+<h2>Profile Tracker</h2>
+
+<p>The profile tracker is used with DLMAN(<a href="../classes/DownloadManager.html#">DownloadManager</a>), For example EO (https://etternaonline.com/). The game sends the tracker scores, goals and favourites once connected, and it allows usage of the ingame leaderboard.</p>
+
+<h3>LoginMessageCommand</h3>
+
+<p>Broadcast when succesfully logging in to score tracker. See DLMAN:Logout(),DLMAN:Login(user, pass) and DLMAN:LoginWithToken(user, passToken) in <a href="../classes/DownloadManager.html#">DownloadManager</a></p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>LoginFailedMessageCommand</h3>
+
+<p>Broadcast when a pack download succeeds. See DLMAN:Logout(),DLMAN:Login(user, pass) and DLMAN:LoginWithToken(user, passToken) in <a href="../classes/DownloadManager.html#">DownloadManager</a></p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>LogOutMessageCommand</h3>
+
+<p>Broadcast when logging out of the tracker. See DLMAN:Logout(),DLMAN:Login(user, pass) and DLMAN:LoginWithToken(user, passToken) in <a href="../classes/DownloadManager.html#">DownloadManager</a></p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>FavouritesUpdateMessageCommand</h3>
+
+<p>Broadcast when favourites are retrieved/refreshed from the tracker.</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>OnlineUpdateMessageCommand</h3>
+
+<p>Broadcast when our top25/rank/ratings/country are updated from the tracker. See DLMAN:GetTopSkillsetScore(n, skillsetString),DLMAN:GetSkillsetRating(), DLMAN:GetUsername(), DLMAN:GetSkillsetRank(skillsetString) in <a href="../classes/DownloadManager.html#">DownloadManager</a></p>
+
+
+<pre>
+params = { }
+</pre>
+
+<p><a name="Multiplayer"></a></p>
+<h2>Multiplayer</h2>
+
+<h3>MultiplayerDisconnectionMessageCommand</h3>
+
+<p>Broadcast when multiplayer connection ends.</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>MultiplayerConnectionMessageCommand</h3>
+
+<p>Broadcast when multiplayer connection starts.</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>NewMultiScoreMessageCommand</h3>
+
+<p>Broadcast when we recieve a score from the server. See NSMAN:GetEvalScores() <code>NetworkSyncManager</code></p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>ChatMessageCommand</h3>
+
+<p>Broadcast when we recieve a chat message from the server.</p>
+
+
+<pre>
+params = {
+    tab = number,
+    msg = <span class="global">string</span> <span class="comment">-- Contains "|crrggbba" to identify color changes
+</span>}
+</pre>
+
+<h3>MPLeaderboardUpdateMessageCommand</h3>
+
+<p>Broadcast when we recieve an update during gameplay on the state of other players playing with us (So, if we're diplaying a leaderboard in a theme, we should update it with the new values). See NSMAN:GetMPLeaderboard() <code>NetworkSyncManager</code></p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>MultiplayerDisconnectionMessageCommand</h3>
+
+<p>Broadcast when multiplayer connection ends.</p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>ChartRequestMessageCommand</h3>
+
+<p>Broadcast when we recieve a new ChartRequest from the server. See NSMAN:GetChartRequests() <code>NetworkSyncManager</code></p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>ChartRequestMessageCommand</h3>
+
+<p>Broadcast when we recieve a new ChartRequest from the server. See NSMAN:GetChartRequests() <code>NetworkSyncManager</code></p>
+
+
+<pre>
+params = { }
+</pre>
+
+<h3>UsersUpdateMessageCommand</h3>
+
+<p>Broadcast when we the userlist needs to be refreshed (Both room and lobby userlists). See NSMAN:GetLobbyUserList() <code>NetworkSyncManager</code> and GetUserQty,GetUser,GetUserReady,GetUserState in <code>ScreenNetSelectMusic</code></p>
+
+
+<pre>
+params = { }
+</pre>
+
+<p>todo/missing: Messages in OptionList.cpp, StepMania.cpp, "ScoreChanged", "UpdateNetEvalStats", "ScoreNone", ScreenOptions.cpp, "CancelAllP1", ScreenSelectMaster.cpp,, ScreenSelectMusic.cpp,</p>
 
 
 </div> <!-- id="content" -->
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2018-11-28 18:35:44 </i>
+<i style="float:right;">Last updated 2019-03-16 00:36:08 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
